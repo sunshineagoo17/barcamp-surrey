@@ -1,0 +1,43 @@
+// Primary Colors
+$light-green: #A5CB48;
+$dark-green: #375B2A;
+$black: #000000;
+$white: #FFFFFF;
+
+// Secondary Colors (Complementary)
+$soft-green: #C8E6A1;
+$olive-green: #6D8A4E;
+$warm-beige: #F5F0E1;
+$cool-gray: #BFC9CA;
+$deep-forest: #2B3B2E;
+
+// Neutral Colors
+$light-gray: #F2F2F2;
+$medium-gray: #B0B0B0;
+$dark-gray: #4D4D4D;
+
+// Soft Colors
+$soft-mint: #DFF5E3;
+$blush-pink: #F8EDEB;
+$mist-blue: #E0F7FA;
+$frosted-white: rgba(255, 255, 255, 0.6);
+$cloud-gray: #ECEFF1;
+
+// Frosted Colors (for glassmorphic effects)
+$frosted-green: rgba(165, 203, 72, 0.3);
+$frosted-dark-green: rgba(55, 91, 42, 0.3);
+$frosted-gray: rgba(191, 201, 202, 0.3);
+$frosted-black: rgba(0, 0, 0, 0.2);
+
+// Gradients
+// Light Gradient (Soft and Fresh)
+$gradient-light: linear-gradient(135deg, $light-green, $soft-green, $warm-beige);
+
+// Dark Gradient (Bold and Elegant)
+$gradient-dark: linear-gradient(135deg, $dark-green, $deep-forest, $black);
+
+// Soft Gradient (Smooth and Subtle)
+$gradient-soft: linear-gradient(135deg, $olive-green, $cool-gray, $light-gray);
+
+// Frosted Gradient (Glassmorphism Inspired)
+$gradient-frosted: linear-gradient(135deg, $frosted-green, $frosted-gray, $frosted-white);
