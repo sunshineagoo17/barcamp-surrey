@@ -1,0 +1,52 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+// Global Dark Mode Styles
+[data-theme='dark'] {
+  // Background and text colors
+  background-color: $deep-forest;  
+  color: $frosted-white;          
+
+  body,
+  label {
+    background-color: $deep-forest;
+    color: $frosted-white;
+  }
+
+  // Headings
+  h1, h2, h3, h4, h5, h6 {
+    color: $light-green;
+  }
+
+  // Links
+  a {
+    color: $light-green;
+
+    &:hover {
+      color: $soft-green;
+    }
+  }
+
+  // Buttons
+  .button {
+    background-color: $dark-green;
+    color: $frosted-white;
+
+    &:hover {
+      background-color: $light-green;
+      color: $deep-forest;
+    }
+  }
+
+  // Borders and Dividers
+  hr {
+    border-color: $olive-green;
+  }
+
+  // Cards or Containers
+  .card,
+  .container {
+    background-color: $dark-green;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+}

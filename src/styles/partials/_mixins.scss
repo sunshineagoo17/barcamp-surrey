@@ -1,0 +1,108 @@
+// Import partials
+@use 'variables' as *;
+@use 'colors' as *;
+@use 'fonts' as *;
+
+// Breakpoints Mixins
+@mixin mobile {
+    @media screen and (min-width: #{$mobile-breakpoint}) {
+        @content;
+    }
+}
+
+@mixin small-mobile {
+    @media (min-width: 321px) and (max-width: 374px) {
+        @content;
+    }
+}
+
+@mixin large-mobile {
+    @media screen and (min-width: #{$large-mobile-breakpoint}) {
+        @content;
+    }
+}
+
+@mixin extra-large-mobile {
+    @media screen and (min-width: #{$extra-large-mobile-breakpoint}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: #{$tablet-breakpoint}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: #{$desktop-breakpoint}) {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media screen and (min-width: #{$large-desktop-breakpoint}) {
+        @content;
+    }
+}
+
+@mixin extra-large-desktop {
+    @media screen and (min-width: #{$extra-large-desktop-breakpoint}) {
+        @content;
+    }
+}
+
+// Block Item Mixin
+@mixin block-item($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// Font Mixins 
+@mixin primary-font($weight) {
+    font-family: 'Fieldwork', sans-serif;
+    font-weight: $weight;
+}
+
+// Base Button Mixin
+@mixin button-style($width, $height, $bg-color, $text-color) {
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    width: $width;
+    height: $height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+// Button Variations
+@mixin primary-button($width, $height) {
+    @include button-style($width, $height, $dark-green, $white);
+}
+
+@mixin secondary-button($width, $height) {
+    @include button-style($width, $height, $light-green, $white);
+}
+
+@mixin success-button($width, $height) {
+    @include button-style($width, $height, $soft-green, $dark-green);
+}
+
+@mixin error-button($width, $height) {
+    @include button-style($width, $height, $deep-forest, $white);
+}
+
+// Frosted Glass Effect 
+@mixin frosted-glass($blur: 10px, $bg-color: $frosted-white) {
+    background-color: $bg-color;
+    backdrop-filter: blur($blur);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}

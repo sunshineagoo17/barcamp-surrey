@@ -1,0 +1,54 @@
+// Imports Fonts
+@import url('https://use.typekit.net/mbo2ylu.css');
+
+// Variables for Fieldwork font weights
+$font-hairline: 'Fieldwork', sans-serif;
+$font-thin: 'Fieldwork', sans-serif;
+$font-light: 'Fieldwork', sans-serif;
+$font-regular: 'Fieldwork', sans-serif;
+$font-semibold: 'Fieldwork', sans-serif;
+$font-bold: 'Fieldwork', sans-serif;
+
+// Base styles
+body {
+    font-family: $font-regular;
+  }
+  
+  h1, h2 {
+    font-family: $font-bold;
+  }
+  
+  h3, h4, h5, h6 {
+    font-family: $font-semibold;
+  }
+  
+  // Font Weight Classes
+  .hairline {
+    font-family: $font-hairline;
+    font-weight: 100;
+  }
+  
+  .thin {
+    font-family: $font-thin;
+    font-weight: 200;
+  }
+  
+  .light {
+    font-family: $font-light;
+    font-weight: 300;
+  }
+  
+  .regular {
+    font-family: $font-regular;
+    font-weight: 400;
+  }
+  
+  .semibold {
+    font-family: $font-semibold;
+    font-weight: 500;
+  }
+  
+  .bold {
+    font-family: $font-bold;
+    font-weight: 700;
+  }
