@@ -1,0 +1,164 @@
+@import url("https://use.typekit.net/mbo2ylu.css");
+body {
+  font-family: "Fieldwork", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Fieldwork", sans-serif;
+}
+
+h3, h4, h5, h6 {
+  font-family: "Fieldwork", sans-serif;
+}
+
+.hairline {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 100;
+}
+
+.thin {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 200;
+}
+
+.light {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 300;
+}
+
+.regular {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 400;
+}
+
+.semibold {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 500;
+}
+
+.bold {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 700;
+}
+
+[data-theme=dark] {
+  background-color: #2B3B2E;
+  color: rgba(255, 255, 255, 0.6);
+}
+[data-theme=dark] body,
+[data-theme=dark] label {
+  background-color: #2B3B2E;
+  color: rgba(255, 255, 255, 0.6);
+}
+[data-theme=dark] h1, [data-theme=dark] h2, [data-theme=dark] h3, [data-theme=dark] h4, [data-theme=dark] h5, [data-theme=dark] h6 {
+  color: #A5CB48;
+}
+[data-theme=dark] a {
+  color: #A5CB48;
+}
+[data-theme=dark] a:hover {
+  color: #C8E6A1;
+}
+[data-theme=dark] .button {
+  background-color: #375B2A;
+  color: rgba(255, 255, 255, 0.6);
+}
+[data-theme=dark] .button:hover {
+  background-color: #A5CB48;
+  color: #2B3B2E;
+}
+[data-theme=dark] hr {
+  border-color: #6D8A4E;
+}
+[data-theme=dark] .card,
+[data-theme=dark] .container {
+  background-color: #375B2A;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  width: 100%;
+  padding: 1.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.header__logo {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #375B2A;
+  margin-bottom: 1rem;
+}
+.header__nav {
+  display: flex;
+  gap: 1.875rem;
+  margin-bottom: 1rem;
+}
+.header__nav-link {
+  text-decoration: none;
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #375B2A;
+}
+.header__nav-link:hover {
+  color: #A5CB48;
+}
+.header__toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__toggle {
+  width: 4rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: #B0B0B0;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.4s ease;
+}
+.header__toggle--light {
+  background-color: #f0e68c;
+}
+.header__toggle--dark {
+  background-color: #4d4d4d;
+}
+.header__toggle-switch {
+  position: absolute;
+  top: 0.15rem;
+  left: 0.15rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+.header__toggle--dark .header__toggle-switch {
+  transform: translateX(2rem);
+}
+.header__toggle-icon {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.header__toggle-icon--sun {
+  color: #FFA500;
+}
+.header__toggle-icon--moon {
+  color: #C0C0C0;
+}
+@media screen and (min-width: 320px) {
+  .header {
+    flex-direction: column;
+    padding: 0.625rem 1.25rem;
+  }
+}/*# sourceMappingURL=Header.css.map */

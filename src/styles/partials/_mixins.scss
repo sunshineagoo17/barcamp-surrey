@@ -52,6 +52,22 @@
     }
 }
 
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == mobile {
+      @include mobile {
+        @content;
+      }
+    } @else if $breakpoint == tablet {
+      @include tablet {
+        @content;
+      }
+    } @else if $breakpoint == desktop {
+      @include desktop {
+        @content;
+      }
+    }
+  }  
+
 // Block Item Mixin
 @mixin block-item($width, $height) {
     width: $width;
