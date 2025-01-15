@@ -1,26 +1,19 @@
 import React from 'react';
 import './Hero.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarAlt, faClock, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import Logo from "../../assets/logos/barcamp_logo-main-gradient-logo.png"; 
 
 const Hero = () => {
+  const scrollToAbout = () => {
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="hero">
-      <h1 className="hero__title">Barcamp Surrey</h1>
-      <div className="hero__info">
-        <div className="hero__item">
-          <FontAwesomeIcon icon={faCalendarAlt} className="hero__icon" />
-          <p>August 2nd</p>
-        </div>
-        <div className="hero__item">
-          <FontAwesomeIcon icon={faClock} className="hero__icon" />
-          <p>9am - 5:30pm</p>
-        </div>
-        <div className="hero__item">
-          <FontAwesomeIcon icon={faMapMarkerAlt} className="hero__icon" />
-          <p>Godalming College, Tuesley Ln, Godalming GU7 1RS</p>
-        </div>
-      </div>
+      <img src={Logo} alt="BarCamp Surrey Logo" className="hero__logo" />
+      <h1 className="hero__title">A Technology <span className="hero__highlight">"Unconference"</span> in the Heart of Surrey</h1>
+      <button className="hero__button" onClick={scrollToAbout}>
+        Tell Me More
+      </button>
     </section>
   );
 };
