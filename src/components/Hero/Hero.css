@@ -77,39 +77,35 @@ h3, h4, h5, h6 {
 }
 
 .hero {
-  background-color: rgba(255, 255, 255, 0.6);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 2rem;
 }
 .hero__title {
   font-family: "Fieldwork", sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #375B2A;
+  margin-bottom: 1rem;
 }
-@media screen and (min-width: 320px) {
-  .hero__title {
-    font-size: 2rem;
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__info {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
   }
 }
-.hero__details {
-  font-family: "Fieldwork", sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
+.hero__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.hero__icon {
+  font-size: 2rem;
   color: #A5CB48;
-}
-@media screen and (min-width: 320px) {
-  .hero__details {
-    font-size: 1rem;
-  }
 }/*# sourceMappingURL=Hero.css.map */

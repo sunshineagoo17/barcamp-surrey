@@ -1,13 +1,26 @@
+import React from 'react';
 import './Hero.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt, faClock, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
   return (
-    <section id="hero" className="hero">
+    <section className="hero">
       <h1 className="hero__title">Barcamp Surrey</h1>
-      <p className="hero__details">
-        August 2nd | 9:00 AM - 5:30 PM <br />
-        Godalming College, Tuesley Ln, Godalming GU7 1RS
-      </p>
+      <div className="hero__info">
+        <div className="hero__item">
+          <FontAwesomeIcon icon={faCalendarAlt} className="hero__icon" />
+          <p>August 2nd</p>
+        </div>
+        <div className="hero__item">
+          <FontAwesomeIcon icon={faClock} className="hero__icon" />
+          <p>9am - 5:30pm</p>
+        </div>
+        <div className="hero__item">
+          <FontAwesomeIcon icon={faMapMarkerAlt} className="hero__icon" />
+          <p>Godalming College, Tuesley Ln, Godalming GU7 1RS</p>
+        </div>
+      </div>
     </section>
   );
 };

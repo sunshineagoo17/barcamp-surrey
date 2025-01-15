@@ -5,32 +5,37 @@
 @use "../../styles/global.scss" as *;
 
 .hero {
-    @include frosted-glass;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 2rem;
   
     &__title {
       @include primary-font(700);
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: $dark-green;
+      margin-bottom: 1rem;
+    }
   
-      @include respond-to(mobile) {
-        font-size: 2rem;
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+  
+      @include tablet {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
       }
     }
   
-    &__details {
-      @include primary-font(400);
-      font-size: 1.2rem;
-      color: $light-green;
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
   
-      @include respond-to(mobile) {
-        font-size: 1rem;
-      }
+    &__icon {
+      font-size: 2rem;
+      color: $light-green;
     }
   }
