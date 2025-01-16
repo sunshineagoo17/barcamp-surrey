@@ -12,7 +12,6 @@
   justify-content: space-between;
   background-color: $white;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
-  position: sticky;
   top: 0;
   z-index: 100;
 
@@ -88,8 +87,8 @@
     }
 
     &--dark {
-      background-color: #4d4d4d;
-      box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
+      background-color: $frosted-black;
+      box-shadow: 0 0 20px rgba(green, 0.8);
     }
 
     &-switch {

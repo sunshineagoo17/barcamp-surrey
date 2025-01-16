@@ -136,8 +136,72 @@ h3, h4, h5, h6 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-color: #9ac237;
 }
+[data-theme=dark] .about__icon {
+  font-size: 3rem;
+  color: #FFFFFF;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+.about__item:hover [data-theme=dark] .about__icon {
+  transform: scale(1.1);
+}
+[data-theme=dark] .about__item {
+  background: rgba(191, 201, 202, 0.3);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 18rem;
+  height: 22rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+[data-theme=dark] .about__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+[data-theme=dark] .about__button {
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  width: 10rem;
+  height: 2.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background-color: #375B2A;
+  color: #DFF5E3;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+[data-theme=dark] .about__button:hover {
+  background-color: #DFF5E3;
+  color: #4D4D4D;
+  box-shadow: 0 6px 15px rgba(100, 200, 120, 0.5);
+  transform: scale(1.05);
+  text-decoration: none;
+}
+[data-theme=dark] .about__button:visited {
+  text-decoration: none;
+}
+[data-theme=dark] .about__button:active {
+  transform: scale(0.95);
+  text-decoration: none;
+}
 [data-theme=dark] .header {
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 [data-theme=dark] .header__logo-img {
   filter: brightness(0) invert(1);
@@ -151,7 +215,6 @@ h3, h4, h5, h6 {
   justify-content: space-between;
   background-color: #FFFFFF;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
-  position: sticky;
   top: 0;
   z-index: 100;
 }
@@ -216,8 +279,8 @@ h3, h4, h5, h6 {
   box-shadow: 0 0 20px rgba(255, 223, 0, 0.6);
 }
 .header__toggle--dark {
-  background-color: #4d4d4d;
-  box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 128, 0, 0.8);
 }
 .header__toggle-switch {
   position: absolute;
