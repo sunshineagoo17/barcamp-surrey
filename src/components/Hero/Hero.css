@@ -85,29 +85,189 @@ h3, h4, h5, h6 {
 .hero {
   width: 100%;
   height: 60vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   background: linear-gradient(180deg, #A5CB48, #375B2A);
+  overflow: hidden;
   padding: 2rem;
+}
+.hero__synapses {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero__synapse {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  animation: float 8s infinite ease-in-out;
+  opacity: 0.8;
+}
+.hero__synapse:nth-child(1) {
+  top: 6%;
+  left: 20%;
+  animation-delay: -3.1691707136s;
+  animation-duration: 5.847339927s;
+}
+.hero__synapse:nth-child(2) {
+  top: 76%;
+  left: 68%;
+  animation-delay: -1.9199584177s;
+  animation-duration: 7.2172641009s;
+}
+.hero__synapse:nth-child(3) {
+  top: 50%;
+  left: 67%;
+  animation-delay: -4.0391228979s;
+  animation-duration: 7.209612938s;
+}
+.hero__synapse:nth-child(4) {
+  top: 85%;
+  left: 21%;
+  animation-delay: -0.6807164904s;
+  animation-duration: 5.1290381843s;
+}
+.hero__synapse:nth-child(5) {
+  top: 42%;
+  left: 61%;
+  animation-delay: -1.5406844691s;
+  animation-duration: 8.9642443544s;
+}
+.hero__synapse:nth-child(6) {
+  top: 88%;
+  left: 45%;
+  animation-delay: -1.9831797364s;
+  animation-duration: 6.7625302598s;
+}
+.hero__synapse:nth-child(7) {
+  top: 4%;
+  left: 11%;
+  animation-delay: -5.0331046438s;
+  animation-duration: 9.194715277s;
+}
+.hero__synapse:nth-child(8) {
+  top: 81%;
+  left: 21%;
+  animation-delay: -1.7880036864s;
+  animation-duration: 7.6127729019s;
+}
+.hero__synapse:nth-child(9) {
+  top: 71%;
+  left: 57%;
+  animation-delay: -4.4319798109s;
+  animation-duration: 8.343369193s;
+}
+.hero__synapse:nth-child(10) {
+  top: 2%;
+  left: 63%;
+  animation-delay: -1.5511852008s;
+  animation-duration: 6.5612386871s;
+}
+.hero__synapse:nth-child(11) {
+  top: 56%;
+  left: 67%;
+  animation-delay: -5.3757558247s;
+  animation-duration: 8.4270415645s;
+}
+.hero__synapse:nth-child(12) {
+  top: 25%;
+  left: 51%;
+  animation-delay: -3.8155496273s;
+  animation-duration: 6.9330314399s;
+}
+.hero__synapse:nth-child(13) {
+  top: 89%;
+  left: 11%;
+  animation-delay: -5.5906985252s;
+  animation-duration: 9.8122688354s;
+}
+.hero__synapse:nth-child(14) {
+  top: 61%;
+  left: 33%;
+  animation-delay: -6.4395418382s;
+  animation-duration: 9.8342444944s;
+}
+.hero__synapse:nth-child(15) {
+  top: 9%;
+  left: 77%;
+  animation-delay: -6.8503036892s;
+  animation-duration: 5.1813841387s;
+}
+.hero__synapse:nth-child(16) {
+  top: 78%;
+  left: 21%;
+  animation-delay: -4.9791988654s;
+  animation-duration: 7.6450563511s;
+}
+.hero__synapse:nth-child(17) {
+  top: 9%;
+  left: 61%;
+  animation-delay: -7.1447280995s;
+  animation-duration: 7.9312586249s;
+}
+.hero__synapse:nth-child(18) {
+  top: 72%;
+  left: 52%;
+  animation-delay: -5.6392474226s;
+  animation-duration: 5.9055382596s;
+}
+.hero__synapse:nth-child(19) {
+  top: 86%;
+  left: 8%;
+  animation-delay: -0.3406751291s;
+  animation-duration: 8.1213137655s;
+}
+.hero__synapse:nth-child(20) {
+  top: 89%;
+  left: 58%;
+  animation-delay: -5.1290252889s;
+  animation-duration: 9.6595089857s;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
 }
 .hero__copy-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 .hero__logo {
-  width: 25rem;
+  width: 15rem;
   height: auto;
+  z-index: 1;
+  margin-bottom: 1rem;
 }
 .hero__title {
   font-family: "Fieldwork", sans-serif;
   font-weight: 500;
   font-size: 2.5rem;
-  color: #FFFFFF;
+  color: yellow;
   margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 320px) {
@@ -116,7 +276,7 @@ h3, h4, h5, h6 {
   }
 }
 .hero__title .hero__highlight {
-  color: #FFFFFF;
+  color: yellow;
   margin-left: 0.3rem;
   display: inline-block;
   font-weight: bold;
@@ -144,10 +304,15 @@ h3, h4, h5, h6 {
   font-size: 1rem;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  z-index: 1;
 }
 .hero__button:hover {
   background-color: #A5CB48;
   color: #FFFFFF;
   box-shadow: 0 0 20px rgba(165, 203, 72, 0.6);
   transform: scale(1.05);
+}
+.hero:hover .hero__synapse {
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  transform: scale(1.3);
 }/*# sourceMappingURL=Hero.css.map */
