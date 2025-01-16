@@ -15,7 +15,7 @@
 
   // Headings
   h1, h2, h3, h4, h5, h6 {
-    color: #C9E4C5;
+    color: $mint-green;
   }
 
   // Links
@@ -48,5 +48,13 @@
   .container {
     background-color: $dark-green;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .header {
+    background-color: $black;
+
+    &__logo {
+        color: $white;
+    }
   }
 }

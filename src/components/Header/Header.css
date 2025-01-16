@@ -75,13 +75,19 @@ h3, h4, h5, h6 {
   background-color: #375B2A;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+[data-theme=dark] .header {
+  background-color: #000000;
+}
+[data-theme=dark] .header__logo {
+  color: #FFFFFF;
+}
 
 .header {
-  width: 100%;
-  padding: 1.25rem 2.5rem;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row !important;
   align-items: center;
+  justify-content: space-between;
   background-color: #FFFFFF;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
 }
@@ -89,13 +95,16 @@ h3, h4, h5, h6 {
   font-family: "Fieldwork", sans-serif;
   font-weight: 700;
   font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #375B2A;
-  margin-bottom: 1rem;
 }
 .header__nav {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1.875rem;
-  margin-bottom: 1rem;
 }
 .header__nav-link {
   text-decoration: none;

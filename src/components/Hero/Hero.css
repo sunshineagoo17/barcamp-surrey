@@ -75,6 +75,12 @@ h3, h4, h5, h6 {
   background-color: #375B2A;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+[data-theme=dark] .header {
+  background-color: #000000;
+}
+[data-theme=dark] .header__logo {
+  color: #FFFFFF;
+}
 
 .hero {
   width: 100%;
@@ -84,7 +90,7 @@ h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, #A5CB48, #375B2A);
+  background: linear-gradient(180deg, #A5CB48, #375B2A);
   padding: 2rem;
 }
 .hero__logo {
