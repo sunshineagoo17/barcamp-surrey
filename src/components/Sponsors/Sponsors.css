@@ -139,6 +139,24 @@ h3, h4, h5, h6 {
 [data-theme=dark] .map {
   background: linear-gradient(180deg, rgba(55, 91, 42, 0.9), #375b2a);
 }
+[data-theme=dark] .faq {
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #375b2a, #2b3b2e);
+}
+[data-theme=dark] .faq__icon {
+  font-size: 3rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+[data-theme=dark] .faq__answer {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
 [data-theme=dark] .about__icon {
   font-size: 3rem;
   color: #FFFFFF;

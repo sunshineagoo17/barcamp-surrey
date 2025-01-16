@@ -113,6 +113,26 @@
     background: linear-gradient(180deg, rgba($dark-green, 0.9), rgba($dark-green, 1));
   }
 
+  .faq {
+    width: 100%;
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba($dark-green, 1), rgba($deep-forest, 1));
+
+    &__icon {
+        font-size: 3rem;
+        color: $white;
+        margin-bottom: 1rem;
+        transition: transform 0.5s ease, color 0.5s ease;
+      }
+
+      &__answer {
+        @include primary-font(400);
+        font-size: 1rem;
+        color: $white;
+      }
+  }
+
   .about {
     &__icon {
         font-size: 3rem;

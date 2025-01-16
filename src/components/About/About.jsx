@@ -24,7 +24,7 @@ const About = () => {
           <FontAwesomeIcon icon={faComments} className="about__icon" />
           <h3 className="about__subtitle">What?</h3>
           <p>BarCamp is a user-generated conference where people like you lead the conversation and shape the future.</p>
-          <button className="about__button" onClick={scrollToDetails}>FAQs</button>
+          <button className="about__button" onClick={scrollToDetails}>FAQ</button>
         </div>
 
         {/* WHEN */}

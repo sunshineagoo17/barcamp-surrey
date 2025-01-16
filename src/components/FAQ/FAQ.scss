@@ -1,0 +1,80 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/global.scss" as *;
+
+.faq {
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(230, 250, 230, 1), rgba($white, 0.9));
+
+  &__title {
+    @include primary-font(700);
+    font-size: 2.8rem;
+    color: $dark-green;
+    margin-bottom: 2.5rem;
+    text-shadow: 0.125rem 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__card {
+    width: 18rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 
+      0.625rem 0.625rem 1.5625rem rgba(0, 0, 0, 0.2),
+      -0.625rem -0.625rem 1.5625rem rgba(255, 255, 255, 0.4),
+      inset 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.3),
+      inset -0.125rem -0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.9375rem);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-0.5rem) scale(1.05);
+      box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__icon {
+    font-size: 3rem;
+    color: green;
+    margin-bottom: 1rem;
+    transition: transform 0.5s ease, color 0.5s ease;
+
+    .faq__card:hover & {
+      transform: rotate(20deg) scale(1.1);
+      color: $dark-gray;
+    }
+  }
+
+  &__question {
+    @include primary-font(600);
+    font-size: 1.25rem;
+    color: $dark-green;
+    margin-bottom: 0.75rem;
+  }
+
+  &__answer {
+    @include primary-font(400);
+    font-size: 1rem;
+    color: $black;
+  }
+
+  @include mobile {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      width: 100%;
+    }
+  }
+}
