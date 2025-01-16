@@ -1,0 +1,71 @@
+// Import partials
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/global.scss" as *;
+
+.footer {
+  width: 100%;
+  padding: 2rem 4rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 
+    10px 10px 25px rgba(0, 0, 0, 0.2),
+    -10px -10px 25px rgba(255, 255, 255, 0.4),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.3),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.1);
+  border-top: 0.125rem solid rgba(255, 255, 255, 0.3);
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 10rem;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__text {
+    @include primary-font(400);
+    font-size: 1rem;
+    color: $dark-green;
+    text-decoration: none;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  &__button {
+    @include button-style(10rem, 2.5rem, $dark-green, $white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 
+      5px 5px 15px rgba(0, 0, 0, 0.2),
+      -5px -5px 15px rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+
+    &:hover {
+      background-color: $soft-mint;
+      color: $dark-green;
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(100, 200, 120, 0.5);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}

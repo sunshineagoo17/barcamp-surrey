@@ -203,4 +203,51 @@
         }
     }
   }
+
+  .registration {
+    background: $deep-forest !important;
+  }
+
+  .footer {
+    &__logo {
+        width: 10rem;
+        filter: brightness(0) invert(1) drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+        transition: transform 0.3s ease;
+    
+        &:hover {
+          transform: scale(1.05);
+        }
+    }
+
+    &__copyright {
+        color: $white;
+    }
+
+    &__button {
+        @include button-style(10rem, 2.5rem, $white, $dark-green);
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 1.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 
+          5px 5px 15px rgba(0, 0, 0, 0.2),
+          -5px -5px 15px rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(5px);
+    
+        &:hover {
+          background-color: $soft-mint;
+          color: $dark-green;
+          transform: scale(1.05);
+          box-shadow: 0 10px 20px rgba(100, 200, 120, 0.5);
+        }
+    
+        &:active {
+          transform: scale(0.95);
+          @include button-style(10rem, 2.5rem, $dark-green, $white);
+          border-radius: 1.5rem;
+        }
+      }
+  }
 }
