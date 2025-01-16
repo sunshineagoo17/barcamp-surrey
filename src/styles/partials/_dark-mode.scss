@@ -109,6 +109,10 @@
       }
   }
 
+  .map {
+    background: linear-gradient(180deg, rgba($dark-green, 0.9), rgba($dark-green, 1));
+  }
+
   .about {
     &__icon {
         font-size: 3rem;

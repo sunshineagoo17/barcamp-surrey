@@ -5,7 +5,9 @@ import Hero from './components/Hero/Hero';
 import Map from './components/Map/Map';
 import FAQ from './components/FAQ/FAQ';
 import Registration from './components/Registration/Registration';
-import './App.scss';
+// import Organisers from './components/Organisers/Organisers';
+// import Sponsors from './components/Sponsors/Sponsors';
+// import Footer from './components/Footer/Footer';
 import './styles/global.scss';
 
 function App() {
@@ -17,6 +19,9 @@ function App() {
       <Map />
       <FAQ />
       <Registration />
+      {/* <Organisers />
+      <Sponsors />
+      <Footer /> */}
     </div>
   );
 }

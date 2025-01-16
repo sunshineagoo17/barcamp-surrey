@@ -136,6 +136,9 @@ h3, h4, h5, h6 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-color: #9ac237;
 }
+[data-theme=dark] .map {
+  background: linear-gradient(180deg, rgba(55, 91, 42, 0.9), #375b2a);
+}
 [data-theme=dark] .about__icon {
   font-size: 3rem;
   color: #FFFFFF;
