@@ -45,7 +45,10 @@ const Hero = () => {
         ))}
       </div>
 
-      <img src={Logo} alt="BarCamp Surrey Logo" className="hero__logo" />
+        <div className="hero__logo-container">
+            <img src={Logo} alt="BarCamp Surrey Logo" className="hero__logo" />
+        </div>
+
       <div className='hero__copy-container'>
         <h1 className="hero__title">
           A Technology <span className={`hero__highlight ${isFading ? 'fade' : ''}`}>
