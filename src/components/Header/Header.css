@@ -78,33 +78,40 @@ h3, h4, h5, h6 {
 [data-theme=dark] .header {
   background-color: #000000;
 }
-[data-theme=dark] .header__logo {
-  color: #FFFFFF;
+[data-theme=dark] .header__logo-img {
+  filter: brightness(0) invert(1);
 }
 
 .header {
-  width: 100vw;
+  width: 100%;
+  padding: 1rem 2rem;
   display: flex;
-  flex-direction: row !important;
   align-items: center;
   justify-content: space-between;
   background-color: #FFFFFF;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .header__logo {
-  font-family: "Fieldwork", sans-serif;
-  font-weight: 700;
-  font-size: 1.8rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: #375B2A;
+}
+.header__logo-img {
+  width: 8rem;
+  height: auto;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.header__logo-img:hover {
+  filter: none;
+  transform: scale(1.05);
 }
 .header__nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.875rem;
+  gap: 2rem;
 }
 .header__nav-link {
   text-decoration: none;
@@ -112,9 +119,16 @@ h3, h4, h5, h6 {
   font-weight: 500;
   font-size: 1rem;
   color: #375B2A;
+  position: relative;
+  transition: all 0.3s ease;
 }
 .header__nav-link:hover {
   color: #A5CB48;
+  transform: scale(1.1);
+  text-shadow: 0 0 15px rgba(165, 203, 72, 0.8);
+}
+.header__nav-link:active {
+  transform: scale(0.95);
 }
 .header__toggle-wrapper {
   display: flex;
@@ -165,9 +179,19 @@ h3, h4, h5, h6 {
 .header__toggle-icon--moon {
   color: #C0C0C0;
 }
+.header__toggle:hover .header__toggle-icon--sun {
+  text-shadow: 0 0 15px rgb(255, 165, 0);
+}
+.header__toggle:hover .header__toggle-icon--moon {
+  text-shadow: 0 0 15px rgb(0, 123, 255);
+}
 @media screen and (min-width: 320px) {
   .header {
-    flex-direction: column;
+    flex-direction: row;
     padding: 0.625rem 1.25rem;
+  }
+  .header__nav {
+    flex-direction: row;
+    gap: 1rem;
   }
 }/*# sourceMappingURL=Header.css.map */

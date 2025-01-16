@@ -5,41 +5,64 @@
 @use "../../styles/global.scss" as *;
 
 .header {
-  width: 100vw;
+  width: 100%;
+  padding: 1rem 2rem;
   display: flex;
-  flex-direction: row !important;
   align-items: center;
   justify-content: space-between;
   background-color: $white;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
+  // Logo Styling
   &__logo {
-    @include primary-font(700);
-    font-size: 1.8rem;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: $dark-green;
+
+    &-img {
+      width: 8rem;
+      height: auto;
+      transition: filter 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        filter: none;
+        transform: scale(1.05);
+      }
+    }
   }
 
+  // Navigation Styling
   &__nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.875rem;
+    gap: 2rem;
 
     &-link {
       text-decoration: none;
       @include primary-font(500);
       font-size: 1rem;
       color: $dark-green;
+      position: relative;
+      transition: all 0.3s ease;
 
+      // Hover Effect: Glow and Grow
       &:hover {
         color: $light-green;
+        transform: scale(1.1);
+        text-shadow: 0 0 15px rgba(165, 203, 72, 0.8); // Green glow effect
+      }
+
+      // Active (Click) Effect: Shrink
+      &:active {
+        transform: scale(0.95);
       }
     }
   }
 
+  // Dark/Light Mode Toggle
   &__toggle-wrapper {
     display: flex;
     justify-content: center;
@@ -47,60 +70,75 @@
   }
 
   &__toggle {
-  width: 4rem;
-  height: 2rem;
-  border-radius: 1rem;
-  background-color: $medium-gray;
-  position: relative;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: background-color 0.4s ease;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: $medium-gray;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.4s ease;
 
-  &--light {
-    background-color: #f0e68c; 
-  }
+    &--light {
+      background-color: #f0e68c;
+    }
 
-  &--dark {
-    background-color: #4d4d4d; 
-  }
+    &--dark {
+      background-color: #4d4d4d;
+    }
 
-  &-switch {
-    position: absolute;
-    top: 0.15rem;
-    left: 0.15rem;
-    width: 1.7rem;
-    height: 1.7rem;
-    background-color: $white;
-    border-radius: 50%;
-    transition: transform 0.4s ease;
+    &-switch {
+      position: absolute;
+      top: 0.15rem;
+      left: 0.15rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      background-color: $white;
+      border-radius: 50%;
+      transition: transform 0.4s ease;
 
-    .header__toggle--dark & {
-      transform: translateX(2rem);
+      .header__toggle--dark & {
+        transform: translateX(2rem);
+      }
+    }
+
+    &-icon {
+      font-size: 1.2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+
+      &--sun {
+        color: #FFA500;
+      }
+
+      &--moon {
+        color: #C0C0C0;
+      }
+    }
+
+    &:hover {
+      .header__toggle-icon--sun {
+        text-shadow: 0 0 15px rgba(255, 165, 0, 1); // Stronger yellow glow
+      }
+
+      .header__toggle-icon--moon {
+        text-shadow: 0 0 15px rgba(0, 123, 255, 1); // Stronger blue glow
+      }
     }
   }
 
-  &-icon {
-    font-size: 1.2rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-
-        &--sun {
-        color: #FFA500;  
-        }
-
-        &--moon {
-        color: #C0C0C0;  
-        }
-    }
-}
-
-
+  // Mobile-Only Navigation (Column Layout)
   @include mobile {
-    flex-direction: column;
+    flex-direction: row;
     padding: 0.625rem 1.25rem;
+
+    &__nav {
+      flex-direction: row;
+      gap: 1rem;
+    }
   }
 }

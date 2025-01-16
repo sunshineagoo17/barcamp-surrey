@@ -78,8 +78,8 @@ h3, h4, h5, h6 {
 [data-theme=dark] .header {
   background-color: #000000;
 }
-[data-theme=dark] .header__logo {
-  color: #FFFFFF;
+[data-theme=dark] .header__logo-img {
+  filter: brightness(0) invert(1);
 }
 
 .about {
