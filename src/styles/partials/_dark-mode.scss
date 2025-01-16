@@ -208,6 +208,50 @@
     background: $deep-forest !important;
   }
 
+  .organisers {
+    width: 100%;
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba($deep-forest, 1), rgba($deep-forest, 0.7));
+
+    &__role {
+        @include primary-font(400);
+        font-size: 1rem;
+        color: $white;
+        margin-bottom: 1rem;
+      }
+
+      &__icon {
+        font-size: 2rem;
+        color: $soft-green;
+        transition: transform 0.3s ease, color 0.3s ease;
+    
+        &:hover {
+          transform: scale(1.2);
+          color: $white;
+        }
+    
+        &:active {
+          transform: scale(0.9);
+        }
+      } 
+  }
+
+  .sponsors {
+    width: 100%;
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba($deep-forest, 1), rgba($dark-gray, 1));
+
+    &__description {
+        @include primary-font(500);
+        font-size: 1.2rem;
+        color: $mint-green;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+  }
+
   .footer {
     &__logo {
         width: 10rem;

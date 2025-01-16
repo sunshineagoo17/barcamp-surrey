@@ -230,6 +230,45 @@ h3, h4, h5, h6 {
 [data-theme=dark] .registration {
   background: #2B3B2E !important;
 }
+[data-theme=dark] .organisers {
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #2b3b2e, rgba(43, 59, 46, 0.7));
+}
+[data-theme=dark] .organisers__role {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+[data-theme=dark] .organisers__icon {
+  font-size: 2rem;
+  color: #C8E6A1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+[data-theme=dark] .organisers__icon:hover {
+  transform: scale(1.2);
+  color: #FFFFFF;
+}
+[data-theme=dark] .organisers__icon:active {
+  transform: scale(0.9);
+}
+[data-theme=dark] .sponsors {
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #2b3b2e, #4d4d4d);
+}
+[data-theme=dark] .sponsors__description {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #C9E4C5;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
 [data-theme=dark] .footer__logo {
   width: 10rem;
   filter: brightness(0) invert(1) drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));

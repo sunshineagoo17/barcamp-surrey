@@ -230,6 +230,45 @@ h3, h4, h5, h6 {
 [data-theme=dark] .registration {
   background: #2B3B2E !important;
 }
+[data-theme=dark] .organisers {
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #2b3b2e, rgba(43, 59, 46, 0.7));
+}
+[data-theme=dark] .organisers__role {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+[data-theme=dark] .organisers__icon {
+  font-size: 2rem;
+  color: #C8E6A1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+[data-theme=dark] .organisers__icon:hover {
+  transform: scale(1.2);
+  color: #FFFFFF;
+}
+[data-theme=dark] .organisers__icon:active {
+  transform: scale(0.9);
+}
+[data-theme=dark] .sponsors {
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #2b3b2e, #4d4d4d);
+}
+[data-theme=dark] .sponsors__description {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #C9E4C5;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
 [data-theme=dark] .footer__logo {
   width: 10rem;
   filter: brightness(0) invert(1) drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
@@ -287,4 +326,123 @@ h3, h4, h5, h6 {
   background-color: #375B2A;
   color: #FFFFFF;
   border-radius: 1.5rem;
+}
+
+.organisers {
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgb(230, 250, 230));
+}
+.organisers__title {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #375B2A;
+  margin-bottom: 2.5rem;
+  text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.organisers__grid {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.organisers__card {
+  width: 18rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2), -10px -10px 25px rgba(255, 255, 255, 0.4), inset 2px 2px 4px rgba(255, 255, 255, 0.3), inset -2px -2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.organisers__card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.organisers__card:hover .organisers__photo {
+  animation: wiggle 1s ease-in-out;
+}
+.organisers__photo {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(5deg);
+  }
+  30% {
+    transform: rotate(-5deg);
+  }
+  45% {
+    transform: rotate(4deg);
+  }
+  60% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.organisers__name {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #375B2A;
+  margin-bottom: 0.5rem;
+}
+.organisers__role {
+  font-family: "Fieldwork", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #4D4D4D;
+  margin-bottom: 1rem;
+}
+.organisers__icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.organisers__icon {
+  font-size: 2rem;
+  color: #375B2A;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.organisers__icon:hover {
+  transform: scale(1.2);
+  color: #A5CB48;
+}
+.organisers__icon:active {
+  transform: scale(0.9);
+}
+@media screen and (min-width: 768px) {
+  .organisers__grid {
+    gap: 3rem;
+    flex-direction: row;
+  }
+  .organisers__card {
+    width: 20rem;
+  }
+}
+@media screen and (min-width: 320px) {
+  .organisers__grid {
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=Organisers.css.map */

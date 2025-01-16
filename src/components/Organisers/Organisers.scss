@@ -3,3 +3,123 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/global.scss" as *;
+
+.organisers {
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba($white, 0.9), rgba(230, 250, 230, 1));
+
+  &__title {
+    @include primary-font(700);
+    font-size: 2.8rem;
+    color: $dark-green;
+    margin-bottom: 2.5rem;
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  &__grid {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__card {
+    width: 18rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 
+      10px 10px 25px rgba(0, 0, 0, 0.2),
+      -10px -10px 25px rgba(255, 255, 255, 0.4),
+      inset 2px 2px 4px rgba(255, 255, 255, 0.3),
+      inset -2px -2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    &:hover .organisers__photo {
+      animation: wiggle 1s ease-in-out;
+    }
+  }
+
+  &__photo {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(5deg); }
+    30% { transform: rotate(-5deg); }
+    45% { transform: rotate(4deg); }
+    60% { transform: rotate(-4deg); }
+    75% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  &__name {
+    @include primary-font(600);
+    font-size: 1.5rem;
+    color: $dark-green;
+    margin-bottom: 0.5rem;
+  }
+
+  &__role {
+    @include primary-font(400);
+    font-size: 1rem;
+    color: $dark-gray;
+    margin-bottom: 1rem;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    color: $dark-green;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+      color: $light-green;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  @include tablet {
+    &__grid {
+      gap: 3rem;
+      flex-direction: row;
+    }
+
+    &__card {
+      width: 20rem;
+    }
+  }
+
+  @include mobile {
+    &__grid {
+      flex-direction: row;
+    }
+  }
+}
