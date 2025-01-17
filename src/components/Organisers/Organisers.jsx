@@ -1,8 +1,6 @@
 import './Organisers.scss';
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
-
-// Import images
 import LauraPhoto from '../../assets/images/laura-c.jpeg';
 import AlanPhoto from '../../assets/images/alan-p.jpeg';
 
