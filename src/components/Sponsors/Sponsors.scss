@@ -6,8 +6,12 @@
 
 .sponsors {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 4rem 1.25rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(
     200deg,
     rgba($dark-green, 0.9),
@@ -26,6 +30,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    width: 90%;
     gap: 3rem;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 2rem;
@@ -40,11 +48,6 @@
     &:hover {
       transform: scale(1.02);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    @include mobile {
-      flex-direction: column;
-      padding: 2rem;
     }
   }
 

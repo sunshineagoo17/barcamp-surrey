@@ -11,7 +11,7 @@ const About = () => {
   useScrollAnimation();
 
   // Google Calendar Event Link (Pre-filled)
-  const googleCalendarLink = `https://www.google.com/calendar/render?action=TEMPLATE&text=Barcamp+Surrey&dates=20240802T090000Z/20240802T173000Z&details=Join+us+at+Barcamp+Surrey+for+a+day+of+collaboration+and+innovation!&location=Godalming+College,+Tuesley+Ln,+Godalming+GU7+1RS`;
+  const googleCalendarLink = `https://www.google.com/calendar/render?action=TEMPLATE&text=BarCamp+Surrey&dates=20240802T090000Z/20240802T173000Z&details=Join+us+at+BarCamp+Surrey+for+a+day+of+collaboration+and+innovation!&location=Godalming+College,+Tuesley+Ln,+Godalming+GU7+1RS`;
 
   // Google Maps Location Link
   const googleMapsLink = `https://www.google.com/maps?q=Godalming+College,+Tuesley+Ln,+Godalming+GU7+1RS`;

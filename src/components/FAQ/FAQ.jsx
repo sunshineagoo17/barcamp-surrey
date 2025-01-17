@@ -30,7 +30,7 @@ const FAQ = () => {
           <FontAwesomeIcon icon={faUtensils} className='faq__icon' />
           <h3 className='faq__question'>Will there be food on site?</h3>
           <p className='faq__answer'>
-            Yes! Breakfast and lunch will be provided.
+            Yes! Breakfast and lunch will be available for purchase.
           </p>
         </div>
       </div>
