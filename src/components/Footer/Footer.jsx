@@ -5,28 +5,23 @@ const Footer = () => {
   return (
     <footer className='footer'>
       <div className='footer__logo'>
-        <a
-          href='https://barcampsurrey.org'
-          target='_blank'
-          rel='noopener noreferrer'>
+        <a href='https://barcampsurrey.org' rel='noopener noreferrer'>
           <img src={WordmarkLogo} alt='Barcamp Surrey Logo' />
         </a>
       </div>
 
       <div className='footer__copyright'>
-        &copy; 2025{' '}
+        &copy; 2025&nbsp;
         <a
           href='https://barcampsurrey.org'
-          target='_blank'
           rel='noopener noreferrer'
           className='footer__link'>
-          Barcamp Surrey
+          BarCamp Surrey
         </a>
-        . All Rights Reserved.
       </div>
 
       <div className='footer__contact'>
-        <a href='mailto:laura@example.com' className='footer__button'>
+        <a href='mailto:Laura.czajkowski@gmail.com' className='footer__button'>
           Contact Us
         </a>
       </div>

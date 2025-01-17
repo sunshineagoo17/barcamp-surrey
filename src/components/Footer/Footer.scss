@@ -42,6 +42,17 @@
     }
   }
 
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        flex-direction: row;
+    }
+  }
+
   &__text {
     @include primary-font(400);
     font-size: 1rem;

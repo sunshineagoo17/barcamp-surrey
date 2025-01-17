@@ -417,6 +417,17 @@ html {
 .footer__logo:active {
   transform: scale(0.9);
 }
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    flex-direction: row;
+  }
+}
 .footer__text {
   font-family: "Fieldwork", sans-serif;
   font-weight: 400;
