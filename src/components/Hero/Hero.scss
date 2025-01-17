@@ -6,7 +6,7 @@
 
 .hero {
   width: 100%;
-  height: 60vh;
+  height: 90vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -16,6 +16,10 @@
   background: linear-gradient(180deg, $light-green, $dark-green);
   overflow: hidden;
   padding: 2rem;
+
+  @include tablet {
+    height: 60vh;
+  }
 
   // Synapse Animation Container
   &__synapses {
@@ -76,8 +80,8 @@
 
   // Neumorphic Glass Logo Container
   &__logo-container {
-    width: 18rem;
-    height: 18rem;
+    width: 12rem;
+    height: 12rem;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2),
@@ -97,10 +101,15 @@
       box-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
         0 0 60px rgba(165, 203, 72, 0.5);
     }
+
+    @include tablet {
+        width: 18rem;
+        height: 18rem;
+    }
   }
 
   &__logo {
-    width: 12rem;
+    width: 7rem;
     height: auto;
     transition: transform 0.5s ease, filter 0.5s ease;
 
@@ -108,18 +117,22 @@
       transform: scale(1.1);
       filter: brightness(1.2) drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
     }
+
+    @include tablet {
+        width: 12rem;
+    }
   }
 
   &__title {
     @include primary-font(500);
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     color: $white;
     margin-bottom: 1.5rem;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 255, 255, 0.3);
     transition: text-shadow 0.3s ease-in-out;
 
-    @include mobile {
-      font-size: 2rem;
+    @include tablet {
+      font-size: 2.5rem;
     }
 
     .hero__highlight {
