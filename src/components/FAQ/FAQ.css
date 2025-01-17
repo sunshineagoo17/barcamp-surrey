@@ -407,6 +407,7 @@ html {
 @media screen and (min-width: 768px) {
   .faq__grid {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 .faq__card {
@@ -499,6 +500,27 @@ html {
   }
   100% {
     transform: translateY(0) rotate(0);
+  }
+}
+.faq__card:nth-child(4):hover .faq__icon {
+  animation: accessibleAppear 1s ease-in-out forwards;
+  filter: drop-shadow(0 0 0.8rem rgba(72, 203, 165, 0.8));
+}
+@keyframes accessibleAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: drop-shadow(0 0 0 rgba(72, 203, 165, 0));
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 0.5rem rgba(72, 203, 165, 0.5));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 0.8rem rgba(72, 203, 165, 0.8));
   }
 }
 .faq__question {

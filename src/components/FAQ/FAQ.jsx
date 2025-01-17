@@ -1,6 +1,6 @@
 import './FAQ.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCar, faChargingStation, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faCar, faChargingStation, faUtensils, faUniversalAccess } from '@fortawesome/free-solid-svg-icons';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 
 const FAQ = () => {
@@ -31,6 +31,14 @@ const FAQ = () => {
           <h3 className='faq__question'>Will there be food on site?</h3>
           <p className='faq__answer'>
             Yes! Breakfast and lunch will be available for purchase.
+          </p>
+        </div>
+
+        <div className='faq__card fade-in'>
+          <FontAwesomeIcon icon={faUniversalAccess} className='faq__icon' />
+          <h3 className='faq__question'>Is the venue accessible?</h3>
+          <p className='faq__answer'>
+            All rooms are on the ground floor with accessible entrances, and disabled parking is available near the entrance.
           </p>
         </div>
       </div>
