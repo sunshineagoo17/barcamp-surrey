@@ -15,10 +15,14 @@ const Loader = () => {
 
   return (
     isLoading && (
-      <div className="loader">
-        <div className="loader__logo-container">
-          <img src={Logo} alt="Loading BarCamp Surrey" className="loader__logo" />
-          <div className="loader__spinner"></div>
+      <div className='loader'>
+        <div className='loader__logo-container'>
+          <img
+            src={Logo}
+            alt='Loading BarCamp Surrey'
+            className='loader__logo'
+          />
+          <div className='loader__spinner'></div>
         </div>
       </div>
     )

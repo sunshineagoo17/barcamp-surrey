@@ -15,7 +15,6 @@
   top: 0;
   z-index: 100;
 
-  // Logo Styling
   &__logo {
     display: flex;
     align-items: center;
@@ -31,10 +30,13 @@
         filter: none;
         transform: scale(1.1) rotate(2deg);
       }
+
+      &:active {
+        transform: scale(.95) rotate(0deg);
+      }
     }
   }
 
-  // Navigation Styling
   &__nav {
     display: flex;
     justify-content: center;
@@ -61,7 +63,6 @@
     }
   }
 
-  // Dark/Light Mode Toggle
   &__toggle-wrapper {
     display: flex;
     justify-content: flex-end;

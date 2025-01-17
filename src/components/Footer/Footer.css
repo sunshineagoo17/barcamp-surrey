@@ -50,7 +50,12 @@ h3, h4, h5, h6 {
   background-color: #2B3B2E;
   color: rgba(255, 255, 255, 0.6);
 }
-[data-theme=dark] h1, [data-theme=dark] h2, [data-theme=dark] h3, [data-theme=dark] h4, [data-theme=dark] h5, [data-theme=dark] h6 {
+[data-theme=dark] h1,
+[data-theme=dark] h2,
+[data-theme=dark] h3,
+[data-theme=dark] h4,
+[data-theme=dark] h5,
+[data-theme=dark] h6 {
   color: #C9E4C5;
 }
 [data-theme=dark] a {
@@ -396,12 +401,16 @@ html {
   }
 }
 .footer__logo {
-  width: 10rem;
+  width: 8rem;
+  height: auto;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
   transition: transform 0.3s ease;
 }
 .footer__logo:hover {
   transform: scale(1.05);
+}
+.footer__logo:active {
+  transform: scale(0.9);
 }
 .footer__text {
   font-family: "Fieldwork", sans-serif;

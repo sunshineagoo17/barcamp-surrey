@@ -1,22 +1,20 @@
 // Import partials
-@use "./partials/colors" as *;
-@use "./partials/fonts" as *;
-@use "./partials/mixins" as *;
-@use "./partials/dark-mode" as *;
+@use './partials/colors' as *;
+@use './partials/fonts' as *;
+@use './partials/mixins' as *;
+@use './partials/dark-mode' as *;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-// Hidden State (Before Animation)
 .fade-in {
-    opacity: 0;
-    transform: translateY(2rem);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
-  
-  // Visible State (When Scrolled Into View)
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

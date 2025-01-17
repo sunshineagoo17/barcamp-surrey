@@ -1,8 +1,8 @@
 // Import partials
-@use "../../styles/partials/colors" as *;
-@use "../../styles/partials/fonts" as *;
-@use "../../styles/partials/mixins" as *;
-@use "../../styles/global.scss" as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/global.scss' as *;
 
 .loader {
   position: fixed;
@@ -19,27 +19,28 @@
 
   &__logo-container {
     position: relative;
-    width: 14rem;  
+    width: 14rem;
     height: 14rem;
-    padding: 1.5rem; 
+    padding: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3),
+      inset 0 2px 4px rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
   }
 
   &__logo {
-    width: 9rem;  
+    width: 9rem;
     height: auto;
     animation: pulse 2s infinite ease-in-out;
   }
 
   &__spinner {
     position: absolute;
-    width: 16rem;  
+    width: 16rem;
     height: 16rem;
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.2);

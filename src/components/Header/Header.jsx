@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Header.scss';
-import Logo from "../../assets/logos/barcamp_logo-wordmark.svg"; 
+import Logo from '../../assets/logos/barcamp_logo-wordmark.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,33 +14,54 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
+    <header className='header'>
       {/* Logo Image */}
-      <div className="header__logo">
-        <a href="https://barcampsurrey.org">
-          <img src={Logo} alt="BarCamp Surrey Logo" className="header__logo-img" />
+      <div className='header__logo'>
+        <a href='https://barcampsurrey.org'>
+          <img
+            src={Logo}
+            alt='BarCamp Surrey Logo'
+            className='header__logo-img'
+          />
         </a>
       </div>
 
       {/* Navigation Links */}
-      <nav className="header__nav">
-        <a href="#about" className="header__nav-link">About</a>
-        <a href="#faq" className="header__nav-link">FAQ</a>
-        <a href="#register" className="header__nav-link">Register</a>
-        <a href="mailto:Laura.czajkowski@gmail.com" className="header__nav-link">Contact</a>
+      <nav className='header__nav'>
+        <a href='#about' className='header__nav-link'>
+          About
+        </a>
+        <a href='#faq' className='header__nav-link'>
+          FAQ
+        </a>
+        <a href='#register' className='header__nav-link'>
+          Register
+        </a>
+        <a
+          href='mailto:Laura.czajkowski@gmail.com'
+          className='header__nav-link'>
+          Contact
+        </a>
       </nav>
 
       {/* Light/Dark Mode Toggle */}
-      <div className="header__toggle-wrapper">
+      <div className='header__toggle-wrapper'>
         <button
           onClick={toggleTheme}
-          className={`header__toggle ${theme === 'light' ? 'header__toggle--light' : 'header__toggle--dark'}`}
-        >
-          <div className="header__toggle-switch">
+          className={`header__toggle ${
+            theme === 'light' ? 'header__toggle--light' : 'header__toggle--dark'
+          }`}>
+          <div className='header__toggle-switch'>
             {theme === 'light' ? (
-              <FontAwesomeIcon icon={faSun} className="header__toggle-icon header__toggle-icon--sun" />
+              <FontAwesomeIcon
+                icon={faSun}
+                className='header__toggle-icon header__toggle-icon--sun'
+              />
             ) : (
-              <FontAwesomeIcon icon={faMoon} className="header__toggle-icon header__toggle-icon--moon" />
+              <FontAwesomeIcon
+                icon={faMoon}
+                className='header__toggle-icon header__toggle-icon--moon'
+              />
             )}
           </div>
         </button>

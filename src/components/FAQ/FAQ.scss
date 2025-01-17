@@ -1,13 +1,18 @@
-@use "../../styles/partials/colors" as *;
-@use "../../styles/partials/fonts" as *;
-@use "../../styles/partials/mixins" as *;
-@use "../../styles/global.scss" as *;
+// Import partials
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/global.scss' as *;
 
 .faq {
   width: 100%;
   padding: 4rem 2rem;
   text-align: center;
-  background: linear-gradient(180deg, rgba(230, 250, 230, 1), rgba($white, 0.9));
+  background: linear-gradient(
+    180deg,
+    rgba(230, 250, 230, 1),
+    rgba($white, 0.9)
+  );
 
   &__title {
     @include primary-font(700);
@@ -28,8 +33,7 @@
     padding: 2rem;
     border-radius: 1.5rem;
     background: rgba(255, 255, 255, 0.2);
-    box-shadow: 
-      0.625rem 0.625rem 1.5625rem rgba(0, 0, 0, 0.2),
+    box-shadow: 0.625rem 0.625rem 1.5625rem rgba(0, 0, 0, 0.2),
       -0.625rem -0.625rem 1.5625rem rgba(255, 255, 255, 0.4),
       inset 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.3),
       inset -0.125rem -0.125rem 0.25rem rgba(0, 0, 0, 0.1);
@@ -57,12 +61,24 @@
   }
 
   @keyframes bumpyRide {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(0.3rem) translateY(-0.2rem); }
-    40% { transform: translateX(-0.3rem) translateY(0.2rem); }
-    60% { transform: translateX(0.2rem) translateY(-0.3rem); }
-    80% { transform: translateX(-0.2rem) translateY(0.3rem); }
-    100% { transform: translateX(0); }
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(0.3rem) translateY(-0.2rem);
+    }
+    40% {
+      transform: translateX(-0.3rem) translateY(0.2rem);
+    }
+    60% {
+      transform: translateX(0.2rem) translateY(-0.3rem);
+    }
+    80% {
+      transform: translateX(-0.2rem) translateY(0.3rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   // 🔌 EV Charging Icon Animation: Electric Spark
@@ -72,9 +88,18 @@
   }
 
   @keyframes electricPulse {
-    0% { transform: scale(1); filter: drop-shadow(0 0 0.3rem rgba(0, 255, 0, 0.6)); }
-    50% { transform: scale(1.15); filter: drop-shadow(0 0 1rem rgba(0, 255, 0, 1)); }
-    100% { transform: scale(1); filter: drop-shadow(0 0 0.3rem rgba(0, 255, 0, 0.6)); }
+    0% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 0.3rem rgba(0, 255, 0, 0.6));
+    }
+    50% {
+      transform: scale(1.15);
+      filter: drop-shadow(0 0 1rem rgba(0, 255, 0, 1));
+    }
+    100% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 0.3rem rgba(0, 255, 0, 0.6));
+    }
   }
 
   // 🍽️ Food Icon Animation: Bounce and Rotate
@@ -83,11 +108,21 @@
   }
 
   @keyframes bounceRotate {
-    0% { transform: translateY(0) rotate(0); }
-    25% { transform: translateY(-0.5rem) rotate(-10deg); }
-    50% { transform: translateY(0) rotate(0deg); }
-    75% { transform: translateY(-0.5rem) rotate(10deg); }
-    100% { transform: translateY(0) rotate(0); }
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    25% {
+      transform: translateY(-0.5rem) rotate(-10deg);
+    }
+    50% {
+      transform: translateY(0) rotate(0deg);
+    }
+    75% {
+      transform: translateY(-0.5rem) rotate(10deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
   }
 
   &__question {

@@ -1,7 +1,7 @@
-@use "../../styles/partials/colors" as *;
-@use "../../styles/partials/fonts" as *;
-@use "../../styles/partials/mixins" as *;
-@use "../../styles/global.scss" as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/global.scss' as *;
 
 .notfound {
   width: 100%;
@@ -20,7 +20,8 @@
     height: 12rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3), -10px -10px 20px rgba(255, 255, 255, 0.1);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3),
+      -10px -10px 20px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
@@ -70,7 +71,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {

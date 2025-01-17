@@ -50,7 +50,12 @@ h3, h4, h5, h6 {
   background-color: #2B3B2E;
   color: rgba(255, 255, 255, 0.6);
 }
-[data-theme=dark] h1, [data-theme=dark] h2, [data-theme=dark] h3, [data-theme=dark] h4, [data-theme=dark] h5, [data-theme=dark] h6 {
+[data-theme=dark] h1,
+[data-theme=dark] h2,
+[data-theme=dark] h3,
+[data-theme=dark] h4,
+[data-theme=dark] h5,
+[data-theme=dark] h6 {
   color: #C9E4C5;
 }
 [data-theme=dark] a {
@@ -409,124 +414,124 @@ html {
   opacity: 0.8;
 }
 .hero__synapse:nth-child(1) {
-  top: 52%;
-  left: 90%;
-  animation-delay: -3.0400238304s;
-  animation-duration: 6.8690328912s;
+  top: 22%;
+  left: 16%;
+  animation-delay: -4.5368123592s;
+  animation-duration: 8.9715859227s;
 }
 .hero__synapse:nth-child(2) {
-  top: 71%;
-  left: 29%;
-  animation-delay: -7.7011328142s;
-  animation-duration: 8.045311655s;
+  top: 39%;
+  left: 81%;
+  animation-delay: -0.4313379546s;
+  animation-duration: 5.3243528763s;
 }
 .hero__synapse:nth-child(3) {
-  top: 27%;
-  left: 43%;
-  animation-delay: -7.0013940903s;
-  animation-duration: 8.288326347s;
+  top: 76%;
+  left: 80%;
+  animation-delay: -4.4387431325s;
+  animation-duration: 8.5216664899s;
 }
 .hero__synapse:nth-child(4) {
-  top: 11%;
-  left: 12%;
-  animation-delay: -7.5718631372s;
-  animation-duration: 5.547106238s;
+  top: 42%;
+  left: 79%;
+  animation-delay: -2.2586325852s;
+  animation-duration: 5.4327372246s;
 }
 .hero__synapse:nth-child(5) {
-  top: 74%;
-  left: 100%;
-  animation-delay: -4.0244043041s;
-  animation-duration: 5.521571275s;
+  top: 56%;
+  left: 55%;
+  animation-delay: -1.6168176817s;
+  animation-duration: 9.6677752395s;
 }
 .hero__synapse:nth-child(6) {
-  top: 91%;
-  left: 56%;
-  animation-delay: -4.2588814505s;
-  animation-duration: 8.6130069188s;
+  top: 58%;
+  left: 53%;
+  animation-delay: -0.5368538185s;
+  animation-duration: 5.2716002454s;
 }
 .hero__synapse:nth-child(7) {
-  top: 67%;
-  left: 73%;
-  animation-delay: -7.0194768401s;
-  animation-duration: 7.2940964623s;
+  top: 1%;
+  left: 52%;
+  animation-delay: -5.549104891s;
+  animation-duration: 7.1356686035s;
 }
 .hero__synapse:nth-child(8) {
-  top: 28%;
-  left: 21%;
-  animation-delay: -6.3347346536s;
-  animation-duration: 6.0544936632s;
+  top: 51%;
+  left: 29%;
+  animation-delay: -2.0658889121s;
+  animation-duration: 9.7758024898s;
 }
 .hero__synapse:nth-child(9) {
-  top: 14%;
-  left: 24%;
-  animation-delay: -1.454757887s;
-  animation-duration: 9.5981639579s;
+  top: 37%;
+  left: 28%;
+  animation-delay: -5.3310734765s;
+  animation-duration: 8.0496444904s;
 }
 .hero__synapse:nth-child(10) {
-  top: 22%;
-  left: 29%;
-  animation-delay: -1.0179380133s;
-  animation-duration: 8.0844658349s;
+  top: 53%;
+  left: 37%;
+  animation-delay: -6.8860969752s;
+  animation-duration: 9.8569974129s;
 }
 .hero__synapse:nth-child(11) {
-  top: 34%;
-  left: 90%;
-  animation-delay: -2.3062514973s;
-  animation-duration: 5.857596115s;
+  top: 28%;
+  left: 29%;
+  animation-delay: -0.6790743852s;
+  animation-duration: 5.3287734389s;
 }
 .hero__synapse:nth-child(12) {
-  top: 27%;
-  left: 27%;
-  animation-delay: -7.6648416014s;
-  animation-duration: 7.1994106514s;
+  top: 93%;
+  left: 90%;
+  animation-delay: -6.750684582s;
+  animation-duration: 6.9947548853s;
 }
 .hero__synapse:nth-child(13) {
-  top: 97%;
-  left: 41%;
-  animation-delay: -5.7903958875s;
-  animation-duration: 9.4197894581s;
+  top: 91%;
+  left: 35%;
+  animation-delay: -6.6551841678s;
+  animation-duration: 8.4842677376s;
 }
 .hero__synapse:nth-child(14) {
-  top: 14%;
-  left: 80%;
-  animation-delay: -4.3666204359s;
-  animation-duration: 7.7523748892s;
+  top: 68%;
+  left: 61%;
+  animation-delay: -7.6677577609s;
+  animation-duration: 8.1800149696s;
 }
 .hero__synapse:nth-child(15) {
-  top: 81%;
-  left: 60%;
-  animation-delay: -5.6030539645s;
-  animation-duration: 5.2769310262s;
+  top: 42%;
+  left: 73%;
+  animation-delay: -0.3130157959s;
+  animation-duration: 8.1058658206s;
 }
 .hero__synapse:nth-child(16) {
-  top: 45%;
-  left: 16%;
-  animation-delay: -2.8125830224s;
-  animation-duration: 9.0075836748s;
+  top: 34%;
+  left: 51%;
+  animation-delay: -5.2266001129s;
+  animation-duration: 9.9273102599s;
 }
 .hero__synapse:nth-child(17) {
-  top: 80%;
-  left: 76%;
-  animation-delay: -6.2644202899s;
-  animation-duration: 5.9610576749s;
+  top: 3%;
+  left: 66%;
+  animation-delay: -4.4783479499s;
+  animation-duration: 5.2300430159s;
 }
 .hero__synapse:nth-child(18) {
-  top: 37%;
-  left: 19%;
-  animation-delay: -4.8363379564s;
-  animation-duration: 6.3238686113s;
+  top: 66%;
+  left: 76%;
+  animation-delay: -1.9141343551s;
+  animation-duration: 6.3509200376s;
 }
 .hero__synapse:nth-child(19) {
-  top: 77%;
-  left: 48%;
-  animation-delay: -3.6881874039s;
-  animation-duration: 8.1209120531s;
+  top: 56%;
+  left: 97%;
+  animation-delay: -3.5455847154s;
+  animation-duration: 7.0548784303s;
 }
 .hero__synapse:nth-child(20) {
-  top: 80%;
-  left: 25%;
-  animation-delay: -0.949852872s;
-  animation-duration: 6.3522031282s;
+  top: 5%;
+  left: 93%;
+  animation-delay: -0.0871967532s;
+  animation-duration: 5.9141860942s;
 }
 @keyframes float {
   0% {

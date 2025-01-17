@@ -4,8 +4,8 @@
 // Global Dark Mode Styles
 [data-theme='dark'] {
   // Background and text colors
-  background-color: $deep-forest;  
-  color: $frosted-white;          
+  background-color: $deep-forest;
+  color: $frosted-white;
 
   body,
   label {
@@ -14,7 +14,12 @@
   }
 
   // Headings
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $mint-green;
   }
 
@@ -52,155 +57,170 @@
 
   .hero {
     background: linear-gradient(230deg, $black, $dark-green);
-    
+
     &__button {
-        @include button-style(10rem, 3rem, $white, $white);
-        border-radius: 2rem;
-        font-size: 1rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 1px;
-        position: relative;
-        z-index: 1;
-        cursor: pointer;
-        transition: all 0.3s ease, transform 0.2s ease;
-      
-        // 3D Popping Effect (Idle)
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), inset 0 0 0 rgba(255, 255, 255, 0);
-        transform: translateY(-2px);
-        background-color: $dark-green;
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-      
-        // Glow Effect (Idle)
+      @include button-style(10rem, 3rem, $white, $white);
+      border-radius: 2rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      transition: all 0.3s ease, transform 0.2s ease;
+
+      // 3D Popping Effect (Idle)
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2),
+        inset 0 0 0 rgba(255, 255, 255, 0);
+      transform: translateY(-2px);
+      background-color: $dark-green;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+
+      // Glow Effect (Idle)
+      &:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        border-radius: inherit;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.3),
+          rgba(165, 203, 72, 0.3)
+        );
+        filter: blur(5px);
+        opacity: 0.4;
+        transition: opacity 0.3s ease;
+        z-index: -1;
+      }
+
+      // Hover Effect
+      &:hover {
+        background-color: $mist-blue;
+        color: $dark-green;
+        transform: scale(1.08);
+        box-shadow: 0 12px 25px rgba(165, 203, 72, 0.5),
+          0 4px 8px rgba(0, 0, 0, 0.2);
+
         &:before {
-          content: '';
-          position: absolute;
-          top: -2px;
-          left: -2px;
-          width: calc(100% + 4px);
-          height: calc(100% + 4px);
-          border-radius: inherit;
-          background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(165, 203, 72, 0.3));
-          filter: blur(5px);
-          opacity: 0.4;
-          transition: opacity 0.3s ease;
-          z-index: -1;
-        }
-      
-        // Hover Effect
-        &:hover {
-          background-color: $mist-blue;
-          color: $dark-green;
-          transform: scale(1.08);
-          box-shadow: 0 12px 25px rgba(165, 203, 72, 0.5), 0 4px 8px rgba(0, 0, 0, 0.2);
-      
-          &:before {
-            opacity: 0.8;
-          }
-        }
-      
-        // Active (Clicked) Effect
-        &:active {
-          transform: scale(0.95) translateY(2px);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-          background-color: darken($light-green, 5%);
+          opacity: 0.8;
         }
       }
+
+      // Active (Clicked) Effect
+      &:active {
+        transform: scale(0.95) translateY(2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        background-color: darken($light-green, 5%);
+      }
+    }
   }
 
   .map {
-    background: linear-gradient(180deg, rgba($dark-green, 0.9), rgba($dark-green, 1));
+    background: linear-gradient(
+      180deg,
+      rgba($dark-green, 0.9),
+      rgba($dark-green, 1)
+    );
   }
 
   .faq {
     width: 100%;
     padding: 4rem 2rem;
     text-align: center;
-    background: linear-gradient(180deg, rgba($dark-green, 1), rgba($deep-forest, 1));
+    background: linear-gradient(
+      180deg,
+      rgba($dark-green, 1),
+      rgba($deep-forest, 1)
+    );
 
     &__icon {
-        font-size: 3rem;
-        color: $white;
-        margin-bottom: 1rem;
-        transition: transform 0.5s ease, color 0.5s ease;
-      }
+      font-size: 3rem;
+      color: $white;
+      margin-bottom: 1rem;
+      transition: transform 0.5s ease, color 0.5s ease;
+    }
 
-      &__answer {
-        @include primary-font(400);
-        font-size: 1rem;
-        color: $white;
-      }
+    &__answer {
+      @include primary-font(400);
+      font-size: 1rem;
+      color: $white;
+    }
   }
 
   .about {
     &__icon {
-        font-size: 3rem;
-        color: $white;
-        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
-        transition: transform 0.3s ease;
-    
-        .about__item:hover & {
-          transform: scale(1.1);
-        }
+      font-size: 3rem;
+      color: $white;
+      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+      transition: transform 0.3s ease;
+
+      .about__item:hover & {
+        transform: scale(1.1);
+      }
+    }
+
+    &__item {
+      background: $frosted-gray;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+        inset 0 2px 4px rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      width: 18rem;
+      height: 22rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &__button {
+      @include button-style(10rem, 2.75rem, $dark-green, $soft-mint);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      border-radius: 1.5rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $soft-mint;
+        color: $dark-gray;
+        box-shadow: 0 6px 15px rgba(100, 200, 120, 0.5);
+        transform: scale(1.05);
+        text-decoration: none;
       }
 
-      &__item {
-        background: $frosted-gray;
-        padding: 2rem;
-        border-radius: 1rem;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(10px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        width: 18rem;
-        height: 22rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-        &:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
+      &:visited {
+        text-decoration: none;
       }
 
-      &__button {
-        @include button-style(10rem, 2.75rem, $dark-green, $soft-mint);
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        border-radius: 1.5rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        text-decoration: none; 
-      
-        &:hover {
-          background-color: $soft-mint;
-          color: $dark-gray;
-          box-shadow: 0 6px 15px rgba(100, 200, 120, 0.5);
-          transform: scale(1.05);
-          text-decoration: none;  
-        }
-      
-        &:visited {
-          text-decoration: none;  
-        }
-      
-        &:active {
-          transform: scale(0.95);
-          text-decoration: none;  
-        }
-      } 
+      &:active {
+        transform: scale(0.95);
+        text-decoration: none;
+      }
+    }
   }
 
   .header {
     background-color: $frosted-black;
 
     &__logo {
-        &-img {
-            filter: brightness(0) invert(1);
-        }
+      &-img {
+        filter: brightness(0) invert(1);
+      }
     }
   }
 
@@ -212,111 +232,118 @@
     width: 100%;
     padding: 4rem 2rem;
     text-align: center;
-    background: linear-gradient(180deg, rgba($deep-forest, 1), rgba($deep-forest, 0.7));
+    background: linear-gradient(
+      180deg,
+      rgba($deep-forest, 1),
+      rgba($deep-forest, 0.7)
+    );
 
     &__role {
-        @include primary-font(400);
-        font-size: 1rem;
+      @include primary-font(400);
+      font-size: 1rem;
+      color: $white;
+      margin-bottom: 1rem;
+    }
+
+    &__icon {
+      font-size: 2rem;
+      color: $soft-green;
+      transition: transform 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        transform: scale(1.2);
         color: $white;
-        margin-bottom: 1rem;
       }
 
-      &__icon {
-        font-size: 2rem;
-        color: $soft-green;
-        transition: transform 0.3s ease, color 0.3s ease;
-    
-        &:hover {
-          transform: scale(1.2);
-          color: $white;
-        }
-    
-        &:active {
-          transform: scale(0.9);
-        }
-      } 
+      &:active {
+        transform: scale(0.9);
+      }
+    }
   }
 
   .sponsors {
     width: 100%;
     padding: 4rem 2rem;
     text-align: center;
-    background: linear-gradient(180deg, rgba($deep-forest, 1), rgba($dark-gray, 1));
+    background: linear-gradient(
+      180deg,
+      rgba($deep-forest, 1),
+      rgba($dark-gray, 1)
+    );
 
     &__description {
-        @include primary-font(500);
-        font-size: 1.2rem;
-        color: $mint-green;
-        margin-bottom: 1rem;
-        line-height: 1.6;
-      }
+      @include primary-font(500);
+      font-size: 1.2rem;
+      color: $mint-green;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
   }
 
   .footer {
     &__logo {
-        width: 10rem;
-        filter: brightness(0) invert(1) drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
-        transition: transform 0.3s ease;
-    
-        &:hover {
-          transform: scale(1.05);
-        }
+      width: 10rem;
+      filter: brightness(0) invert(1) drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
 
     &__copyright {
-        color: $light-green;
+      color: $light-green;
     }
 
     &__button {
-        @include button-style(10rem, 2.5rem, $white, $dark-green);
-        font-size: 0.85rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        text-decoration: none;
-        border-radius: 1.5rem;
-        transition: all 0.3s ease;
-        box-shadow: 
-          5px 5px 15px rgba(0, 0, 0, 0.2),
-          -5px -5px 15px rgba(255, 255, 255, 0.4);
-        backdrop-filter: blur(5px);
-    
-        &:hover {
-          background-color: $soft-mint;
-          color: $dark-green;
-          transform: scale(1.05);
-          box-shadow: 0 10px 20px rgba(100, 200, 120, 0.5);
-        }
-    
-        &:active {
-          transform: scale(0.95);
-          @include button-style(10rem, 2.5rem, $dark-green, $white);
-          border-radius: 1.5rem;
-        }
+      @include button-style(10rem, 2.5rem, $white, $dark-green);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2),
+        -5px -5px 15px rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(5px);
+
+      &:hover {
+        background-color: $soft-mint;
+        color: $dark-green;
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(100, 200, 120, 0.5);
       }
+
+      &:active {
+        transform: scale(0.95);
+        @include button-style(10rem, 2.5rem, $dark-green, $white);
+        border-radius: 1.5rem;
+      }
+    }
   }
 
   .notfound {
     &__button {
-        @include button-style(12rem, 3rem, $light-green, $deep-forest);
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-radius: 2rem;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    
-        &:hover {
-          transform: scale(1.1);
-          background-color: $dark-green;
-          color: $white;
-          box-shadow: 0 10px 20px rgba(100, 200, 120, 0.5);
-        }
-    
-        &:active {
-          transform: scale(0.95);
-          background-color: $white;
-          color: $dark-green;
-        }
+      @include button-style(12rem, 3rem, $light-green, $deep-forest);
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 2rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: $dark-green;
+        color: $white;
+        box-shadow: 0 10px 20px rgba(100, 200, 120, 0.5);
       }
+
+      &:active {
+        transform: scale(0.95);
+        background-color: $white;
+        color: $dark-green;
+      }
+    }
   }
 }

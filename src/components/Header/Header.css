@@ -50,7 +50,12 @@ h3, h4, h5, h6 {
   background-color: #2B3B2E;
   color: rgba(255, 255, 255, 0.6);
 }
-[data-theme=dark] h1, [data-theme=dark] h2, [data-theme=dark] h3, [data-theme=dark] h4, [data-theme=dark] h5, [data-theme=dark] h6 {
+[data-theme=dark] h1,
+[data-theme=dark] h2,
+[data-theme=dark] h3,
+[data-theme=dark] h4,
+[data-theme=dark] h5,
+[data-theme=dark] h6 {
   color: #C9E4C5;
 }
 [data-theme=dark] a {
@@ -400,6 +405,9 @@ html {
 .header__logo-img:hover {
   filter: none;
   transform: scale(1.1) rotate(2deg);
+}
+.header__logo-img:active {
+  transform: scale(0.95) rotate(0deg);
 }
 .header__nav {
   display: flex;

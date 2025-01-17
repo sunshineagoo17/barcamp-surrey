@@ -6,28 +6,27 @@ const Sponsors = () => {
   useScrollAnimation();
 
   return (
-    <section className="sponsors fade-in">
-      <h2 className="sponsors__title fade-in">Sponsored By</h2>
-      <div className="sponsors__content fade-in">
-        
-        {/* BitFolk Logo */}
+    <section className='sponsors fade-in'>
+      <h2 className='sponsors__title fade-in'>Sponsored By</h2>
+      <div className='sponsors__content fade-in'>
         <a
-          href="https://bitfolk.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="sponsors__logo-link"
-        >
+          href='https://bitfolk.com'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='sponsors__logo-link'>
           <img
             src={BitFolkLogo}
-            alt="BitFolk Logo"
-            className="sponsors__logo"
+            alt='BitFolk Logo'
+            className='sponsors__logo'
           />
         </a>
 
-        {/* Informative Copy */}
-        <div className="sponsors__info">
-          <p className="sponsors__description">
-            BitFolk Ltd is your trusted, no-nonsense VPS host. Offering reliable, feature-rich, and affordable virtual private servers with full transparency—no small print, just performance. Explore how BitFolk can power your next big idea.
+        <div className='sponsors__info'>
+          <p className='sponsors__description'>
+            BitFolk Ltd is your trusted, no-nonsense VPS host. Offering
+            reliable, feature-rich, and affordable virtual private servers with
+            full transparency—no small print, just performance. Explore how
+            BitFolk can power your next big idea.
           </p>
         </div>
       </div>

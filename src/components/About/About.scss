@@ -1,8 +1,8 @@
 // Import partials
-@use "../../styles/partials/colors" as *;
-@use "../../styles/partials/fonts" as *;
-@use "../../styles/partials/mixins" as *;
-@use "../../styles/global.scss" as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/global.scss' as *;
 
 .about {
   text-align: center;
@@ -42,7 +42,8 @@
     background: rgba(255, 255, 255, 0.6);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+      inset 0 2px 4px rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
@@ -59,7 +60,6 @@
     }
   }
 
-  // Base Icon Style
   &__icon {
     font-size: 3rem;
     color: green;
@@ -67,7 +67,6 @@
     transition: transform 0.75s ease;
   }
 
-  // 💬 Pop-in Animation for Comments Icon
   &__item:nth-child(1):hover &__icon {
     animation: popIn 1.25s ease-out;
   }
@@ -86,7 +85,6 @@
     }
   }
 
-  // 🔄 Shake Animation for Calendar Icon
   &__item:nth-child(2):hover &__icon {
     animation: shake 0.75s ease-in-out;
   }
@@ -109,7 +107,6 @@
     }
   }
 
-  // 🔽 Drop Animation for Location Icon
   &__item:nth-child(3):hover &__icon {
     animation: drop 1.25s ease;
   }

@@ -11,7 +11,7 @@ import Registration from './components/Registration/Registration';
 import Organisers from './components/Organisers/Organisers';
 import Sponsors from './components/Sponsors/Sponsors';
 import Footer from './components/Footer/Footer';
-import NotFound from './pages/NotFound/NotFound'; 
+import NotFound from './pages/NotFound/NotFound';
 
 import './styles/global.scss';
 
@@ -21,14 +21,14 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500); // Loader will disappear after 2.5 seconds
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <Router>
-      <div className="App">
+      <div className='App'>
         {isLoading ? (
           <Loader />
         ) : (
@@ -36,7 +36,7 @@ function App() {
             <Header />
             <Routes>
               <Route
-                path="/"
+                path='/'
                 element={
                   <>
                     <Hero />
@@ -50,7 +50,7 @@ function App() {
                   </>
                 }
               />
-              <Route path="*" element={<NotFound />} />
+              <Route path='*' element={<NotFound />} />
             </Routes>
           </>
         )}

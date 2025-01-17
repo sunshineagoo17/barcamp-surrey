@@ -1,14 +1,18 @@
 // Import partials
-@use "../../styles/partials/colors" as *;
-@use "../../styles/partials/fonts" as *;
-@use "../../styles/partials/mixins" as *;
-@use "../../styles/global.scss" as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/global.scss' as *;
 
 .sponsors {
   width: 100%;
   padding: 4rem 2rem;
   text-align: center;
-  background: linear-gradient(200deg, rgba($dark-green, 0.9), rgba(230, 250, 230, 1));
+  background: linear-gradient(
+    200deg,
+    rgba($dark-green, 0.9),
+    rgba(230, 250, 230, 1)
+  );
 
   &__title {
     @include primary-font(700);
@@ -26,8 +30,7 @@
     background: rgba(255, 255, 255, 0.15);
     border-radius: 2rem;
     padding: 2rem 3rem;
-    box-shadow:
-      10px 10px 25px rgba(0, 0, 0, 0.2),
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2),
       -10px -10px 25px rgba(255, 255, 255, 0.4),
       inset 2px 2px 4px rgba(255, 255, 255, 0.3),
       inset -2px -2px 4px rgba(0, 0, 0, 0.1);
