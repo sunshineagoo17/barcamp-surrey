@@ -1,5 +1,6 @@
 import './Organisers.scss';
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import useScrollAnimation from '../../hooks/useScrollAnimation';
 
 // Import images
 import LauraPhoto from '../../assets/images/laura-c.jpeg';
@@ -23,15 +24,17 @@ const BarcampOrganisers = [
 ];
 
 const Organisers = () => {
+  useScrollAnimation();
+
   return (
-    <section className="organisers">
-      <h2 className="organisers__title">Meet the Organisers</h2>
+    <section className="organisers fade-in">
+      <h2 className="organisers__title fade-in">Meet the Organisers</h2>
       <div className="organisers__grid">
         {BarcampOrganisers.map((organiser, index) => (
-          <div key={index} className="organisers__card">
+          <div key={index} className="organisers__card fade-in">
             <img
               src={organiser.photo}
-              alt={`Photo of ${organiser.name}`}
+              alt={`Headshot of ${organiser.name}`}
               className="organisers__photo"
             />
             <h3 className="organisers__name">{organiser.name}</h3>

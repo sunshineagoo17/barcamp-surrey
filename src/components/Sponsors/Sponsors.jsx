@@ -1,11 +1,14 @@
 import './Sponsors.scss';
-import BitFolkLogo from '../../assets/logos/bitfolk-logo.png'; 
+import BitFolkLogo from '../../assets/logos/bitfolk-logo.png';
+import useScrollAnimation from '../../hooks/useScrollAnimation';
 
 const Sponsors = () => {
+  useScrollAnimation();
+
   return (
-    <section className="sponsors">
-      <h2 className="sponsors__title">Sponsored By</h2>
-      <div className="sponsors__content">
+    <section className="sponsors fade-in">
+      <h2 className="sponsors__title fade-in">Sponsored By</h2>
+      <div className="sponsors__content fade-in">
         
         {/* BitFolk Logo */}
         <a

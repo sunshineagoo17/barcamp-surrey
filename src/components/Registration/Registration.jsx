@@ -1,9 +1,12 @@
 import './Registration.scss';
+import useScrollAnimation from '../../hooks/useScrollAnimation';
 
 const Registration = () => {
+  useScrollAnimation();
+
   return (
-    <section id="register" className="registration">
-      <h2 className="registration__title">Register Now</h2>
+    <section id="register" className="registration fade-in">
+      <h2 className="registration__title fade-in">Register Now</h2>
       <iframe
         src="https://lu.ma/embed/event/evt-u6LyCSDe4NG1hBq/simple"
         width="600"
@@ -14,6 +17,7 @@ const Registration = () => {
         aria-hidden="false"
         tabIndex="0"
         title="Barcamp Surrey Registration Form"
+        className="fade-in"
       ></iframe>
     </section>
   );

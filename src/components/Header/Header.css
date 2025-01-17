@@ -278,7 +278,7 @@ h3, h4, h5, h6 {
   transform: scale(1.05);
 }
 [data-theme=dark] .footer__copyright {
-  color: #FFFFFF;
+  color: #A5CB48;
 }
 [data-theme=dark] .footer__button {
   border-radius: 0.25rem;
@@ -326,6 +326,21 @@ h3, h4, h5, h6 {
   background-color: #375B2A;
   color: #FFFFFF;
   border-radius: 1.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .header {
