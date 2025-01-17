@@ -386,7 +386,6 @@ html {
 .hero {
   width: 100%;
   height: 90vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -422,124 +421,124 @@ html {
   opacity: 0.8;
 }
 .hero__synapse:nth-child(1) {
-  top: 97%;
-  left: 7%;
-  animation-delay: -5.4261610939s;
-  animation-duration: 7.9453791205s;
+  top: 12%;
+  left: 21%;
+  animation-delay: -5.218283219s;
+  animation-duration: 8.2294238742s;
 }
 .hero__synapse:nth-child(2) {
-  top: 73%;
-  left: 31%;
-  animation-delay: -6.9485723208s;
-  animation-duration: 6.5166579894s;
+  top: 49%;
+  left: 76%;
+  animation-delay: -2.2481880025s;
+  animation-duration: 7.9009098274s;
 }
 .hero__synapse:nth-child(3) {
-  top: 61%;
-  left: 3%;
-  animation-delay: -5.9368077781s;
-  animation-duration: 7.225688572s;
+  top: 37%;
+  left: 8%;
+  animation-delay: -6.6525083596s;
+  animation-duration: 9.1015947366s;
 }
 .hero__synapse:nth-child(4) {
-  top: 30%;
-  left: 62%;
-  animation-delay: -5.5960849627s;
-  animation-duration: 9.4457142375s;
+  top: 20%;
+  left: 51%;
+  animation-delay: -7.4133428228s;
+  animation-duration: 7.6113217519s;
 }
 .hero__synapse:nth-child(5) {
-  top: 93%;
-  left: 78%;
-  animation-delay: -0.8134328723s;
-  animation-duration: 7.7553268154s;
+  top: 91%;
+  left: 28%;
+  animation-delay: -2.4309405553s;
+  animation-duration: 6.3406165297s;
 }
 .hero__synapse:nth-child(6) {
-  top: 69%;
-  left: 53%;
-  animation-delay: -0.5002577041s;
-  animation-duration: 5.3107242179s;
+  top: 57%;
+  left: 65%;
+  animation-delay: -0.0932752261s;
+  animation-duration: 9.5756788839s;
 }
 .hero__synapse:nth-child(7) {
-  top: 53%;
-  left: 87%;
-  animation-delay: -2.7245646038s;
-  animation-duration: 9.6012773367s;
+  top: 63%;
+  left: 59%;
+  animation-delay: -5.3946538888s;
+  animation-duration: 7.2826208472s;
 }
 .hero__synapse:nth-child(8) {
-  top: 36%;
-  left: 74%;
-  animation-delay: -0.4148129623s;
-  animation-duration: 7.054555922s;
+  top: 61%;
+  left: 14%;
+  animation-delay: -3.9794290222s;
+  animation-duration: 5.7087603093s;
 }
 .hero__synapse:nth-child(9) {
-  top: 92%;
-  left: 10%;
-  animation-delay: -2.4078605104s;
-  animation-duration: 5.6810065884s;
+  top: 78%;
+  left: 34%;
+  animation-delay: -3.2144584276s;
+  animation-duration: 5.1500572061s;
 }
 .hero__synapse:nth-child(10) {
-  top: 78%;
-  left: 49%;
-  animation-delay: -0.2317597633s;
-  animation-duration: 6.8769521175s;
+  top: 52%;
+  left: 98%;
+  animation-delay: -7.0425306465s;
+  animation-duration: 6.4443035805s;
 }
 .hero__synapse:nth-child(11) {
-  top: 41%;
-  left: 26%;
-  animation-delay: -0.4134446768s;
-  animation-duration: 8.8826540369s;
+  top: 43%;
+  left: 12%;
+  animation-delay: -3.8485509488s;
+  animation-duration: 8.1376805734s;
 }
 .hero__synapse:nth-child(12) {
-  top: 97%;
-  left: 15%;
-  animation-delay: -7.6310712384s;
-  animation-duration: 5.7126009235s;
+  top: 29%;
+  left: 40%;
+  animation-delay: -5.3252454045s;
+  animation-duration: 6.1038034928s;
 }
 .hero__synapse:nth-child(13) {
-  top: 64%;
-  left: 14%;
-  animation-delay: -3.1351536723s;
-  animation-duration: 9.7225145765s;
+  top: 9%;
+  left: 64%;
+  animation-delay: -7.3699315675s;
+  animation-duration: 8.2708388184s;
 }
 .hero__synapse:nth-child(14) {
-  top: 28%;
-  left: 47%;
-  animation-delay: -3.46133358s;
-  animation-duration: 6.4405318332s;
+  top: 2%;
+  left: 16%;
+  animation-delay: -6.3309296417s;
+  animation-duration: 5.3217816034s;
 }
 .hero__synapse:nth-child(15) {
-  top: 57%;
-  left: 95%;
-  animation-delay: -3.8798361933s;
-  animation-duration: 6.9198101378s;
+  top: 20%;
+  left: 22%;
+  animation-delay: -1.4402124059s;
+  animation-duration: 7.5355086318s;
 }
 .hero__synapse:nth-child(16) {
-  top: 96%;
-  left: 16%;
-  animation-delay: -0.7714841583s;
-  animation-duration: 6.8382897571s;
+  top: 17%;
+  left: 8%;
+  animation-delay: -4.3653885849s;
+  animation-duration: 9.0363307824s;
 }
 .hero__synapse:nth-child(17) {
-  top: 76%;
-  left: 21%;
-  animation-delay: -7.5784223767s;
-  animation-duration: 9.884001158s;
+  top: 24%;
+  left: 3%;
+  animation-delay: -6.5858859198s;
+  animation-duration: 9.3405628419s;
 }
 .hero__synapse:nth-child(18) {
-  top: 96%;
-  left: 87%;
-  animation-delay: -6.2806910372s;
-  animation-duration: 8.5720805087s;
+  top: 48%;
+  left: 60%;
+  animation-delay: -2.2699648362s;
+  animation-duration: 8.7858033902s;
 }
 .hero__synapse:nth-child(19) {
-  top: 67%;
-  left: 77%;
-  animation-delay: -7.8740316115s;
-  animation-duration: 5.265268808s;
+  top: 98%;
+  left: 95%;
+  animation-delay: -2.9681390224s;
+  animation-duration: 7.2310941604s;
 }
 .hero__synapse:nth-child(20) {
-  top: 95%;
-  left: 58%;
-  animation-delay: -7.7054792313s;
-  animation-duration: 5.8767630372s;
+  top: 98%;
+  left: 81%;
+  animation-delay: -6.8191737493s;
+  animation-duration: 8.3439485726s;
 }
 @keyframes float {
   0% {
@@ -564,9 +563,8 @@ html {
   z-index: 1;
 }
 .hero__logo-container {
-  width: 45vw;
-  max-width: 18rem;
-  aspect-ratio: 1/1;
+  width: 16rem;
+  height: 16rem;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.1);
@@ -577,7 +575,7 @@ html {
   justify-content: center;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  overflow: hidden;
+  overflow: visible;
   z-index: 1;
   margin-bottom: 2rem;
 }
@@ -587,22 +585,22 @@ html {
 }
 @media screen and (min-width: 768px) {
   .hero__logo-container {
-    width: 25vw;
-    max-width: 22rem;
+    width: 15rem;
+    height: 15rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__logo-container {
-    width: 20vw;
-    max-width: 24rem;
+    width: 20rem;
+    height: 20rem;
   }
 }
 .hero__logo {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   -o-object-fit: contain;
      object-fit: contain;
-  padding: 1rem;
+  padding: 0.5rem;
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 .hero__logo:hover {
@@ -611,7 +609,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .hero__logo {
-    padding: 2rem;
+    padding: 1rem;
   }
 }
 .hero__title {
