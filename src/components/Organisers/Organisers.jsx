@@ -7,7 +7,7 @@ import AlanPhoto from '../../assets/images/alan-p.jpeg';
 const BarcampOrganisers = [
   {
     name: 'Laura Czajkowski',
-    role: 'Head of Community',
+    role: 'Head of Developer Ecosystem',
     email: 'Laura.czajkowski@gmail.com',
     linkedin: 'https://www.linkedin.com/in/lauraczajkowski/',
     photo: LauraPhoto,
