@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Loader from './components/Loader/Loader';
 import Header from './components/Header/Header';
 import About from './components/About/About';
 import Hero from './components/Hero/Hero';
@@ -11,17 +12,33 @@ import Footer from './components/Footer/Footer';
 import './styles/global.scss';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500); // Loader will disappear after 2.5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <About />
-      <Map />
-      <FAQ />
-      <Registration />
-      <Organisers />
-      <Sponsors />
-      <Footer />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <Header />
+          <Hero />
+          <About />
+          <Map />
+          <FAQ />
+          <Registration />
+          <Organisers />
+          <Sponsors />
+          <Footer />
+        </>
+      )}
     </div>
   );
 }
