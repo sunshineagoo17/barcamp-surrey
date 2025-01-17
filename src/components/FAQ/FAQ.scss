@@ -43,16 +43,51 @@
     }
   }
 
+  // Base Icon Style
   &__icon {
     font-size: 3rem;
     color: green;
     margin-bottom: 1rem;
     transition: transform 0.5s ease, color 0.5s ease;
+  }
 
-    .faq__card:hover & {
-      transform: rotate(20deg) scale(1.1);
-      color: $dark-gray;
-    }
+  // 🚗 Car Icon Animation: Bumpy Ride
+  &__card:nth-child(1):hover &__icon {
+    animation: bumpyRide 1s infinite ease-in-out;
+  }
+
+  @keyframes bumpyRide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0.3rem) translateY(-0.2rem); }
+    40% { transform: translateX(-0.3rem) translateY(0.2rem); }
+    60% { transform: translateX(0.2rem) translateY(-0.3rem); }
+    80% { transform: translateX(-0.2rem) translateY(0.3rem); }
+    100% { transform: translateX(0); }
+  }
+
+  // 🔌 EV Charging Icon Animation: Electric Spark
+  &__card:nth-child(2):hover &__icon {
+    animation: electricPulse 0.8s infinite ease-in-out;
+    filter: drop-shadow(0 0 0.5rem rgba(0, 255, 0, 0.8));
+  }
+
+  @keyframes electricPulse {
+    0% { transform: scale(1); filter: drop-shadow(0 0 0.3rem rgba(0, 255, 0, 0.6)); }
+    50% { transform: scale(1.15); filter: drop-shadow(0 0 1rem rgba(0, 255, 0, 1)); }
+    100% { transform: scale(1); filter: drop-shadow(0 0 0.3rem rgba(0, 255, 0, 0.6)); }
+  }
+
+  // 🍽️ Food Icon Animation: Bounce and Rotate
+  &__card:nth-child(3):hover &__icon {
+    animation: bounceRotate 1s infinite ease-in-out;
+  }
+
+  @keyframes bounceRotate {
+    0% { transform: translateY(0) rotate(0); }
+    25% { transform: translateY(-0.5rem) rotate(-10deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(-0.5rem) rotate(10deg); }
+    100% { transform: translateY(0) rotate(0); }
   }
 
   &__question {
@@ -70,7 +105,7 @@
 
   @include mobile {
     &__grid {
-      grid-template-columns: 1fr;
+      flex-direction: row;
     }
 
     &__card {

@@ -15,20 +15,19 @@ const Header = () => {
 
   return (
     <header className="header">
-        {/* Logo Image */}
-        <div className="header__logo">
-            <a href="#hero">
-                <img src={Logo} alt="BarCamp Surrey Logo" className="header__logo-img" />
-            </a>
-        </div>
-
+      {/* Logo Image */}
+      <div className="header__logo">
+        <a href="https://barcampsurrey.org">
+          <img src={Logo} alt="BarCamp Surrey Logo" className="header__logo-img" />
+        </a>
+      </div>
 
       {/* Navigation Links */}
       <nav className="header__nav">
-        <a href="#hero" className="header__nav-link">About</a>
+        <a href="#about" className="header__nav-link">About</a>
         <a href="#faq" className="header__nav-link">FAQ</a>
         <a href="#register" className="header__nav-link">Register</a>
-        <a href="#contact" className="header__nav-link">Contact</a>
+        <a href="mailto:Laura.czajkowski@gmail.com" className="header__nav-link">Contact</a>
       </nav>
 
       {/* Light/Dark Mode Toggle */}

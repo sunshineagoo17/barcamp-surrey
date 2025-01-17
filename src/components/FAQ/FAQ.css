@@ -328,6 +328,10 @@ h3, h4, h5, h6 {
   border-radius: 1.5rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .faq {
   width: 100%;
   padding: 4rem 2rem;
@@ -368,9 +372,66 @@ h3, h4, h5, h6 {
   margin-bottom: 1rem;
   transition: transform 0.5s ease, color 0.5s ease;
 }
-.faq__card:hover .faq__icon {
-  transform: rotate(20deg) scale(1.1);
-  color: #4D4D4D;
+.faq__card:nth-child(1):hover .faq__icon {
+  animation: bumpyRide 1s infinite ease-in-out;
+}
+@keyframes bumpyRide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0.3rem) translateY(-0.2rem);
+  }
+  40% {
+    transform: translateX(-0.3rem) translateY(0.2rem);
+  }
+  60% {
+    transform: translateX(0.2rem) translateY(-0.3rem);
+  }
+  80% {
+    transform: translateX(-0.2rem) translateY(0.3rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.faq__card:nth-child(2):hover .faq__icon {
+  animation: electricPulse 0.8s infinite ease-in-out;
+  filter: drop-shadow(0 0 0.5rem rgba(0, 255, 0, 0.8));
+}
+@keyframes electricPulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0.3rem rgba(0, 255, 0, 0.6));
+  }
+  50% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 1rem rgb(0, 255, 0));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0.3rem rgba(0, 255, 0, 0.6));
+  }
+}
+.faq__card:nth-child(3):hover .faq__icon {
+  animation: bounceRotate 1s infinite ease-in-out;
+}
+@keyframes bounceRotate {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  25% {
+    transform: translateY(-0.5rem) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-0.5rem) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
 }
 .faq__question {
   font-family: "Fieldwork", sans-serif;
@@ -387,7 +448,7 @@ h3, h4, h5, h6 {
 }
 @media screen and (min-width: 320px) {
   .faq__grid {
-    grid-template-columns: 1fr;
+    flex-direction: row;
   }
   .faq__card {
     width: 100%;

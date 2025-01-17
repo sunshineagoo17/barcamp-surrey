@@ -328,6 +328,10 @@ h3, h4, h5, h6 {
   border-radius: 1.5rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .footer {
   width: 100%;
   padding: 2rem 4rem;
@@ -363,6 +367,22 @@ h3, h4, h5, h6 {
   color: #375B2A;
   text-decoration: none;
   text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.footer__link {
+  color: #000000;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.footer__link:hover {
+  color: #375B2A;
+  text-shadow: 0 0 10px rgba(165, 203, 72, 0.6);
+}
+.footer__link:active {
+  color: #4D4D4D;
+  font-weight: bold;
+  transform: scale(0.95);
+  border-radius: 0.25rem;
 }
 .footer__button {
   border-radius: 0.25rem;

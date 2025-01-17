@@ -11,11 +11,11 @@ const About = () => {
 
   // Scroll to detailed section
   const scrollToDetails = () => {
-    document.getElementById('details').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('faq').scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="about">
+    <section id="about" className="about">
       <h1 className="about__title">Event Info</h1>
       <div className="about__info">
 

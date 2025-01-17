@@ -5,7 +5,7 @@ import { faCar, faChargingStation, faUtensils } from '@fortawesome/free-solid-sv
 
 const FAQ = () => {
   return (
-    <section className="faq">
+    <section id="faq" className="faq">  
       <h2 className="faq__title">FAQ</h2>
       <div className="faq__grid">
         
