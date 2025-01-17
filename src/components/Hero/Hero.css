@@ -282,6 +282,9 @@ h3, h4, h5, h6 {
 [data-theme=dark] .footer__logo:hover {
   transform: scale(1.05);
 }
+[data-theme=dark] .footer__logo:active {
+  transform: scale(0.95);
+}
 [data-theme=dark] .footer__copyright {
   color: #A5CB48;
 }
@@ -395,7 +398,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 60vh;
+    height: 63vh;
   }
 }
 .hero__synapses {
@@ -419,124 +422,124 @@ html {
   opacity: 0.8;
 }
 .hero__synapse:nth-child(1) {
-  top: 18%;
-  left: 9%;
-  animation-delay: -1.0819760333s;
-  animation-duration: 6.5224316566s;
+  top: 71%;
+  left: 48%;
+  animation-delay: -5.9399513879s;
+  animation-duration: 7.5207014514s;
 }
 .hero__synapse:nth-child(2) {
-  top: 33%;
-  left: 76%;
-  animation-delay: -6.4799493439s;
-  animation-duration: 8.7269071888s;
+  top: 76%;
+  left: 31%;
+  animation-delay: -4.8847809483s;
+  animation-duration: 5.4441933475s;
 }
 .hero__synapse:nth-child(3) {
-  top: 15%;
-  left: 34%;
-  animation-delay: -7.8918662479s;
-  animation-duration: 7.4150293011s;
+  top: 4%;
+  left: 26%;
+  animation-delay: -4.3961961521s;
+  animation-duration: 6.6764298714s;
 }
 .hero__synapse:nth-child(4) {
-  top: 65%;
-  left: 22%;
-  animation-delay: -0.1328369122s;
-  animation-duration: 7.6609115034s;
+  top: 97%;
+  left: 48%;
+  animation-delay: -6.2936432633s;
+  animation-duration: 7.7432002043s;
 }
 .hero__synapse:nth-child(5) {
-  top: 84%;
-  left: 66%;
-  animation-delay: -0.485204131s;
-  animation-duration: 6.6855511218s;
+  top: 97%;
+  left: 84%;
+  animation-delay: -0.3527070585s;
+  animation-duration: 8.3399143603s;
 }
 .hero__synapse:nth-child(6) {
-  top: 74%;
-  left: 23%;
-  animation-delay: -7.3832916507s;
-  animation-duration: 9.5709712711s;
+  top: 28%;
+  left: 10%;
+  animation-delay: -7.6269748938s;
+  animation-duration: 9.00877475s;
 }
 .hero__synapse:nth-child(7) {
-  top: 40%;
-  left: 93%;
-  animation-delay: -0.4473223917s;
-  animation-duration: 9.4971060858s;
+  top: 53%;
+  left: 77%;
+  animation-delay: -3.6383630707s;
+  animation-duration: 5.5748317639s;
 }
 .hero__synapse:nth-child(8) {
-  top: 27%;
+  top: 14%;
   left: 44%;
-  animation-delay: -4.6692807613s;
-  animation-duration: 6.3981299028s;
+  animation-delay: -2.8804779777s;
+  animation-duration: 5.3898979012s;
 }
 .hero__synapse:nth-child(9) {
-  top: 91%;
-  left: 60%;
-  animation-delay: -7.3635135463s;
-  animation-duration: 9.8515877241s;
+  top: 16%;
+  left: 31%;
+  animation-delay: -7.7708526392s;
+  animation-duration: 5.8038208552s;
 }
 .hero__synapse:nth-child(10) {
-  top: 18%;
-  left: 23%;
-  animation-delay: -2.7898982058s;
-  animation-duration: 7.9371684561s;
+  top: 83%;
+  left: 99%;
+  animation-delay: -6.7492046107s;
+  animation-duration: 7.1773739268s;
 }
 .hero__synapse:nth-child(11) {
-  top: 35%;
-  left: 83%;
-  animation-delay: -1.6936785661s;
-  animation-duration: 5.8562772317s;
+  top: 78%;
+  left: 11%;
+  animation-delay: -5.1046805322s;
+  animation-duration: 7.5982035633s;
 }
 .hero__synapse:nth-child(12) {
-  top: 35%;
-  left: 10%;
-  animation-delay: -3.0347930246s;
-  animation-duration: 8.4165679477s;
+  top: 88%;
+  left: 48%;
+  animation-delay: -4.1887322662s;
+  animation-duration: 8.2740231433s;
 }
 .hero__synapse:nth-child(13) {
-  top: 67%;
-  left: 74%;
-  animation-delay: -6.0133827592s;
-  animation-duration: 9.4279382368s;
+  top: 31%;
+  left: 7%;
+  animation-delay: -4.1167496295s;
+  animation-duration: 9.820773242s;
 }
 .hero__synapse:nth-child(14) {
-  top: 91%;
-  left: 91%;
-  animation-delay: -4.842349608s;
-  animation-duration: 6.4586122158s;
+  top: 86%;
+  left: 1%;
+  animation-delay: -1.672127652s;
+  animation-duration: 6.7348035745s;
 }
 .hero__synapse:nth-child(15) {
-  top: 79%;
-  left: 40%;
-  animation-delay: -5.7615872303s;
-  animation-duration: 6.547868592s;
+  top: 27%;
+  left: 61%;
+  animation-delay: -4.3035100392s;
+  animation-duration: 8.6206851409s;
 }
 .hero__synapse:nth-child(16) {
-  top: 100%;
-  left: 87%;
-  animation-delay: -4.5067355093s;
-  animation-duration: 5.695400493s;
+  top: 60%;
+  left: 63%;
+  animation-delay: -0.8176461371s;
+  animation-duration: 5.8569816837s;
 }
 .hero__synapse:nth-child(17) {
-  top: 54%;
-  left: 55%;
-  animation-delay: -5.3016478207s;
-  animation-duration: 9.3633758956s;
+  top: 79%;
+  left: 91%;
+  animation-delay: -0.8177282408s;
+  animation-duration: 9.5451927654s;
 }
 .hero__synapse:nth-child(18) {
-  top: 19%;
-  left: 28%;
-  animation-delay: -0.9735464717s;
-  animation-duration: 9.7293929276s;
+  top: 7%;
+  left: 64%;
+  animation-delay: -6.30093524s;
+  animation-duration: 8.9362720444s;
 }
 .hero__synapse:nth-child(19) {
-  top: 78%;
-  left: 41%;
-  animation-delay: -4.3476411455s;
-  animation-duration: 8.4096707451s;
+  top: 19%;
+  left: 49%;
+  animation-delay: -2.6694260789s;
+  animation-duration: 8.0733881591s;
 }
 .hero__synapse:nth-child(20) {
-  top: 30%;
-  left: 34%;
-  animation-delay: -6.2721088607s;
-  animation-duration: 6.8028591639s;
+  top: 48%;
+  left: 86%;
+  animation-delay: -4.5400916967s;
+  animation-duration: 8.8536599632s;
 }
 @keyframes float {
   0% {
@@ -583,8 +586,8 @@ html {
 }
 @media screen and (min-width: 768px) {
   .hero__logo-container {
-    width: 18rem;
-    height: 18rem;
+    width: 20rem;
+    height: 20rem;
   }
 }
 .hero__logo {
@@ -630,17 +633,8 @@ html {
   transform: translateY(-10px);
 }
 .hero__button {
-  border-radius: 0.25rem;
-  text-transform: uppercase;
-  font-size: 0.75rem;
   width: 10rem;
   height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  border: none;
   background-color: #FFFFFF;
   color: #375B2A;
   border-radius: 2rem;
@@ -651,9 +645,8 @@ html {
   position: relative;
   z-index: 1;
   cursor: pointer;
-  transition: all 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), inset 0 0 0 rgba(255, 255, 255, 0);
-  transform: translateY(-2px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   background-color: #C8E6A1;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -676,14 +669,14 @@ html {
 .hero__button:hover {
   background-color: #A5CB48;
   color: #FFFFFF;
-  transform: scale(1.08);
+  transform: scale(1.5);
   box-shadow: 0 12px 25px rgba(165, 203, 72, 0.5), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .hero__button:hover:before {
   opacity: 0.8;
 }
 .hero__button:active {
-  transform: scale(0.95) translateY(2px);
+  transform: scale(0.9);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-color: #9ac237;
 }

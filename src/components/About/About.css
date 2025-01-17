@@ -282,6 +282,9 @@ h3, h4, h5, h6 {
 [data-theme=dark] .footer__logo:hover {
   transform: scale(1.05);
 }
+[data-theme=dark] .footer__logo:active {
+  transform: scale(0.95);
+}
 [data-theme=dark] .footer__copyright {
   color: #A5CB48;
 }
@@ -523,4 +526,5 @@ html {
 }
 .about__button:visited, .about__button:active {
   text-decoration: none;
+  transform: scale(0.9);
 }/*# sourceMappingURL=About.css.map */

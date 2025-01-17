@@ -69,6 +69,10 @@
       transform: scale(1.1) rotate(2deg);
     }
 
+    &:active {
+        transform: scale(.9) rotate(0deg);
+    }
+
     @include mobile {
       width: 9rem;
     }
