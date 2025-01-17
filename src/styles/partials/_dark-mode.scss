@@ -294,4 +294,29 @@
         }
       }
   }
+
+  .notfound {
+    &__button {
+        @include button-style(12rem, 3rem, $light-green, $deep-forest);
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 2rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    
+        &:hover {
+          transform: scale(1.1);
+          background-color: $dark-green;
+          color: $white;
+          box-shadow: 0 10px 20px rgba(100, 200, 120, 0.5);
+        }
+    
+        &:active {
+          transform: scale(0.95);
+          background-color: $white;
+          color: $dark-green;
+        }
+      }
+  }
 }

@@ -327,6 +327,38 @@ h3, h4, h5, h6 {
   color: #FFFFFF;
   border-radius: 1.5rem;
 }
+[data-theme=dark] .notfound__button {
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  width: 12rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background-color: #A5CB48;
+  color: #2B3B2E;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+[data-theme=dark] .notfound__button:hover {
+  transform: scale(1.1);
+  background-color: #375B2A;
+  color: #FFFFFF;
+  box-shadow: 0 10px 20px rgba(100, 200, 120, 0.5);
+}
+[data-theme=dark] .notfound__button:active {
+  transform: scale(0.95);
+  background-color: #FFFFFF;
+  color: #375B2A;
+}
 
 html {
   scroll-behavior: smooth;
