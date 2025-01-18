@@ -235,6 +235,33 @@ h3, h4, h5, h6 {
 [data-theme=dark] .registration {
   background: #2B3B2E !important;
 }
+[data-theme=dark] .registration__button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.0625rem;
+  color: #375B2A;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+}
+[data-theme=dark] .registration__button:hover {
+  background-color: #4c7e3a;
+  color: #FFFFFF;
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+[data-theme=dark] .registration__button:active {
+  transform: scale(0.98);
+  background-color: green;
+  color: #FFFFFF;
+}
 [data-theme=dark] .organisers {
   width: 100%;
   padding: 4rem 2rem;
@@ -287,6 +314,49 @@ h3, h4, h5, h6 {
 }
 [data-theme=dark] .footer__copyright {
   color: #A5CB48;
+}
+[data-theme=dark] .footer__created-by {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 500;
+  color: #A5CB48;
+}
+[data-theme=dark] .footer__sun-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+[data-theme=dark] .footer__sun-link:hover .footer__sun-icon {
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+  transform: scale(1.3);
+}
+[data-theme=dark] .footer__sun-link:active .footer__sun-icon {
+  transform: scale(0.9);
+  filter: brightness(1.1);
+}
+[data-theme=dark] .footer__sun-icon {
+  font-size: 0.65rem;
+  color: #A5CB48;
+  transition: color 0.3s ease, transform 0.2s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+}
+@media screen and (min-width: 375px) {
+  [data-theme=dark] .footer__sun-icon {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  [data-theme=dark] .footer__sun-icon {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  [data-theme=dark] .footer__sun-icon {
+    font-size: 1.5rem;
+  }
 }
 [data-theme=dark] .footer__button {
   border-radius: 0.25rem;
@@ -421,124 +491,124 @@ html {
   opacity: 0.8;
 }
 .hero__synapse:nth-child(1) {
-  top: 12%;
-  left: 21%;
-  animation-delay: -5.218283219s;
-  animation-duration: 8.2294238742s;
+  top: 64%;
+  left: 16%;
+  animation-delay: -2.8148286961s;
+  animation-duration: 5.2290668933s;
 }
 .hero__synapse:nth-child(2) {
-  top: 49%;
-  left: 76%;
-  animation-delay: -2.2481880025s;
-  animation-duration: 7.9009098274s;
+  top: 41%;
+  left: 81%;
+  animation-delay: -1.5705457688s;
+  animation-duration: 6.1587153471s;
 }
 .hero__synapse:nth-child(3) {
-  top: 37%;
-  left: 8%;
-  animation-delay: -6.6525083596s;
-  animation-duration: 9.1015947366s;
+  top: 28%;
+  left: 25%;
+  animation-delay: -5.7284219762s;
+  animation-duration: 8.2728434706s;
 }
 .hero__synapse:nth-child(4) {
-  top: 20%;
-  left: 51%;
-  animation-delay: -7.4133428228s;
-  animation-duration: 7.6113217519s;
+  top: 25%;
+  left: 62%;
+  animation-delay: -4.8443214714s;
+  animation-duration: 5.656865323s;
 }
 .hero__synapse:nth-child(5) {
-  top: 91%;
-  left: 28%;
-  animation-delay: -2.4309405553s;
-  animation-duration: 6.3406165297s;
+  top: 96%;
+  left: 100%;
+  animation-delay: -5.8019778329s;
+  animation-duration: 6.3496804319s;
 }
 .hero__synapse:nth-child(6) {
-  top: 57%;
-  left: 65%;
-  animation-delay: -0.0932752261s;
-  animation-duration: 9.5756788839s;
+  top: 12%;
+  left: 50%;
+  animation-delay: -1.5426944017s;
+  animation-duration: 9.7747848789s;
 }
 .hero__synapse:nth-child(7) {
-  top: 63%;
-  left: 59%;
-  animation-delay: -5.3946538888s;
-  animation-duration: 7.2826208472s;
+  top: 55%;
+  left: 54%;
+  animation-delay: -7.8297891371s;
+  animation-duration: 9.7332510373s;
 }
 .hero__synapse:nth-child(8) {
-  top: 61%;
-  left: 14%;
-  animation-delay: -3.9794290222s;
-  animation-duration: 5.7087603093s;
+  top: 41%;
+  left: 65%;
+  animation-delay: -6.1614027389s;
+  animation-duration: 8.7441449569s;
 }
 .hero__synapse:nth-child(9) {
-  top: 78%;
-  left: 34%;
-  animation-delay: -3.2144584276s;
-  animation-duration: 5.1500572061s;
+  top: 59%;
+  left: 64%;
+  animation-delay: -1.8606501116s;
+  animation-duration: 6.9961726657s;
 }
 .hero__synapse:nth-child(10) {
-  top: 52%;
-  left: 98%;
-  animation-delay: -7.0425306465s;
-  animation-duration: 6.4443035805s;
+  top: 7%;
+  left: 40%;
+  animation-delay: -4.7987107542s;
+  animation-duration: 6.3428006895s;
 }
 .hero__synapse:nth-child(11) {
-  top: 43%;
-  left: 12%;
-  animation-delay: -3.8485509488s;
-  animation-duration: 8.1376805734s;
+  top: 21%;
+  left: 26%;
+  animation-delay: -7.9058718988s;
+  animation-duration: 9.7347899131s;
 }
 .hero__synapse:nth-child(12) {
-  top: 29%;
-  left: 40%;
-  animation-delay: -5.3252454045s;
-  animation-duration: 6.1038034928s;
+  top: 14%;
+  left: 85%;
+  animation-delay: -5.3437884969s;
+  animation-duration: 5.5301525616s;
 }
 .hero__synapse:nth-child(13) {
-  top: 9%;
-  left: 64%;
-  animation-delay: -7.3699315675s;
-  animation-duration: 8.2708388184s;
+  top: 35%;
+  left: 96%;
+  animation-delay: -7.1108896799s;
+  animation-duration: 7.6875606907s;
 }
 .hero__synapse:nth-child(14) {
-  top: 2%;
-  left: 16%;
-  animation-delay: -6.3309296417s;
-  animation-duration: 5.3217816034s;
+  top: 32%;
+  left: 98%;
+  animation-delay: -7.6983751038s;
+  animation-duration: 9.4861667847s;
 }
 .hero__synapse:nth-child(15) {
-  top: 20%;
-  left: 22%;
-  animation-delay: -1.4402124059s;
-  animation-duration: 7.5355086318s;
+  top: 94%;
+  left: 16%;
+  animation-delay: -1.4300613213s;
+  animation-duration: 9.1488646685s;
 }
 .hero__synapse:nth-child(16) {
-  top: 17%;
-  left: 8%;
-  animation-delay: -4.3653885849s;
-  animation-duration: 9.0363307824s;
+  top: 34%;
+  left: 92%;
+  animation-delay: -3.3804929879s;
+  animation-duration: 8.6218376439s;
 }
 .hero__synapse:nth-child(17) {
-  top: 24%;
-  left: 3%;
-  animation-delay: -6.5858859198s;
-  animation-duration: 9.3405628419s;
+  top: 6%;
+  left: 27%;
+  animation-delay: -6.3904371761s;
+  animation-duration: 6.4317249841s;
 }
 .hero__synapse:nth-child(18) {
-  top: 48%;
-  left: 60%;
-  animation-delay: -2.2699648362s;
-  animation-duration: 8.7858033902s;
+  top: 49%;
+  left: 79%;
+  animation-delay: -4.2763387971s;
+  animation-duration: 9.6028701469s;
 }
 .hero__synapse:nth-child(19) {
-  top: 98%;
-  left: 95%;
-  animation-delay: -2.9681390224s;
-  animation-duration: 7.2310941604s;
+  top: 56%;
+  left: 10%;
+  animation-delay: -2.6226184755s;
+  animation-duration: 5.0474758601s;
 }
 .hero__synapse:nth-child(20) {
-  top: 98%;
-  left: 81%;
-  animation-delay: -6.8191737493s;
-  animation-duration: 8.3439485726s;
+  top: 72%;
+  left: 42%;
+  animation-delay: -0.9283902669s;
+  animation-duration: 8.3618890398s;
 }
 @keyframes float {
   0% {
@@ -649,7 +719,7 @@ html {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   position: relative;
   z-index: 1;
   cursor: pointer;
