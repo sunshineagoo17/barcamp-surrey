@@ -4,7 +4,7 @@ import useScrollAnimation from '../../hooks/useScrollAnimation';
 const Registration = () => {
   useScrollAnimation();
 
-  const eventUrl = 'https://lu.ma/ins7ivwr?from=embed'; 
+  const eventUrl = 'https://lu.ma/ins7ivwr?from=embed';
 
   return (
     <section id='register' className='registration fade-in'>
@@ -12,8 +12,7 @@ const Registration = () => {
 
       <button
         className='registration__button'
-        onClick={() => window.open(eventUrl, '_blank')}
-      >
+        onClick={() => window.open(eventUrl, '_blank')}>
         Save Your Spot
       </button>
 
@@ -21,8 +20,7 @@ const Registration = () => {
         className='registration__container'
         onClick={() => window.open(eventUrl, '_blank')}
         role='button'
-        tabIndex={0}
-      >
+        tabIndex={0}>
         <iframe
           src='https://lu.ma/embed/event/evt-u6LyCSDe4NG1hBq/simple'
           allowFullScreen

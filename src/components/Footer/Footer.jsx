@@ -1,5 +1,7 @@
 import './Footer.scss';
 import WordmarkLogo from '../../assets/logos/barcamp_logo-wordmark.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
   return (
@@ -15,9 +17,22 @@ const Footer = () => {
         <a
           href='https://barcampsurrey.org'
           rel='noopener noreferrer'
-          className='footer__link'>
+          className='footer__link'
+        >
           BarCamp Surrey
         </a>
+        <div className='footer__divider'>&nbsp;|&nbsp;</div>
+        <span className='footer__created-by'>
+          Created by
+          <a
+            href='https://www.sunshineagoo.com'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='footer__sun-link'
+          >
+            <FontAwesomeIcon icon={faSun} className='footer__sun-icon' />
+          </a>
+        </span>
       </div>
 
       <div className='footer__contact'>
