@@ -36,12 +36,11 @@ function Share() {
 
     // Glassmorphic Gradient Background
     const bgColors = {
-      'theme-black': ['rgba(43,43,43,0.9)', 'rgba(20,20,20,0.8)'],
-      'theme-green': ['rgba(55,91,42,0.9)', 'rgba(165,203,72,0.8)'],
-        'theme-white': ['#FFFFFF', '#F7F7F7'],
+      'theme-black': ['rgba(30, 30, 30, 1)', 'rgba(60, 60, 60, 1)'],
+      'theme-green': ['rgba(30, 77, 38, 1)', 'rgba(102, 187, 106, 1)'],
+      'theme-white': ['#FFFFFF', '#F7F7F7'],
     };
 
-    
     const gradient = ctx.createLinearGradient(0, 0, width, height);
     bgColors[theme].forEach((color, index) => {
       gradient.addColorStop(index / (bgColors[theme].length - 1), color);
@@ -49,30 +48,30 @@ function Share() {
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, width, height);
 
-     // Add Subtle Shapes for White Theme
-  if (theme === 'theme-white') {
-    const addCircle = (x, y, radius, color) => {
+    // Add Subtle Shapes for White Theme
+    if (theme === 'theme-white') {
+      const addCircle = (x, y, radius, color) => {
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        ctx.fillStyle = color;
+        ctx.fill();
+      };
+
+      addCircle(width * 0.25, height * 0.3, 20, 'rgba(95, 255, 143, 0.1)');
+      addCircle(width * 0.75, height * 0.8, 40, 'rgba(68, 255, 0, 0.05)');
+      addCircle(width * 0.5, height * 0.5, 50, 'rgb(0, 255, 98, .1)');
+    }
+
+    // Add Rounded Border
+    if (theme === 'theme-white') {
+      ctx.save();
+      ctx.strokeStyle = 'rgba(0,0,0,0.1)';
+      ctx.lineWidth = 4;
       ctx.beginPath();
-      ctx.arc(x, y, radius, 0, Math.PI * 2);
-      ctx.fillStyle = color;
-      ctx.fill();
-    };
-
-    addCircle(width * 0.25, height * 0.3, 20, 'rgba(95, 255, 143, 0.1)'); 
-    addCircle(width * 0.75, height * 0.8, 40, 'rgba(68, 255, 0, 0.05)'); 
-    addCircle(width * 0.5, height * 0.5, 50, 'rgb(0, 255, 98, .1)');
-  }
-
-  // Add Rounded Border
-  if (theme === 'theme-white') {
-    ctx.save();
-    ctx.strokeStyle = 'rgba(0,0,0,0.1)';
-    ctx.lineWidth = 4;
-    ctx.beginPath();
-    ctx.roundRect(40, 40, width - 80, height - 80, 25);
-    ctx.stroke();
-    ctx.restore();
-  }
+      ctx.roundRect(40, 40, width - 80, height - 80, 25);
+      ctx.stroke();
+      ctx.restore();
+    }
 
     // Add Blurred Blobs for Depth
     const createBlob = (x, y, size, color) => {
@@ -86,7 +85,7 @@ function Share() {
       ctx.fill();
       ctx.restore();
     };
-    createBlob(width * 0.27, height * 0.42, 20, 'rgba(255, 255, 255, 0.1)');
+    createBlob(width * 0.27, height * 0.39, 20, 'rgba(255, 255, 255, 0.1)');
     createBlob(width * 0.8, height * 0.8, 40, 'rgba(255, 255, 255, 0.1)');
 
     // Add Glassmorphic Rounded Rectangle
@@ -130,13 +129,13 @@ function Share() {
         format === 'instagram' ? 'bold 26px Fieldwork' : 'bold 36px Fieldwork';
       ctx.fillStyle = theme === 'theme-white' ? '#000' : '#FFF';
       ctx.textAlign = 'center';
-      ctx.fillText('Proud Participant of BarCamp Surrey', width / 2, 215);
+      ctx.fillText('Proud Participant of BarCamp Surrey', width / 2, 205);
 
       // Event Details
       ctx.font = format === 'instagram' ? '20px Fieldwork' : '24px Fieldwork';
-      ctx.fillText('www.barcampsurrey.org', width / 2, 260);
-      ctx.fillText('August 2, 2025 | 9:00 AM - 5:30 PM', width / 2, 300);
-      ctx.fillText('Godalming College, UK', width / 2, 340);
+      ctx.fillText('www.barcampsurrey.org', width / 2, 250);
+      ctx.fillText('August 2, 2025 | 9:00 AM - 5:30 PM', width / 2, 290);
+      ctx.fillText('Godalming College, UK', width / 2, 330);
 
       // Add User Image
       if (includeImage && image) {
