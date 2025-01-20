@@ -6,13 +6,13 @@ import logoDark from '../../assets/logos/barcamp_logo-gradient_social.webp';
 import logoLight from '../../assets/logos/barcamp_logo-main.webp';
 
 function Share() {
-  const [role, setRole] = useState('attendee');
+  const [role, setRole] = useState('none');
   const [name, setName] = useState('');
   const [includeName, setIncludeName] = useState(false);
   const [title, setTitle] = useState('');
   const [includeTitle, setIncludeTitle] = useState(false);
-  const [theme, setTheme] = useState('theme-black');
-  const [format, setFormat] = useState('instagram');
+  const [theme, setTheme] = useState('theme-green');
+  const [format, setFormat] = useState('linkedin');
   const [includeImage, setIncludeImage] = useState(false);
   const [image, setImage] = useState(null);
   const canvasRef = useRef(null);
@@ -360,11 +360,11 @@ function Share() {
             onChange={() => setIncludeImage(!includeImage)}
           />
           Include Photo
-        </label>
+        </label >
         {includeImage && (
           <div className='share__custom-file'>
-            <label className='share__custom-file-label share__label'>
-              
+            <label className='share__custom-file-label'>
+                Upload Image
               <input
                 type='file'
                 accept='image/*'
