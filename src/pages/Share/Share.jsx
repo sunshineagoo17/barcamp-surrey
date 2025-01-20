@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Share.scss';
+import XLogo from '../../assets/logos/X_logo.svg';
 import logoDark from '../../assets/logos/barcamp_logo-gradient_social.webp';
 import logoLight from '../../assets/logos/barcamp_logo-main.webp';
 
@@ -249,7 +250,9 @@ function Share() {
       />
       <div className='share__header'>
         <h1>Create & Share Your Event Badge</h1>
-        <p className='share__subheading'>Personalise your badge for #BarCampSurrey and share it!</p>
+        <p className='share__subheading'>
+          Personalise your badge for #BarCampSurrey and share it!
+        </p>
       </div>
 
       {/* Participant Details */}
@@ -359,11 +362,11 @@ function Share() {
             onChange={() => setIncludeImage(!includeImage)}
           />
           Include Photo
-        </label >
+        </label>
         {includeImage && (
           <div className='share__custom-file'>
             <label className='share__custom-file-label'>
-                Upload Image
+              Upload Image
               <input
                 type='file'
                 accept='image/*'
@@ -375,9 +378,9 @@ function Share() {
         {includeImage && (
           <>
             <p className='share__fine-print'>
-              For the best results, please upload a square image. *Please note:
-              We do not store images. Once downloaded, they are immediately
-              deleted, and nothing is kept on our servers.*
+              For best results, please upload a square image. *Note: We do not
+              store images. Once downloaded, they are immediately deleted, and
+              no data is retained on our servers.*
             </p>
           </>
         )}
@@ -392,7 +395,7 @@ function Share() {
       {/* Actions */}
       <div className='share__section'>
         <button className='share__button' onClick={handleDownload}>
-          Download Badge
+          Download
         </button>
         <button
           className='share__button share__button--reset'
@@ -403,7 +406,9 @@ function Share() {
 
       {/* Share Section */}
       <div className='share__section'>
-        <h2 className='share__heading'>Join the Conversation with #BarCampSurrey</h2>
+        <h2 className='share__heading'>
+          Join the Conversation with #BarCampSurrey
+        </h2>
         <div className='share__buttons'>
           <button
             className='share__button-icon'
@@ -435,7 +440,7 @@ function Share() {
             <i className='fab fa-linkedin'></i>
           </a>
 
-          {/* Share on Twitter */}
+          {/* Share on X */}
           <a
             className='share__button-icon'
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
@@ -443,7 +448,7 @@ function Share() {
             )}`}
             target='_blank'
             rel='noopener noreferrer'>
-            <i className='fab fa-twitter'></i>
+            <img src={XLogo} alt='X Logo' className='share__icon-image' />
           </a>
         </div>
       </div>
