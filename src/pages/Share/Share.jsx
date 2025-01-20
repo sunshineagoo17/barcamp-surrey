@@ -21,20 +21,17 @@ function Share() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
 
-    // Dimensions for each format
     const dimensions = {
       instagram: { width: 600, height: 600 },
       twitter: { width: 1200, height: 675 },
       linkedin: { width: 1200, height: 627 },
     };
 
-    // Default to Instagram size if format is invalid
     const { width, height } = dimensions[format] || dimensions.instagram;
 
     canvas.width = width;
     canvas.height = height;
 
-    // Glassmorphic Gradient Background
     const bgColors = {
       'theme-black': ['rgba(30, 30, 30, 1)', 'rgba(60, 60, 60, 1)'],
       'theme-green': ['rgba(30, 77, 38, 1)', 'rgba(102, 187, 106, 1)'],
@@ -48,7 +45,6 @@ function Share() {
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, width, height);
 
-    // Add Subtle Shapes for White Theme
     if (theme === 'theme-white') {
       const addCircle = (x, y, radius, color) => {
         ctx.beginPath();
@@ -62,7 +58,6 @@ function Share() {
       addCircle(width * 0.5, height * 0.5, 50, 'rgb(0, 255, 98, .1)');
     }
 
-    // Add Rounded Border
     if (theme === 'theme-white') {
       ctx.save();
       ctx.strokeStyle = 'rgba(0,0,0,0.1)';
@@ -73,7 +68,6 @@ function Share() {
       ctx.restore();
     }
 
-    // Add Blurred Blobs for Depth
     const createBlob = (x, y, size, color) => {
       ctx.save();
       ctx.beginPath();
@@ -88,7 +82,6 @@ function Share() {
     createBlob(width * 0.25, height * 0.3, 20, 'rgba(255, 255, 255, 0.1)');
     createBlob(width * 0.8, height * 0.8, 40, 'rgba(255, 255, 255, 0.1)');
 
-    // Add Glassmorphic Rounded Rectangle
     ctx.save();
     ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
@@ -106,7 +99,6 @@ function Share() {
     ctx.stroke();
     ctx.restore();
 
-    // Dynamically Select Logo Based on Theme
     const logoImg = new Image();
     const isLogoDark = theme === 'theme-white';
     logoImg.src = isLogoDark ? logoDark : logoLight;
@@ -124,11 +116,9 @@ function Share() {
 
       ctx.drawImage(logoImg, logoX, logoY, logoWidth, adjustedLogoHeight);
 
-      // Check if additional elements are included
       const hasAdditionalContent =
         includeName || includeTitle || includeImage || role !== 'none';
 
-      // Adjust font sizes for Twitter and LinkedIn
       const headlineFont =
         format === 'twitter' || format === 'linkedin'
           ? hasAdditionalContent
@@ -147,17 +137,14 @@ function Share() {
           ? '20px Fieldwork'
           : '24px Fieldwork';
 
-      // Position adjustments
       const headlineY = hasAdditionalContent ? 195 : height / 2 - 60;
       const detailsY = hasAdditionalContent ? 235 : height / 2;
 
-      // Headline
       ctx.font = headlineFont;
       ctx.fillStyle = theme === 'theme-white' ? '#000' : '#FFF';
       ctx.textAlign = 'center';
       ctx.fillText('Proud Participant of BarCamp Surrey', width / 2, headlineY);
 
-      // Event Details
       ctx.font = detailsFont;
       ctx.fillText('www.barcampsurrey.org', width / 2, detailsY);
       ctx.fillText(
@@ -167,7 +154,6 @@ function Share() {
       );
       ctx.fillText('Godalming College, UK', width / 2, detailsY + 80);
 
-      // Add User Image
       if (includeImage && image) {
         const userImage = new Image();
         userImage.src = image;
@@ -190,7 +176,6 @@ function Share() {
         };
       }
 
-      // Participant Name, Title, and Role
       const textBase = 475;
       if (includeName && name) {
         ctx.font = 'bold 24px Fieldwork';
@@ -379,7 +364,7 @@ function Share() {
         {includeImage && (
           <div className='share__custom-file'>
             <label className='share__custom-file-label share__label'>
-              Choose File
+              
               <input
                 type='file'
                 accept='image/*'
