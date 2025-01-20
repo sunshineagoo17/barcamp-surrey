@@ -416,6 +416,53 @@ function Share() {
           Reset
         </button>
       </div>
+
+      {/* Share Section */}
+      <div className='share__section'>
+        <h2>Join the Conversation with #BarCampSurrey</h2>
+        <div className='share__buttons'>
+          <button
+            className='share__button-icon'
+            onClick={async () => {
+              const text = `Check out BarCamp Surrey! Proud to participate in this amazing event. Learn more at: https://www.barcampsurrey.org`;
+              if (navigator.share) {
+                try {
+                  await navigator.share({ text });
+                } catch (error) {
+                  if (error.name !== 'AbortError') {
+                    toast.error('An error occurred while sharing.');
+                  }
+                }
+              } else {
+                toast.info('Sharing is not supported on your device.');
+              }
+            }}>
+            <i className='fas fa-share-alt'></i>
+          </button>
+
+          {/* Share on LinkedIn */}
+          <a
+            className='share__button-icon'
+            href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+              'https://www.barcampsurrey.org'
+            )}`}
+            target='_blank'
+            rel='noopener noreferrer'>
+            <i className='fab fa-linkedin'></i>
+          </a>
+
+          {/* Share on Twitter */}
+          <a
+            className='share__button-icon'
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+              `Excited to participate in BarCamp Surrey! Learn more at: https://www.barcampsurrey.org`
+            )}`}
+            target='_blank'
+            rel='noopener noreferrer'>
+            <i className='fab fa-twitter'></i>
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
