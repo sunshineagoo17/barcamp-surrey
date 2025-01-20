@@ -19,56 +19,88 @@ function Share() {
   const drawBadge = useCallback(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-
+  
     // Dimensions for each format
     const dimensions = {
       instagram: { width: 600, height: 600 },
       twitter: { width: 1200, height: 675 },
       linkedin: { width: 1200, height: 627 },
     };
-
+  
     // Default to Instagram size if format is invalid
     const { width, height } = dimensions[format] || dimensions.instagram;
-
+  
     canvas.width = width;
     canvas.height = height;
-
-    // Glassmorphic Background Gradient
+  
+    // Glassmorphic Gradient Background
     const bgColors = {
-      'theme-black': ['rgba(43,43,43,0.8)', 'rgba(30,30,30,0.9)'],
-      'theme-green': ['rgba(55,91,42,0.8)', 'rgba(165,203,72,0.9)'],
-      'theme-white': ['rgba(255,255,255,0.7)', 'rgba(234,234,234,0.8)'],
+      'theme-black': ['rgba(43,43,43,0.9)', 'rgba(20,20,20,0.8)'],
+      'theme-green': ['rgba(55,91,42,0.9)', 'rgba(165,203,72,0.8)'],
+      'theme-white': ['rgba(255,255,255,0.8)', 'rgba(234,234,234,0.7)'],
     };
     const gradient = ctx.createLinearGradient(0, 0, width, height);
     bgColors[theme].forEach((color, index) => {
       gradient.addColorStop(index / (bgColors[theme].length - 1), color);
     });
-
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, width, height);
-    ctx.strokeStyle = 'rgba(255,255,255,0.3)';
-    ctx.lineWidth = 5;
-    ctx.strokeRect(0, 0, width, height);
-
-    // Logo
+  
+    // Add Blurred Blobs for Depth
+    const createBlob = (x, y, size, color) => {
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(x, y, size, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.fillStyle = color;
+      ctx.shadowColor = color;
+      ctx.shadowBlur = 50;
+      ctx.fill();
+      ctx.restore();
+    };
+    createBlob(width * 0.3, height * 0.3, 10, 'rgba(white, 0.3)');
+    createBlob(width * 0.7, height * 0.7, 30, 'rgba(white, 0.3)');
+  
+    // Add Glassmorphic Rounded Rectangle
+    ctx.save();
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+    ctx.lineWidth = 3;
+    const padding = 50;
+    const radius = 25;
+    ctx.roundRect(
+      padding,
+      padding,
+      width - padding * 2,
+      height - padding * 2,
+      radius
+    );
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+  
+    // Add BarCamp Surrey Logo
     const logoImg = new Image();
     logoImg.src = logo;
     logoImg.onload = () => {
-      const logoSize = 120;
-      ctx.drawImage(logoImg, 40, 40, logoSize, logoSize);
-
-      // Event Details
-      ctx.font = 'bold 32px Fieldwork';
+      const logoHeight = 120; // Set max height
+      const aspectRatio = logoImg.width / logoImg.height;
+      const logoWidth = logoHeight * aspectRatio; 
+      ctx.drawImage(logoImg, 40, 40, logoWidth, logoHeight);
+  
+      // Headline
+      ctx.font = format === 'instagram' ? 'bold 26px Fieldwork' : 'bold 36px Fieldwork';
       ctx.fillStyle = theme === 'theme-white' ? '#000' : '#FFF';
       ctx.textAlign = 'center';
-      ctx.fillText('BarCamp Surrey', width / 2, 100);
-      ctx.font = '20px Fieldwork';
-      ctx.fillText('www.barcampsurrey.org', width / 2, 140);
-      ctx.fillText('August 2, 2025', width / 2, 180);
-      ctx.fillText('9:00 AM - 5:30 PM', width / 2, 220);
-      ctx.fillText('Godalming College, UK', width / 2, 260);
-
-      // Dynamic Image (if added)
+      ctx.fillText('Proud Participant of BarCamp Surrey', width / 2, 200);
+  
+      // Event Details
+      ctx.font = format === 'instagram' ? '20px Fieldwork' : '24px Fieldwork';
+      ctx.fillText('www.barcampsurrey.org', width / 2, 260);
+      ctx.fillText('August 2, 2025 | 9:00 AM - 5:30 PM', width / 2, 300);
+      ctx.fillText('Godalming College, UK', width / 2, 340);
+  
+      // Add User Image
       if (includeImage && image) {
         const userImage = new Image();
         userImage.src = image;
@@ -76,48 +108,38 @@ function Share() {
           const imgSize = 150;
           ctx.save();
           ctx.beginPath();
-          ctx.arc(width / 2, 360, imgSize / 2, 0, Math.PI * 2);
+          ctx.arc(width / 2, 400, imgSize / 2, 0, Math.PI * 2);
           ctx.closePath();
           ctx.clip();
           ctx.drawImage(
             userImage,
             width / 2 - imgSize / 2,
-            360 - imgSize / 2,
+            400 - imgSize / 2,
             imgSize,
             imgSize
           );
           ctx.restore();
         };
       }
-
+  
       // Participant Name, Title, and Role
       if (includeName && name) {
-        ctx.font = 'bold 36px Fieldwork';
-        ctx.fillText(name, width / 2, 480);
+        ctx.font = format === 'instagram' ? 'bold 28px Fieldwork' : 'bold 36px Fieldwork';
+        ctx.fillText(name, width / 2, 520);
       }
-
+  
       if (includeTitle && title) {
-        ctx.font = 'italic 24px Fieldwork';
-        ctx.fillText(title, width / 2, 520);
+        ctx.font = format === 'instagram' ? 'italic 20px Fieldwork' : 'italic 28px Fieldwork';
+        ctx.fillText(title, width / 2, 560);
       }
-
+  
       if (role !== 'none') {
-        ctx.font = 'bold 24px Fieldwork';
-        ctx.fillText(role.toUpperCase(), width / 2, 560);
+        ctx.font = format === 'instagram' ? 'bold 20px Fieldwork' : 'bold 28px Fieldwork';
+        ctx.fillText(role.toUpperCase(), width / 2, 600);
       }
     };
-  }, [
-    role,
-    name,
-    title,
-    theme,
-    format,
-    includeImage,
-    image,
-    includeName,
-    includeTitle,
-  ]);
-
+  }, [role, name, title, theme, format, includeImage, image, includeName, includeTitle]);
+  
   useEffect(() => {
     drawBadge();
   }, [drawBadge]);
