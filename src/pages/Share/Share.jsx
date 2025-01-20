@@ -85,7 +85,7 @@ function Share() {
       ctx.fill();
       ctx.restore();
     };
-    createBlob(width * 0.27, height * 0.39, 20, 'rgba(255, 255, 255, 0.1)');
+    createBlob(width * 0.25, height * 0.3, 20, 'rgba(255, 255, 255, 0.1)');
     createBlob(width * 0.8, height * 0.8, 40, 'rgba(255, 255, 255, 0.1)');
 
     // Add Glassmorphic Rounded Rectangle
@@ -114,28 +114,58 @@ function Share() {
     logoImg.onload = () => {
       const baseLogoHeight = 100;
       const adjustedLogoHeight = isLogoDark
-        ? baseLogoHeight * 1.35
+        ? baseLogoHeight * 1.15
         : baseLogoHeight;
       const aspectRatio = logoImg.width / logoImg.height;
       const logoWidth = adjustedLogoHeight * aspectRatio;
 
-      const logoX = isLogoDark ? 30 : 60;
+      const logoX = isLogoDark ? 35 : 60;
       const logoY = 55;
 
       ctx.drawImage(logoImg, logoX, logoY, logoWidth, adjustedLogoHeight);
 
+      // Check if additional elements are included
+      const hasAdditionalContent =
+        includeName || includeTitle || includeImage || role !== 'none';
+
+      // Adjust font sizes for Twitter and LinkedIn
+      const headlineFont =
+        format === 'twitter' || format === 'linkedin'
+          ? hasAdditionalContent
+            ? 'bold 50px Fieldwork'
+            : 'bold 55px Fieldwork'
+          : hasAdditionalContent
+          ? 'bold 26px Fieldwork'
+          : 'bold 28px Fieldwork';
+
+      const detailsFont =
+        format === 'twitter' || format === 'linkedin'
+          ? hasAdditionalContent
+            ? '28px Fieldwork'
+            : '32px Fieldwork'
+          : hasAdditionalContent
+          ? '20px Fieldwork'
+          : '24px Fieldwork';
+
+      // Position adjustments
+      const headlineY = hasAdditionalContent ? 195 : height / 2 - 60;
+      const detailsY = hasAdditionalContent ? 235 : height / 2;
+
       // Headline
-      ctx.font =
-        format === 'instagram' ? 'bold 26px Fieldwork' : 'bold 36px Fieldwork';
+      ctx.font = headlineFont;
       ctx.fillStyle = theme === 'theme-white' ? '#000' : '#FFF';
       ctx.textAlign = 'center';
-      ctx.fillText('Proud Participant of BarCamp Surrey', width / 2, 205);
+      ctx.fillText('Proud Participant of BarCamp Surrey', width / 2, headlineY);
 
       // Event Details
-      ctx.font = format === 'instagram' ? '20px Fieldwork' : '24px Fieldwork';
-      ctx.fillText('www.barcampsurrey.org', width / 2, 250);
-      ctx.fillText('August 2, 2025 | 9:00 AM - 5:30 PM', width / 2, 290);
-      ctx.fillText('Godalming College, UK', width / 2, 330);
+      ctx.font = detailsFont;
+      ctx.fillText('www.barcampsurrey.org', width / 2, detailsY);
+      ctx.fillText(
+        'August 2, 2025 | 9:00 AM - 5:30 PM',
+        width / 2,
+        detailsY + 40
+      );
+      ctx.fillText('Godalming College, UK', width / 2, detailsY + 80);
 
       // Add User Image
       if (includeImage && image) {
@@ -143,7 +173,7 @@ function Share() {
         userImage.src = image;
         userImage.onload = () => {
           const imgSize = 90;
-          const imgY = 405;
+          const imgY = 400;
           ctx.save();
           ctx.beginPath();
           ctx.arc(width / 2, imgY, imgSize / 2, 0, Math.PI * 2);
@@ -359,10 +389,13 @@ function Share() {
           </div>
         )}
         {includeImage && (
-          <p className='share__fine-print'>
-            *Please note: We do not store images. Once downloaded, they are
-            immediately deleted, and nothing is kept on our servers.*
-          </p>
+          <>
+            <p className='share__fine-print'>
+              For the best results, please upload a square image. *Please note:
+              We do not store images. Once downloaded, they are immediately
+              deleted, and nothing is kept on our servers.*
+            </p>
+          </>
         )}
       </div>
 
