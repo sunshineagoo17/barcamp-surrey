@@ -38,14 +38,41 @@ function Share() {
     const bgColors = {
       'theme-black': ['rgba(43,43,43,0.9)', 'rgba(20,20,20,0.8)'],
       'theme-green': ['rgba(55,91,42,0.9)', 'rgba(165,203,72,0.8)'],
-      'theme-white': ['rgba(255,255,255,0.8)', 'rgba(234,234,234,0.7)'],
+        'theme-white': ['#FFFFFF', '#F7F7F7'],
     };
+
+    
     const gradient = ctx.createLinearGradient(0, 0, width, height);
     bgColors[theme].forEach((color, index) => {
       gradient.addColorStop(index / (bgColors[theme].length - 1), color);
     });
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, width, height);
+
+     // Add Subtle Shapes for White Theme
+  if (theme === 'theme-white') {
+    const addCircle = (x, y, radius, color) => {
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+    };
+
+    addCircle(width * 0.25, height * 0.3, 20, 'rgba(95, 255, 143, 0.1)'); 
+    addCircle(width * 0.75, height * 0.8, 40, 'rgba(68, 255, 0, 0.05)'); 
+    addCircle(width * 0.5, height * 0.5, 50, 'rgb(0, 255, 98, .1)');
+  }
+
+  // Add Rounded Border
+  if (theme === 'theme-white') {
+    ctx.save();
+    ctx.strokeStyle = 'rgba(0,0,0,0.1)';
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.roundRect(40, 40, width - 80, height - 80, 25);
+    ctx.stroke();
+    ctx.restore();
+  }
 
     // Add Blurred Blobs for Depth
     const createBlob = (x, y, size, color) => {
@@ -94,7 +121,7 @@ function Share() {
       const logoWidth = adjustedLogoHeight * aspectRatio;
 
       const logoX = isLogoDark ? 30 : 60;
-      const logoY = 60;
+      const logoY = 55;
 
       ctx.drawImage(logoImg, logoX, logoY, logoWidth, adjustedLogoHeight);
 
