@@ -3,7 +3,19 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/global.scss' as *;
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .share {
+  animation: fadeIn 0.5s ease-out;
   max-width: 50rem;
   margin: 2rem auto;
   padding: 2rem;

@@ -37,6 +37,9 @@ const Header = () => {
         <a href='#register' className='header__nav-link'>
           Register
         </a>
+        <a href='/share' className='header__nav-link'>
+          Share
+        </a>
         <a
           href='mailto:Laura.czajkowski@gmail.com'
           className='header__nav-link'>
