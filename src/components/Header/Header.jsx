@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.scss';
 import Logo from '../../assets/logos/barcamp_logo-wordmark.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,6 +7,7 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [theme, setTheme] = useState('light');
+  const location = useLocation();
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -13,38 +15,53 @@ const Header = () => {
     document.documentElement.setAttribute('data-theme', newTheme);
   };
 
+  const isMainPage = location.pathname === '/';
+  const isSharePage = location.pathname === '/share';
+
   return (
     <header className='header'>
       {/* Logo Image */}
       <div className='header__logo'>
-        <a href='https://barcampsurrey.org'>
+        <Link to='/'>
           <img
             src={Logo}
             alt='BarCamp Surrey Logo'
             className='header__logo-img'
           />
-        </a>
+        </Link>
       </div>
 
       {/* Navigation Links */}
       <nav className='header__nav'>
-        <a href='#about' className='header__nav-link'>
-          About
-        </a>
-        <a href='#faq' className='header__nav-link'>
-          FAQ
-        </a>
-        <a href='#register' className='header__nav-link'>
-          Register
-        </a>
-        <a href='/share' className='header__nav-link'>
-          Share
-        </a>
-        <a
-          href='mailto:Laura.czajkowski@gmail.com'
-          className='header__nav-link'>
-          Contact
-        </a>
+        {isMainPage ? (
+          <>
+            <a href='#about' className='header__nav-link'>
+              About
+            </a>
+            <a href='#faq' className='header__nav-link'>
+              FAQ
+            </a>
+            <a href='#register' className='header__nav-link'>
+              Register
+            </a>
+            <a
+              href='mailto:Laura.czajkowski@gmail.com'
+              className='header__nav-link'>
+              Contact
+            </a>
+          </>
+        ) : (
+          <>
+            <Link to='/' className='header__nav-link'>
+              Home
+            </Link>
+            {!isSharePage && (
+              <Link to='/share' className='header__nav-link'>
+                Share
+              </Link>
+            )}
+          </>
+        )}
       </nav>
 
       {/* Light/Dark Mode Toggle */}

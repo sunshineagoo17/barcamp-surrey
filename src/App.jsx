@@ -13,6 +13,7 @@ import Sponsors from './components/Sponsors/Sponsors';
 import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound/NotFound';
 import Share from './pages/Share/Share';
+import Social from './components/Social/Social';
 
 import './styles/global.scss';
 
@@ -46,14 +47,15 @@ function App() {
                     <FAQ />
                     <Registration />
                     <Organisers />
+                    <Social />
                     <Sponsors />
-                    <Footer />
                   </>
                 }
               />
               <Route path="/share" element={<Share />} />
               <Route path='*' element={<NotFound />} />
             </Routes>
+            <Footer />
           </>
         )}
       </div>

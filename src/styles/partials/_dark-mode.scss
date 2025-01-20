@@ -556,6 +556,106 @@
     }
   }
 
+  .social {
+    &__title {
+      color: $dark-green;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    &__button {
+      background: $soft-mint;
+      color: $dark-green;
+      width: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: .5rem;
+      border-radius: .5rem;
+      font-size: .85rem;
+      text-decoration: none;
+      border: .125rem solid $white;
+      transition: background-color 0.3s ease, transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+        @include large-mobile {
+            width: 8rem;
+            padding: .6rem;
+        }
+
+        @include tablet {
+            padding: .7rem;
+            width: 10rem;
+            font-size: 1rem;
+        }
+
+        @include desktop {
+            width: 11rem;
+        }
+
+      &:hover {
+        background: $soft-mint;
+        color: $dark-green;
+        border: 1px solid $white;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        background: green;
+        color: $white;
+        transform: scale(0.98);
+        border: 1px solid $soft-green;
+      }
+    }
+
+    &__badge-button {
+      display: inline-block;
+      background: linear-gradient(135deg, $dark-green, $deep-forest);
+      color: $soft-mint;
+      padding: 1rem 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 1rem;
+      text-decoration: none;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: buttonPulse 2s infinite;
+  
+      @include tablet {
+          padding: 1rem 2rem;
+      }
+  
+      @include desktop {
+          padding: 1rem 3.5rem;
+      }
+  
+      &:hover {
+        transform: scale(1.05);
+        color: $very-light-green;
+        background: linear-gradient(135deg, $deep-forest, $dark-green);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+  
+      &:active {
+        transform: scale(0.95);
+        color: $white;
+        box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(135deg, $dark-gray, $black);
+      }
+    }
+  
+    @keyframes buttonPulse {
+      0%,
+      100% {
+        box-shadow: 0 0 15px rgba(173, 255, 47, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 25px rgba(173, 255, 47, 0.8);
+      }
+    }
+  }
+
   .notfound {
     &__button {
       @include button-style(12rem, 3rem, $light-green, $deep-forest);

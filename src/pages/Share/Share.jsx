@@ -2,11 +2,14 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Share.scss';
+import useScrollAnimation from '../../hooks/useScrollAnimation';
 import XLogo from '../../assets/logos/X_logo.svg';
 import logoDark from '../../assets/logos/barcamp_logo-gradient_social.webp';
 import logoLight from '../../assets/logos/barcamp_logo-main.webp';
 
 function Share() {
+    useScrollAnimation();
+
   const [role, setRole] = useState('none');
   const [name, setName] = useState('');
   const [includeName, setIncludeName] = useState(false);
@@ -238,7 +241,7 @@ function Share() {
   };
 
   return (
-    <div className='share'>
+    <div className='share fade-in'>
       <ToastContainer
         position='bottom-center'
         autoClose={4000}
@@ -248,7 +251,7 @@ function Share() {
         draggable
         pauseOnHover
       />
-      <div className='share__header'>
+      <div className='share__header fade-in'>
         <h1>Create & Share Your Event Badge</h1>
         <p className='share__subheading'>
           Personalise your badge for #BarCampSurrey and share it!
@@ -256,7 +259,7 @@ function Share() {
       </div>
 
       {/* Participant Details */}
-      <div className='share__section'>
+      <div className='share__section fade-in'>
         <h2 className='share__heading'>Participant Details</h2>
 
         {/* Include Name Toggle */}
@@ -299,7 +302,7 @@ function Share() {
       </div>
 
       {/* Role Selection */}
-      <div className='share__section'>
+      <div className='share__section fade-in'>
         <h2 className='share__heading'>Select Your Role</h2>
         {['organiser', 'speaker', 'attendee', 'volunteer', 'none'].map(
           (option) => (
@@ -318,7 +321,7 @@ function Share() {
       </div>
 
       {/* Theme Selection */}
-      <div className='share__section'>
+      <div className='share__section fade-in'>
         <h2 className='share__heading'>Select a Theme</h2>
         {['theme-black', 'theme-green', 'theme-white'].map((option) => (
           <label key={option} className='share__label'>
@@ -336,7 +339,7 @@ function Share() {
       </div>
 
       {/* Format Selection */}
-      <div className='share__section'>
+      <div className='share__section fade-in'>
         <h2 className='share__heading'>Choose Format</h2>
         {['twitter', 'linkedin'].map((option) => (
           <label key={option} className='share__label'>
@@ -353,7 +356,7 @@ function Share() {
       </div>
 
       {/* Include Photo */}
-      <div className='share__section'>
+      <div className='share__section fade-in'>
         <h2 className='share__heading'>Add Your Photo</h2>
         <label className='share__label'>
           <input
@@ -387,13 +390,13 @@ function Share() {
       </div>
 
       {/* Preview */}
-      <div className='share__section share__section--preview'>
+      <div className='share__section fade-in share__section--preview'>
         <h2 className='share__heading'>Preview</h2>
         <canvas ref={canvasRef} className='share__canvas'></canvas>
       </div>
 
       {/* Actions */}
-      <div className='share__section'>
+      <div className='share__section fade-in'>
         <button className='share__button' onClick={handleDownload}>
           Download
         </button>
@@ -405,7 +408,7 @@ function Share() {
       </div>
 
       {/* Share Section */}
-      <div className='share__section'>
+      <div className='share__section fade-in'>
         <h2 className='share__heading'>
           Join the Conversation with #BarCampSurrey
         </h2>
