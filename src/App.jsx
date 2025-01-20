@@ -12,6 +12,7 @@ import Organisers from './components/Organisers/Organisers';
 import Sponsors from './components/Sponsors/Sponsors';
 import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound/NotFound';
+import Share from './pages/Share/Share';
 
 import './styles/global.scss';
 
@@ -50,6 +51,7 @@ function App() {
                   </>
                 }
               />
+              <Route path="/share" element={<Share />} />
               <Route path='*' element={<NotFound />} />
             </Routes>
           </>
