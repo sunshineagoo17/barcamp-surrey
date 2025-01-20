@@ -215,9 +215,8 @@ function Share() {
           </div>
         )}
         {includeImage && (
-          <p className="fine-print">
-            We do not save images. Once downloaded, the image is deleted. We don't keep anything on
-            our servers.
+          <p className="share__fine-print">
+            *Please note: We do not store images. Once downloaded, they are immediately deleted, and nothing is kept on our servers.*
           </p>
         )}
       </div>
