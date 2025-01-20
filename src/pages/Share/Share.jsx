@@ -265,15 +265,15 @@ function Share() {
       />
       <div className='share__header'>
         <h1>Create & Share Your Event Badge</h1>
-        <p>Personalise your badge for #BarCampSurrey and share it!</p>
+        <p className='share__subheading'>Personalise your badge for #BarCampSurrey and share it!</p>
       </div>
 
       {/* Participant Details */}
       <div className='share__section'>
-        <h2>Participant Details</h2>
+        <h2 className='share__heading'>Participant Details</h2>
 
         {/* Include Name Toggle */}
-        <label>
+        <label className='share__label'>
           <input
             type='checkbox'
             checked={includeName}
@@ -292,7 +292,7 @@ function Share() {
         )}
 
         {/* Include Title Toggle */}
-        <label>
+        <label className='share__label'>
           <input
             type='checkbox'
             checked={includeTitle}
@@ -313,10 +313,10 @@ function Share() {
 
       {/* Role Selection */}
       <div className='share__section'>
-        <h2>Select Your Role</h2>
+        <h2 className='share__heading'>Select Your Role</h2>
         {['organiser', 'speaker', 'attendee', 'volunteer', 'none'].map(
           (option) => (
-            <label key={option}>
+            <label key={option} className='share__label'>
               <input
                 type='radio'
                 name='role'
@@ -332,9 +332,9 @@ function Share() {
 
       {/* Theme Selection */}
       <div className='share__section'>
-        <h2>Select a Theme</h2>
+        <h2 className='share__heading'>Select a Theme</h2>
         {['theme-black', 'theme-green', 'theme-white'].map((option) => (
-          <label key={option}>
+          <label key={option} className='share__label'>
             <input
               type='radio'
               name='theme'
@@ -350,9 +350,9 @@ function Share() {
 
       {/* Format Selection */}
       <div className='share__section'>
-        <h2>Choose Format</h2>
+        <h2 className='share__heading'>Choose Format</h2>
         {['instagram', 'twitter', 'linkedin'].map((option) => (
-          <label key={option}>
+          <label key={option} className='share__label'>
             <input
               type='radio'
               name='format'
@@ -367,8 +367,8 @@ function Share() {
 
       {/* Include Photo */}
       <div className='share__section'>
-        <h2>Add Your Photo</h2>
-        <label>
+        <h2 className='share__heading'>Add Your Photo</h2>
+        <label className='share__label'>
           <input
             type='checkbox'
             checked={includeImage}
@@ -378,7 +378,7 @@ function Share() {
         </label>
         {includeImage && (
           <div className='share__custom-file'>
-            <label className='share__custom-file-label'>
+            <label className='share__custom-file-label share__label'>
               Choose File
               <input
                 type='file'
@@ -401,7 +401,7 @@ function Share() {
 
       {/* Preview */}
       <div className='share__section share__section--preview'>
-        <h2>Preview</h2>
+        <h2 className='share__heading'>Preview</h2>
         <canvas ref={canvasRef} className='share__canvas'></canvas>
       </div>
 
@@ -419,7 +419,7 @@ function Share() {
 
       {/* Share Section */}
       <div className='share__section'>
-        <h2>Join the Conversation with #BarCampSurrey</h2>
+        <h2 className='share__heading'>Join the Conversation with #BarCampSurrey</h2>
         <div className='share__buttons'>
           <button
             className='share__button-icon'
