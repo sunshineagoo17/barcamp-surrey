@@ -54,12 +54,12 @@ function Share() {
       ctx.closePath();
       ctx.fillStyle = color;
       ctx.shadowColor = color;
-      ctx.shadowBlur = 50;
+      ctx.shadowBlur = 80;
       ctx.fill();
       ctx.restore();
     };
-    createBlob(width * 0.3, height * 0.3, 10, 'rgba(white, 0.3)');
-    createBlob(width * 0.7, height * 0.7, 30, 'rgba(white, 0.3)');
+    createBlob(width * 0.27, height * 0.42, 20, 'rgba(255, 255, 255, 0.1)');
+    createBlob(width * 0.8, height * 0.8, 40, 'rgba(255, 255, 255, 0.1)');
   
     // Add Glassmorphic Rounded Rectangle
     ctx.save();
@@ -83,16 +83,16 @@ function Share() {
     const logoImg = new Image();
     logoImg.src = logo;
     logoImg.onload = () => {
-      const logoHeight = 120; // Set max height
+      const logoHeight = 100; 
       const aspectRatio = logoImg.width / logoImg.height;
-      const logoWidth = logoHeight * aspectRatio; 
-      ctx.drawImage(logoImg, 40, 40, logoWidth, logoHeight);
+      const logoWidth = logoHeight * aspectRatio;
+      ctx.drawImage(logoImg, 60, 60, logoWidth, logoHeight);
   
       // Headline
       ctx.font = format === 'instagram' ? 'bold 26px Fieldwork' : 'bold 36px Fieldwork';
       ctx.fillStyle = theme === 'theme-white' ? '#000' : '#FFF';
       ctx.textAlign = 'center';
-      ctx.fillText('Proud Participant of BarCamp Surrey', width / 2, 200);
+      ctx.fillText('Proud Participant of BarCamp Surrey', width / 2, 215);
   
       // Event Details
       ctx.font = format === 'instagram' ? '20px Fieldwork' : '24px Fieldwork';
@@ -105,16 +105,17 @@ function Share() {
         const userImage = new Image();
         userImage.src = image;
         userImage.onload = () => {
-          const imgSize = 150;
+          const imgSize = 90;
+          const imgY = 405; 
           ctx.save();
           ctx.beginPath();
-          ctx.arc(width / 2, 400, imgSize / 2, 0, Math.PI * 2);
+          ctx.arc(width / 2, imgY, imgSize / 2, 0, Math.PI * 2);
           ctx.closePath();
           ctx.clip();
           ctx.drawImage(
             userImage,
             width / 2 - imgSize / 2,
-            400 - imgSize / 2,
+            imgY - imgSize / 2,
             imgSize,
             imgSize
           );
@@ -123,19 +124,18 @@ function Share() {
       }
   
       // Participant Name, Title, and Role
+      const textBase = 475; 
       if (includeName && name) {
-        ctx.font = format === 'instagram' ? 'bold 28px Fieldwork' : 'bold 36px Fieldwork';
-        ctx.fillText(name, width / 2, 520);
+        ctx.font = 'bold 24px Fieldwork';
+        ctx.fillText(name, width / 2, textBase);
       }
-  
       if (includeTitle && title) {
-        ctx.font = format === 'instagram' ? 'italic 20px Fieldwork' : 'italic 28px Fieldwork';
-        ctx.fillText(title, width / 2, 560);
+        ctx.font = 'italic 20px Fieldwork';
+        ctx.fillText(title, width / 2, textBase + 30);
       }
-  
       if (role !== 'none') {
-        ctx.font = format === 'instagram' ? 'bold 20px Fieldwork' : 'bold 28px Fieldwork';
-        ctx.fillText(role.toUpperCase(), width / 2, 600);
+        ctx.font = 'bold 20px Fieldwork';
+        ctx.fillText(role.toUpperCase(), width / 2, textBase + 60);
       }
     };
   }, [role, name, title, theme, format, includeImage, image, includeName, includeTitle]);
