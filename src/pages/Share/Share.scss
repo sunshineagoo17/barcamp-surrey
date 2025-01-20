@@ -14,6 +14,29 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.2);
 
+  &__custom-file-label {
+    display: inline-block;
+    background: $frosted-white;
+    border: 0.1rem solid $dark-green;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: $deep-forest;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+  
+    &:hover {
+      background: $gradient-frosted;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+  
+    input[type="file"] {
+      display: none;
+    }
+  }
+
   &__header {
     text-align: center;
     margin-bottom: 2rem;
@@ -36,7 +59,7 @@
     background: $frosted-white;
     padding: 1rem;
     border-radius: 1rem;
-    border: .1rem solid $white;
+    border: 0.1rem solid $white;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
 
     h2 {
@@ -65,7 +88,7 @@
         position: relative;
         margin-top: 1rem;
 
-        input {
+        input[type='file'] {
           opacity: 0;
           position: absolute;
           top: 0;
@@ -75,22 +98,29 @@
           cursor: pointer;
         }
 
-        span {
+        label {
           display: inline-block;
           padding: 0.75rem 1.5rem;
           font-size: 1rem;
-          color: #fff;
-          background: linear-gradient(145deg, #3b82f6, #2563eb);
+          color: $deep-forest;
+          background: $frosted-white;
+          border: 0.1rem solid $dark-green;
           border-radius: 12px;
-          box-shadow: 0 8px 16px rgba(59, 130, 246, 0.2);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
           cursor: pointer;
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          transition: background 0.3s ease, box-shadow 0.3s ease;
 
           &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(59, 130, 246, 0.4);
+            background: $gradient-frosted;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
           }
         }
+      }
+
+      .fine-print {
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+        color: $dark-gray;
       }
     }
 
@@ -180,7 +210,7 @@
       }
     }
   }
-  
+
   &__image-preview {
     width: 150px;
     height: 150px;
@@ -190,4 +220,15 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border: 3px solid rgba(255, 255, 255, 0.5);
   }
+}
+  
+.custom-toast {
+    background: $gradient-frosted;
+    border-radius: 12px;
+    color: $dark-green;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    text-align: center;
 }

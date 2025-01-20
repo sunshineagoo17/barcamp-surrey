@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Share.scss';
 import logo from '../../assets/logos/barcamp_logo-main.webp';
 
@@ -56,19 +58,6 @@ function Share() {
       ctx.fillText('9:00 AM - 5:30 PM', width / 2, 200);
       ctx.fillText('Godalming College, UK', width / 2, 240);
 
-      ctx.font = 'bold 36px Fieldwork';
-      ctx.fillText(name || 'Your Name', width / 2, height / 2);
-
-      if (title) {
-        ctx.font = 'italic 24px Fieldwork';
-        ctx.fillText(title, width / 2, height / 2 + 50);
-      }
-
-      if (role !== 'none') {
-        ctx.font = 'bold 24px Fieldwork';
-        ctx.fillText(role.toUpperCase(), width / 2, height / 2 + 100);
-      }
-
       if (includeImage && image) {
         const userImage = new Image();
         userImage.src = image;
@@ -76,23 +65,35 @@ function Share() {
           const imgSize = 100;
           ctx.save();
           ctx.beginPath();
-          ctx.arc(width / 2, height / 2 - 150, imgSize / 2, 0, Math.PI * 2);
+          ctx.arc(width / 2, height / 2 - 60, imgSize / 2, 0, Math.PI * 2);
           ctx.closePath();
           ctx.clip();
           ctx.drawImage(
             userImage,
             width / 2 - imgSize / 2,
-            height / 2 - 150 - imgSize / 2,
+            height / 2 - 60 - imgSize / 2,
             imgSize,
             imgSize
           );
           ctx.restore();
         };
       }
+
+      ctx.font = 'bold 36px Fieldwork';
+      ctx.fillText(name || 'Your Name', width / 2, height / 2 + 20);
+
+      if (title) {
+        ctx.font = 'italic 24px Fieldwork';
+        ctx.fillText(title, width / 2, height / 2 + 70);
+      }
+
+      if (role !== 'none') {
+        ctx.font = 'bold 24px Fieldwork';
+        ctx.fillText(role.toUpperCase(), width / 2, height / 2 + 110);
+      }
     };
   }, [role, name, title, theme, format, includeImage, image]);
 
-  // Call drawBadge whenever dependencies change
   useEffect(() => {
     drawBadge();
   }, [drawBadge]);
@@ -105,6 +106,7 @@ function Share() {
     setFormat('instagram');
     setIncludeImage(false);
     setImage(null);
+    toast.success('Badge reset successfully!');
   };
 
   const handleImageCapture = (event) => {
@@ -122,10 +124,23 @@ function Share() {
     link.download = `barcamp-badge-${format}.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
+    toast.success('Badge downloaded successfully!');
   };
 
   return (
     <div className="share">
+      <ToastContainer
+        position="bottom-center"
+        autoClose={3000}
+        hideProgressBar
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        toastClassName="custom-toast" 
+      />
       <div className="share__header">
         <h1>Create & Share Your Badge</h1>
         <p>Personalize your badge for #BarCampSurrey and share it!</p>
@@ -194,12 +209,19 @@ function Share() {
           Include Photo
         </label>
         {includeImage && (
-          <div className="custom-file">
-            <input type="file" accept="image/*" onChange={handleImageCapture} />
-            <span>Choose Image</span>
+          <div className="share__custom-file">
+            <label className="share__custom-file-label">
+              Choose File
+              <input type="file" accept="image/*" onChange={handleImageCapture} />
+            </label>
           </div>
         )}
-        {image && <img src={image} alt="Preview" className="share__image-preview" />}
+        {includeImage && (
+          <p className="fine-print">
+            We do not save images. Once downloaded, the image is deleted. We don't keep anything on
+            our servers.
+          </p>
+        )}
       </div>
 
       {/* Preview */}
