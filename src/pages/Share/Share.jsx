@@ -22,12 +22,11 @@ function Share() {
     const ctx = canvas.getContext('2d');
 
     const dimensions = {
-      instagram: { width: 600, height: 600 },
       twitter: { width: 1200, height: 675 },
       linkedin: { width: 1200, height: 627 },
     };
 
-    const { width, height } = dimensions[format] || dimensions.instagram;
+    const { width, height } = dimensions[format] || dimensions.linkedin;
 
     canvas.width = width;
     canvas.height = height;
@@ -79,7 +78,7 @@ function Share() {
       ctx.fill();
       ctx.restore();
     };
-    createBlob(width * 0.25, height * 0.3, 20, 'rgba(255, 255, 255, 0.1)');
+    createBlob(width * 0.175, height * 0.19, 20, 'rgba(255, 255, 255, 0.1)');
     createBlob(width * 0.8, height * 0.8, 40, 'rgba(255, 255, 255, 0.1)');
 
     ctx.save();
@@ -146,13 +145,13 @@ function Share() {
       ctx.fillText('Proud Participant of BarCamp Surrey', width / 2, headlineY);
 
       ctx.font = detailsFont;
-      ctx.fillText('www.barcampsurrey.org', width / 2, detailsY);
       ctx.fillText(
         'August 2, 2025 | 9:00 AM - 5:30 PM',
         width / 2,
-        detailsY + 40
+        detailsY + 10
       );
-      ctx.fillText('Godalming College, UK', width / 2, detailsY + 80);
+      ctx.fillText('Godalming College, UK', width / 2, detailsY + 50);
+      ctx.fillText('www.barcampsurrey.org', width / 2, detailsY + 90);
 
       if (includeImage && image) {
         const userImage = new Image();
@@ -178,16 +177,16 @@ function Share() {
 
       const textBase = 475;
       if (includeName && name) {
-        ctx.font = 'bold 24px Fieldwork';
+        ctx.font = 'bold 30px Fieldwork';
         ctx.fillText(name, width / 2, textBase);
       }
       if (includeTitle && title) {
-        ctx.font = 'italic 20px Fieldwork';
-        ctx.fillText(title, width / 2, textBase + 30);
+        ctx.font = 'italic 22px Fieldwork';
+        ctx.fillText(title, width / 2, textBase + 29);
       }
       if (role !== 'none') {
-        ctx.font = 'bold 20px Fieldwork';
-        ctx.fillText(role.toUpperCase(), width / 2, textBase + 60);
+        ctx.font = 'bold 25px Fieldwork';
+        ctx.fillText(role.toUpperCase(), width / 2, textBase + 62);
       }
     };
   }, [
@@ -207,13 +206,13 @@ function Share() {
   }, [drawBadge]);
 
   const handleReset = () => {
-    setRole('attendee');
+    setRole('none');
     setName('');
     setIncludeName(false);
     setTitle('');
     setIncludeTitle(false);
-    setTheme('theme-black');
-    setFormat('instagram');
+    setTheme('theme-green');
+    setFormat('linkedin');
     setIncludeImage(false);
     setImage(null);
     toast.success('Badge reset successfully!');
@@ -336,7 +335,7 @@ function Share() {
       {/* Format Selection */}
       <div className='share__section'>
         <h2 className='share__heading'>Choose Format</h2>
-        {['instagram', 'twitter', 'linkedin'].map((option) => (
+        {['twitter', 'linkedin'].map((option) => (
           <label key={option} className='share__label'>
             <input
               type='radio'
