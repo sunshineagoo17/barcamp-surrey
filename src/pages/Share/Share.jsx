@@ -2,14 +2,15 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Share.scss';
-import logo from '../../assets/logos/barcamp_logo-main.webp';
+import logoDark from '../../assets/logos/barcamp_logo-gradient_social.webp';
+import logoLight from '../../assets/logos/barcamp_logo-main.webp';
 
 function Share() {
   const [role, setRole] = useState('attendee');
   const [name, setName] = useState('');
-  const [includeName, setIncludeName] = useState(false); 
+  const [includeName, setIncludeName] = useState(false);
   const [title, setTitle] = useState('');
-  const [includeTitle, setIncludeTitle] = useState(false); 
+  const [includeTitle, setIncludeTitle] = useState(false);
   const [theme, setTheme] = useState('theme-black');
   const [format, setFormat] = useState('instagram');
   const [includeImage, setIncludeImage] = useState(false);
@@ -19,20 +20,20 @@ function Share() {
   const drawBadge = useCallback(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-  
+
     // Dimensions for each format
     const dimensions = {
       instagram: { width: 600, height: 600 },
       twitter: { width: 1200, height: 675 },
       linkedin: { width: 1200, height: 627 },
     };
-  
+
     // Default to Instagram size if format is invalid
     const { width, height } = dimensions[format] || dimensions.instagram;
-  
+
     canvas.width = width;
     canvas.height = height;
-  
+
     // Glassmorphic Gradient Background
     const bgColors = {
       'theme-black': ['rgba(43,43,43,0.9)', 'rgba(20,20,20,0.8)'],
@@ -45,7 +46,7 @@ function Share() {
     });
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, width, height);
-  
+
     // Add Blurred Blobs for Depth
     const createBlob = (x, y, size, color) => {
       ctx.save();
@@ -60,7 +61,7 @@ function Share() {
     };
     createBlob(width * 0.27, height * 0.42, 20, 'rgba(255, 255, 255, 0.1)');
     createBlob(width * 0.8, height * 0.8, 40, 'rgba(255, 255, 255, 0.1)');
-  
+
     // Add Glassmorphic Rounded Rectangle
     ctx.save();
     ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
@@ -78,35 +79,45 @@ function Share() {
     ctx.fill();
     ctx.stroke();
     ctx.restore();
-  
-    // Add BarCamp Surrey Logo
+
+    // Dynamically Select Logo Based on Theme
     const logoImg = new Image();
-    logoImg.src = logo;
+    const isLogoDark = theme === 'theme-white';
+    logoImg.src = isLogoDark ? logoDark : logoLight;
+
     logoImg.onload = () => {
-      const logoHeight = 100; 
+      const baseLogoHeight = 100;
+      const adjustedLogoHeight = isLogoDark
+        ? baseLogoHeight * 1.35
+        : baseLogoHeight;
       const aspectRatio = logoImg.width / logoImg.height;
-      const logoWidth = logoHeight * aspectRatio;
-      ctx.drawImage(logoImg, 60, 60, logoWidth, logoHeight);
-  
+      const logoWidth = adjustedLogoHeight * aspectRatio;
+
+      const logoX = isLogoDark ? 30 : 60;
+      const logoY = 60;
+
+      ctx.drawImage(logoImg, logoX, logoY, logoWidth, adjustedLogoHeight);
+
       // Headline
-      ctx.font = format === 'instagram' ? 'bold 26px Fieldwork' : 'bold 36px Fieldwork';
+      ctx.font =
+        format === 'instagram' ? 'bold 26px Fieldwork' : 'bold 36px Fieldwork';
       ctx.fillStyle = theme === 'theme-white' ? '#000' : '#FFF';
       ctx.textAlign = 'center';
       ctx.fillText('Proud Participant of BarCamp Surrey', width / 2, 215);
-  
+
       // Event Details
       ctx.font = format === 'instagram' ? '20px Fieldwork' : '24px Fieldwork';
       ctx.fillText('www.barcampsurrey.org', width / 2, 260);
       ctx.fillText('August 2, 2025 | 9:00 AM - 5:30 PM', width / 2, 300);
       ctx.fillText('Godalming College, UK', width / 2, 340);
-  
+
       // Add User Image
       if (includeImage && image) {
         const userImage = new Image();
         userImage.src = image;
         userImage.onload = () => {
           const imgSize = 90;
-          const imgY = 405; 
+          const imgY = 405;
           ctx.save();
           ctx.beginPath();
           ctx.arc(width / 2, imgY, imgSize / 2, 0, Math.PI * 2);
@@ -122,9 +133,9 @@ function Share() {
           ctx.restore();
         };
       }
-  
+
       // Participant Name, Title, and Role
-      const textBase = 475; 
+      const textBase = 475;
       if (includeName && name) {
         ctx.font = 'bold 24px Fieldwork';
         ctx.fillText(name, width / 2, textBase);
@@ -138,8 +149,18 @@ function Share() {
         ctx.fillText(role.toUpperCase(), width / 2, textBase + 60);
       }
     };
-  }, [role, name, title, theme, format, includeImage, image, includeName, includeTitle]);
-  
+  }, [
+    role,
+    name,
+    title,
+    theme,
+    format,
+    includeImage,
+    image,
+    includeName,
+    includeTitle,
+  ]);
+
   useEffect(() => {
     drawBadge();
   }, [drawBadge]);
