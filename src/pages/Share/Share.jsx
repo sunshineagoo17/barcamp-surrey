@@ -129,17 +129,15 @@ function Share() {
 
   return (
     <div className="share">
-      <ToastContainer
+    <ToastContainer
         position="bottom-center"
-        autoClose={3000}
-        hideProgressBar
+        autoClose={4000}
         newestOnTop
         closeOnClick
         rtl={false}
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        toastClassName="custom-toast" 
       />
       <div className="share__header">
         <h1>Create & Share Your Badge</h1>
@@ -149,7 +147,7 @@ function Share() {
       {/* Role Selection */}
       <div className="share__section">
         <h2>Select Your Role</h2>
-        {['attendee', 'organizer', 'speaker', 'volunteer', 'none'].map((option) => (
+        {['organiser', 'speaker', 'attendee', 'volunteer', 'none'].map((option) => (
           <label key={option}>
             <input
               type="radio"
@@ -183,7 +181,7 @@ function Share() {
       {/* Format Selection */}
       <div className="share__section">
         <h2>Choose Format</h2>
-        {['instagram', 'twitter', 'linkedin'].map((option) => (
+        {['Instagram', 'Twitter', 'Linkedin'].map((option) => (
           <label key={option}>
             <input
               type="radio"
