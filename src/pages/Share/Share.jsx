@@ -7,26 +7,29 @@ import logo from '../../assets/logos/barcamp_logo-main.webp';
 function Share() {
   const [role, setRole] = useState('attendee');
   const [name, setName] = useState('');
-  const [includeName, setIncludeName] = useState(false); // Toggle for Name
+  const [includeName, setIncludeName] = useState(false); 
   const [title, setTitle] = useState('');
-  const [includeTitle, setIncludeTitle] = useState(false); // Toggle for Title
+  const [includeTitle, setIncludeTitle] = useState(false); 
   const [theme, setTheme] = useState('theme-black');
   const [format, setFormat] = useState('instagram');
   const [includeImage, setIncludeImage] = useState(false);
   const [image, setImage] = useState(null);
   const canvasRef = useRef(null);
 
-  // Memoize the drawBadge function
   const drawBadge = useCallback(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
 
+    // Dimensions for each format
     const dimensions = {
       instagram: { width: 600, height: 600 },
       twitter: { width: 1200, height: 675 },
       linkedin: { width: 1200, height: 627 },
     };
-    const { width, height } = dimensions[format];
+
+    // Default to Instagram size if format is invalid
+    const { width, height } = dimensions[format] || dimensions.instagram;
+
     canvas.width = width;
     canvas.height = height;
 
@@ -87,7 +90,7 @@ function Share() {
         };
       }
 
-      // Participant Name, Title and Role
+      // Participant Name, Title, and Role
       if (includeName && name) {
         ctx.font = 'bold 36px Fieldwork';
         ctx.fillText(name, width / 2, 480);
@@ -103,7 +106,17 @@ function Share() {
         ctx.fillText(role.toUpperCase(), width / 2, 560);
       }
     };
-  }, [role, name, title, theme, format, includeImage, image, includeName, includeTitle]);
+  }, [
+    role,
+    name,
+    title,
+    theme,
+    format,
+    includeImage,
+    image,
+    includeName,
+    includeTitle,
+  ]);
 
   useEffect(() => {
     drawBadge();
@@ -141,21 +154,29 @@ function Share() {
   };
 
   return (
-    <div className="share">
-      <ToastContainer position="bottom-center" autoClose={4000} newestOnTop closeOnClick pauseOnFocusLoss draggable pauseOnHover />
-      <div className="share__header">
+    <div className='share'>
+      <ToastContainer
+        position='bottom-center'
+        autoClose={4000}
+        newestOnTop
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <div className='share__header'>
         <h1>Create & Share Your Event Badge</h1>
         <p>Personalise your badge for #BarCampSurrey and share it!</p>
       </div>
 
       {/* Participant Details */}
-      <div className="share__section">
+      <div className='share__section'>
         <h2>Participant Details</h2>
 
         {/* Include Name Toggle */}
         <label>
           <input
-            type="checkbox"
+            type='checkbox'
             checked={includeName}
             onChange={(e) => setIncludeName(e.target.checked)}
           />
@@ -163,18 +184,18 @@ function Share() {
         </label>
         {includeName && (
           <input
-            type="text"
+            type='text'
             value={name}
-            placeholder="Enter Your Name"
+            placeholder='Enter Your Name'
             onChange={(e) => setName(e.target.value)}
-            className="share__input"
+            className='share__input'
           />
         )}
 
         {/* Include Title Toggle */}
         <label>
           <input
-            type="checkbox"
+            type='checkbox'
             checked={includeTitle}
             onChange={(e) => setIncludeTitle(e.target.checked)}
           />
@@ -182,104 +203,114 @@ function Share() {
         </label>
         {includeTitle && (
           <input
-            type="text"
+            type='text'
             value={title}
-            placeholder="Enter Your Title"
+            placeholder='Enter Your Title'
             onChange={(e) => setTitle(e.target.value)}
-            className="share__input"
+            className='share__input'
           />
         )}
       </div>
 
       {/* Role Selection */}
-      <div className="share__section">
+      <div className='share__section'>
         <h2>Select Your Role</h2>
-        {['organiser', 'speaker', 'attendee', 'volunteer', 'none'].map((option) => (
+        {['organiser', 'speaker', 'attendee', 'volunteer', 'none'].map(
+          (option) => (
+            <label key={option}>
+              <input
+                type='radio'
+                name='role'
+                value={option}
+                checked={role === option}
+                onChange={() => setRole(option)}
+              />
+              {option.charAt(0).toUpperCase() + option.slice(1)}
+            </label>
+          )
+        )}
+      </div>
+
+      {/* Theme Selection */}
+      <div className='share__section'>
+        <h2>Select a Theme</h2>
+        {['theme-black', 'theme-green', 'theme-white'].map((option) => (
           <label key={option}>
             <input
-              type="radio"
-              name="role"
+              type='radio'
+              name='theme'
               value={option}
-              checked={role === option}
-              onChange={() => setRole(option)}
+              checked={theme === option}
+              onChange={() => setTheme(option)}
+            />
+            {option.replace('theme-', '').charAt(0).toUpperCase() +
+              option.slice(1)}
+          </label>
+        ))}
+      </div>
+
+      {/* Format Selection */}
+      <div className='share__section'>
+        <h2>Choose Format</h2>
+        {['instagram', 'twitter', 'linkedin'].map((option) => (
+          <label key={option}>
+            <input
+              type='radio'
+              name='format'
+              value={option}
+              checked={format === option}
+              onChange={(e) => setFormat(e.target.value)}
             />
             {option.charAt(0).toUpperCase() + option.slice(1)}
           </label>
         ))}
       </div>
 
-      {/* Theme Selection */}
-      <div className="share__section">
-        <h2>Select a Theme</h2>
-        {['theme-black', 'theme-green', 'theme-white'].map((option) => (
-          <label key={option}>
-            <input
-              type="radio"
-              name="theme"
-              value={option}
-              checked={theme === option}
-              onChange={() => setTheme(option)}
-            />
-            {option.replace('theme-', '').charAt(0).toUpperCase() + option.slice(1)}
-          </label>
-        ))}
-      </div>
-
-      {/* Format Selection */}
-      <div className="share__section">
-        <h2>Choose Format</h2>
-        {['Instagram', 'Twitter', 'Linkedin'].map((option) => (
-          <label key={option}>
-            <input
-              type="radio"
-              name="format"
-              value={option}
-              checked={format === option}
-              onChange={() => setFormat(option)}
-            />
-            {option}
-          </label>
-        ))}
-      </div>
-
       {/* Include Photo */}
-      <div className="share__section">
+      <div className='share__section'>
         <h2>Add Your Photo</h2>
         <label>
           <input
-            type="checkbox"
+            type='checkbox'
             checked={includeImage}
             onChange={() => setIncludeImage(!includeImage)}
           />
           Include Photo
         </label>
         {includeImage && (
-          <div className="share__custom-file">
-            <label className="share__custom-file-label">
+          <div className='share__custom-file'>
+            <label className='share__custom-file-label'>
               Choose File
-              <input type="file" accept="image/*" onChange={handleImageCapture} />
+              <input
+                type='file'
+                accept='image/*'
+                onChange={handleImageCapture}
+              />
             </label>
           </div>
         )}
         {includeImage && (
-          <p className="share__fine-print">
-            *Please note: We do not store images. Once downloaded, they are immediately deleted, and nothing is kept on our servers.*
+          <p className='share__fine-print'>
+            *Please note: We do not store images. Once downloaded, they are
+            immediately deleted, and nothing is kept on our servers.*
           </p>
         )}
       </div>
 
       {/* Preview */}
-      <div className="share__section share__section--preview">
+      <div className='share__section share__section--preview'>
         <h2>Preview</h2>
-        <canvas ref={canvasRef} className="share__canvas"></canvas>
+        <canvas ref={canvasRef} className='share__canvas'></canvas>
       </div>
 
       {/* Actions */}
-      <div className="share__section">
-        <button className="share__button" onClick={handleDownload}>
+      <div className='share__section'>
+        <button className='share__button' onClick={handleDownload}>
           Download Badge
         </button>
-        <button className="share__button share__button--reset" onClick={handleReset}>
+        <button
+          className='share__button share__button--reset'
+          onClick={handleReset}>
           Reset
         </button>
       </div>
