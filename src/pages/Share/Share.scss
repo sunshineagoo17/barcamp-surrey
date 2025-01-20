@@ -44,6 +44,29 @@
     }
   }
 
+  &__input {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid $dark-gray;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    color: $deep-forest;
+    box-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.1), 
+      -2px -2px 4px rgba(255, 255, 255, 0.5);
+    outline: none;
+  
+    &:focus {
+      border-color: $dark-green;
+      box-shadow: 
+        4px 4px 8px rgba(0, 0, 0, 0.2), 
+        -4px -4px 8px rgba(255, 255, 255, 0.7);
+    }
+  }
+
   &__header {
     text-align: center;
     margin-bottom: 2rem;
