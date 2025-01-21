@@ -416,7 +416,7 @@ function Share() {
           <button
             className='share__button-icon'
             onClick={async () => {
-              const text = `Check out BarCamp Surrey! Proud to participate in this amazing event. Learn more at: https://www.barcampsurrey.org`;
+              const text = `Check out #BarCampSurrey! Proud to participate in this amazing event. Learn more at: https://www.barcampsurrey.org`;
               if (navigator.share) {
                 try {
                   await navigator.share({ text });
@@ -447,7 +447,7 @@ function Share() {
           <a
             className='share__button-icon'
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-              `Excited to participate in BarCamp Surrey! Learn more at: https://www.barcampsurrey.org`
+              `Excited to participate in #BarCampSurrey! Hope to see you there! Learn more at: https://www.barcampsurrey.org`
             )}`}
             target='_blank'
             rel='noopener noreferrer'>
