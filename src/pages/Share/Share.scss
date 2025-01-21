@@ -24,7 +24,7 @@
   backdrop-filter: blur(20px);
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
 
   &__custom-file-label {
     display: inline-block;
@@ -117,6 +117,11 @@
       background: linear-gradient(135deg, $mint-green, $white);
       box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3),
         -6px -6px 12px rgba(255, 255, 255, 0.5);
+
+      img {
+        filter: brightness(0.7) saturate(150%);
+        transform: translateY(-2px);
+      }
     }
 
     &:active {
@@ -125,6 +130,11 @@
       background: linear-gradient(135deg, $white, $frosted-white);
       box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3),
         inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+
+      img {
+        filter: brightness(0.5) saturate(200%);
+        transform: translateY(2px);
+      }
     }
   }
 
