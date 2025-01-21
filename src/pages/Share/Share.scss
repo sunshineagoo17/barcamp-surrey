@@ -21,13 +21,20 @@
   padding: 2rem;
   font-family: 'Fieldwork', sans-serif;
   background: $gradient-frosted;
+  background: linear-gradient(
+    180deg,
+    rgba($mint-green, 0.75),
+    rgba($soft-mint, .5)
+  );
   backdrop-filter: blur(20px);
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   border: 0.0625rem solid rgba(255, 255, 255, 0.2);
 
   &__custom-file-label {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 10rem;
     height: 3rem;
     background: $soft-mint;
@@ -65,16 +72,23 @@
     font-size: 1rem;
     border: 1px solid $dark-gray;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     color: $deep-forest;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-      -2px -2px 4px rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1),
+      -1px -1px 2px rgba(255, 255, 255, 0.5);
     outline: none;
-
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  
     &:focus {
-      border-color: $dark-green;
-      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
-        -4px -4px 8px rgba(255, 255, 255, 0.7);
+      border-color: $mint-green;
+      box-shadow: 0 0 8px rgba(95, 255, 143, 0.4),
+        0 0 4px rgba(95, 255, 143, 0.3);
+      background: rgba(255, 255, 255, 1);
+    }
+  
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 0 6px rgba(95, 255, 143, 0.3);
     }
   }
 
@@ -191,6 +205,13 @@
     border-radius: 1rem;
     border: 0.1rem solid $white;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+    &:focus-within {
+      box-shadow: 0 0 20px rgba(95, 255, 143, 0.2),
+        0 0 10px rgba(95, 255, 143, 0.4);
+      border: 0.1rem solid rgba(95, 255, 143, 0.5);
+    }
 
     h2 {
       font-size: 1.5rem;
