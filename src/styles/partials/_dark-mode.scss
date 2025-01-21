@@ -512,6 +512,38 @@
       }
     }
 
+    &__custom-file-label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 10rem;
+      height: 3rem;
+      background: green;
+      border: 0.1rem solid $mint-green;
+      padding: 0.5rem 1.5rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      color: $white;
+      cursor: pointer;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        background: $frosted-black;
+        color: $soft-mint;
+        border: 1px solid $white;
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+  
+      &:active {
+        background: $dark-green;
+        color: $white;
+        transform: scale(.95);
+      }
+    }  
+
     &__button-icon {
       display: inline-block;
       padding: 0.75rem 1.5rem;

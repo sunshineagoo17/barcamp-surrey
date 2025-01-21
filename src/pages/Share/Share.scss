@@ -38,7 +38,7 @@
     width: 10rem;
     height: 3rem;
     background: $soft-mint;
-    border: 0.1rem solid $dark-green;
+    border: 0.1rem solid $white;
     padding: 0.5rem 1.5rem;
     border-radius: 12px;
     font-size: 1rem;
@@ -46,17 +46,20 @@
     cursor: pointer;
     text-align: center;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
       background: $frosted-black;
       border: 1px solid $white;
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
     }
 
     &:active {
       background: $dark-green;
       color: $white;
+      border: 0.1rem solid green;
+      transform: scale(.95);
     }
 
     input[type='file'] {
