@@ -17,7 +17,8 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "build": "react-scripts build",
+    "build": "react-scripts build --output-path=temp-build",
+    "deploy": "mv build old-build && mv temp-build build && rm -rf old-build",
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
