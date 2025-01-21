@@ -114,7 +114,7 @@
     align-items: center;
     gap: 0.3rem;
     font-weight: 500;
-    color: $dark-green;
+    color: $black;
   }
 
   &__sun-link {
@@ -137,7 +137,7 @@
 
   &__sun-icon {
     font-size: .65rem;
-    color: $dark-green;
+    color: $black;
     transition: color 0.3s ease, transform 0.2s ease, text-shadow 0.3s ease;
     cursor: pointer;
 
