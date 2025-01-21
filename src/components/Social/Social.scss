@@ -5,12 +5,16 @@
 
 .social {
   margin: 2rem 3rem;
-  padding: 2rem;
+  padding: 2rem 1rem;
   background: linear-gradient(135deg, $soft-mint, $mint-green);
   border-radius: 12px;
   text-align: center;
   color: $dark-green;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  @include tablet {
+    padding: 2rem;
+  }
 
   &__title {
     font-size: 2rem;
@@ -35,13 +39,13 @@
     .social__button {
       background: $dark-green;
       color: $white;
-      width: 6rem;
+      width: 8.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: .15rem;
-      border-radius: 1.5rem;
-      font-size: .665rem;
+      padding: .5rem .25rem;
+      border-radius: 2.5rem;
+      font-size: .6rem;
       text-decoration: none;
       font-weight: bold;
       text-transform: uppercase;
@@ -49,8 +53,9 @@
         box-shadow 0.3s ease;
 
         @include large-mobile {
-            width: 8rem;
-            padding: .6rem;
+            width: 9.5rem;
+            padding: .75rem;
+            font-size: .6rem;
         }
 
         @include tablet {
@@ -89,9 +94,9 @@
     color: $dark-green;
     padding: 1rem 1rem;
     border: .125rem solid $white;
-    font-size: 1rem;
+    font-size: .85rem;
     font-weight: bold;
-    border-radius: 2rem;
+    border-radius: 2.85rem;
     text-decoration: none;
     text-transform: uppercase;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
