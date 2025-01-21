@@ -20,7 +20,7 @@
     "clean": "rm -rf temp-build",
     "build": "npm run clean && react-scripts build --output-path=temp-build",
     "deploy": "npm run build && mv build old-build && mv temp-build build && rm -rf old-build",
-    "deploy-fallback": "npm run build && mv build old-build && mv build-new build && rm -rf old-build",
+    "fallback-deploy": "npm run build && mv build old-build && mv build-new build && rm -rf old-build",
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
