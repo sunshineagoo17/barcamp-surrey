@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Share.scss';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
@@ -219,7 +219,9 @@ function Share() {
     setFormat('linkedin');
     setIncludeImage(false);
     setImage(null);
-    toast.success('Badge reset successfully!');
+    toast.success('Badge reset successfully!', {
+      className: 'custom-toast-body',
+    });
   };
 
   const handleImageCapture = (event) => {
@@ -236,20 +238,26 @@ function Share() {
     const link = document.createElement('a');
     link.download = `barcamp-badge-${format}.png`;
     link.href = canvas.toDataURL('image/png');
-    link.click();
-    toast.success('Badge downloaded successfully!');
+    
+    setTimeout(() => {
+      link.click();
+      toast.success('Your event badge is ready for you!', {
+        className: 'custom-toast-body',
+      });
+    }, 500); 
   };
-
+  
   return (
     <div className='share fade-in'>
       <ToastContainer
-        position='bottom-center'
+        position="bottom-center"
         autoClose={4000}
         newestOnTop
         closeOnClick
         pauseOnFocusLoss
         draggable
         pauseOnHover
+        transition={Slide}
       />
       <div className='share__header fade-in'>
         <h1>Create & Share Your Event Badge</h1>
