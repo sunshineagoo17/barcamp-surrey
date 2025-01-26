@@ -240,15 +240,29 @@
   }  
   
   &__card:nth-child(8):hover &__icon {
-    animation: rotate360 1.2s infinite linear;
+    animation: bounceScaleCoolGreen 2.5s infinite ease-in-out;
   }
   
-  @keyframes rotate360 {
+  @keyframes bounceScaleCoolGreen {
     0% {
-      transform: rotate(0);
+      transform: translateY(0) scale(1);
+      color: #a8e6cf; 
+    }
+    25% {
+      transform: translateY(-10px) scale(1.1);
+      color: #56c596;
+    }
+    50% {
+      transform: translateY(0) scale(1.2);
+      color: #2a9d8f; 
+    }
+    75% {
+      transform: translateY(-10px) scale(1.1);
+      color: #76c893;
     }
     100% {
-      transform: rotate(360deg);
+      transform: translateY(0) scale(1);
+      color: #a8e6cf; 
     }
   }
 
