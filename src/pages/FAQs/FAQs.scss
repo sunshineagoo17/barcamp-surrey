@@ -76,7 +76,7 @@
   }
 
   &__answer-container {
-    max-height: 6rem; /* Default for collapsible sections */
+    max-height: 6rem;
     overflow-y: hidden;
     transition: max-height 0.3s ease;
 
@@ -102,16 +102,42 @@
   }
 
   &__toggle {
-    background: none;
-    border: none;
-    color: $olive-green;
-    font-size: 0.9rem;
+    @include primary-font(600);
+    text-transform: uppercase;
+    background: $soft-green;
+    border: 0.125rem solid $white;
+    color: $dark-green;
+    font-size: .85rem;
     cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.5rem;
     margin-top: 1rem;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 
+      0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.1),
+      inset 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $mint-green;
+      color: $olive-green;
+      box-shadow: 0.5rem 0.5rem 1.5rem rgba($mint-green, 0.5);
+    }
+
+    &:active {
+      transform: scale(0.95);
+      box-shadow: 0.25rem 0.25rem 0.75rem rgba($dark-green, 0.5);
+    }
 
     .faq-page__chevron {
+      font-size: 1.25rem;
       margin-left: 0.5rem;
       transition: transform 0.3s ease;
+      color: $white;
 
       &.rotated {
         transform: rotate(180deg);
