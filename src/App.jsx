@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Loader from './components/Loader/Loader';
 import Header from './components/Header/Header';
 import About from './components/About/About';
@@ -31,7 +31,8 @@ function App() {
 
   return (
     <Router>
-      <div className='App'>
+      <ScrollToTop /> 
+      <div className="App">
         {isLoading ? (
           <Loader />
         ) : (
@@ -39,7 +40,7 @@ function App() {
             <Header />
             <Routes>
               <Route
-                path='/'
+                path="/"
                 element={
                   <>
                     <Hero />
@@ -53,9 +54,9 @@ function App() {
                   </>
                 }
               />
-              <Route path="/faq" element={<FAQs />} /> 
+              <Route path="/faq" element={<FAQs />} />
               <Route path="/share" element={<Share />} />
-              <Route path='*' element={<NotFound />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
           </>
