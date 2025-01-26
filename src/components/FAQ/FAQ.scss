@@ -14,6 +14,40 @@
     rgba($white, 0.9)
   );
 
+  &__button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.0625rem;
+    color: $white;
+    margin-top: -1.5rem;
+    background-color: green;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease,
+      box-shadow 0.2s ease;
+    margin-bottom: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); 
+  
+    &:hover {
+      background-color: $white;
+      color: $deep-forest;
+      transform: translateY(-0.4rem);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); 
+    }
+  
+    &:active {
+      transform: translateY(0.5rem); 
+      box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2); 
+      background-color: darken($deep-forest, 10%); 
+      color: lighten($white, 20%); 
+    }
+  }
+
   &__title {
     @include primary-font(700);
     font-size: 2.8rem;

@@ -2,6 +2,7 @@ import './FAQ.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCar, faChargingStation, faUtensils, faUniversalAccess } from '@fortawesome/free-solid-svg-icons';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
+import { Link } from 'react-router-dom';
 
 const FAQ = () => {
   useScrollAnimation();
@@ -9,6 +10,7 @@ const FAQ = () => {
   return (
     <section id='faq' className='faq fade-in'>
       <h2 className='faq__title fade-in'>FAQ</h2>
+      <Link to='/faq' className='faq__button fade-in'>Explore All FAQs</Link>
       <div className='faq__grid'>
         <div className='faq__card fade-in'>
           <FontAwesomeIcon icon={faCar} className='faq__icon' />

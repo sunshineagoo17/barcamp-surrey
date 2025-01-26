@@ -138,6 +138,40 @@
       rgba($deep-forest, 1)
     );
 
+    &__button {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.0625rem;
+      color: $deep-forest;
+      margin-top: -1.5rem;
+      background-color: $mint-green;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease,
+        box-shadow 0.2s ease;
+      margin-bottom: 2rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        background-color: $white;
+        color: $deep-forest;
+        transform: translateY(-0.4rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+      }
+
+      &:active {
+        transform: translateY(0rem);
+        box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+        background-color: $deep-forest;
+        color: $mint-green;
+      }
+    }
+
     &__icon {
       font-size: 3rem;
       color: $white;
@@ -299,7 +333,7 @@
     background: linear-gradient(
       180deg,
       rgba($deep-forest, 1),
-      rgba(green, .5)
+      rgba(green, 0.5)
     );
 
     &__description {
@@ -331,12 +365,12 @@
       font-weight: 500;
       text-decoration: none;
       transition: color 0.3s ease, text-shadow 0.3s ease;
-  
+
       &:hover {
         color: $white;
         text-shadow: 0 0 10px rgba(188, 255, 20, 0.9);
       }
-  
+
       &:active {
         color: $very-light-green;
         font-weight: bold;
@@ -528,7 +562,7 @@
       text-align: center;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+
       &:hover {
         background: $frosted-black;
         color: $soft-mint;
@@ -536,13 +570,13 @@
         transform: scale(1.05);
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
       }
-  
+
       &:active {
         background: $dark-green;
         color: $white;
-        transform: scale(.95);
+        transform: scale(0.95);
       }
-    }  
+    }
 
     &__button-icon {
       display: inline-block;
@@ -620,8 +654,8 @@
     &__links {
       display: flex;
       justify-content: center;
-      gap: .5rem;
-  
+      gap: 0.5rem;
+
       @include tablet {
         gap: 1rem;
       }
@@ -632,8 +666,8 @@
       background: linear-gradient(135deg, $dark-gray, $black);
       color: $white;
       padding: 1rem 1rem;
-      border: .125rem solid $white;
-      font-size: .85rem;
+      border: 0.125rem solid $white;
+      font-size: 0.85rem;
       font-weight: bold;
       border-radius: 2.85rem;
       text-decoration: none;
@@ -641,23 +675,23 @@
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: buttonPulse 2s infinite;
-  
+
       @include tablet {
-          padding: 1rem 2rem;
-          font-size: 1.2rem;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
       }
-  
+
       @include desktop {
-          padding: 1rem 3.5rem;
+        padding: 1rem 3.5rem;
       }
-  
+
       &:hover {
         transform: scale(1.05);
         color: green;
         background: linear-gradient(135deg, $white, $frosted-white);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
       }
-  
+
       &:active {
         transform: scale(0.95);
         color: $white;
@@ -665,7 +699,7 @@
         background: linear-gradient(135deg, green, $dark-green);
       }
     }
-  
+
     @keyframes buttonPulse {
       0%,
       100% {
