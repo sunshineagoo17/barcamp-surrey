@@ -7,8 +7,8 @@
   padding: 4rem 2rem;
   background: linear-gradient(
     180deg,
-    rgba($mint-green, 0.75),
-    rgba($soft-mint, .5)
+    rgba($mint-green, 1),
+    rgba($white, 1)
   );
   text-align: center;
 
@@ -28,7 +28,7 @@
   }
 
   &__card {
-    background: $frosted-white; 
+    background: $white; 
     border-radius: 1.5rem;
     box-shadow: 
       0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.2),
@@ -42,8 +42,16 @@
 
     &:hover {
       transform: translateY(-0.5rem);
-      box-shadow: 0 1.5rem 3rem rgba($soft-mint, 0.75);
-      background: $white; 
+      box-shadow: 0 1.5rem 3rem rgba($white, 0.75);
+      background: $soft-mint;
+      border: .125rem solid $white; 
+    }
+
+    &.expanded {
+      .faq-page__answer-container {
+        max-height: none;
+        overflow: visible;
+      }
     }
   }
 
@@ -51,7 +59,7 @@
     font-size: 3rem;
     color: green;
     margin-bottom: 1rem;
-    filter: drop-shadow(0 0 0.5rem rgba(green, 0.5)); 
+    filter: drop-shadow(0 0 0.5rem rgba(green, 0.25)); 
     transition: transform 0.3s ease, filter 0.3s ease;
 
     &:hover {
@@ -67,6 +75,17 @@
     margin-bottom: 1rem;
   }
 
+  &__answer-container {
+    max-height: 6rem; /* Default for collapsible sections */
+    overflow-y: hidden;
+    transition: max-height 0.3s ease;
+
+    &.expanded {
+      max-height: 100%;
+      overflow-y: visible;
+    }
+  }
+
   &__answer {
     @include primary-font(400);
     font-size: 1.1rem;
@@ -78,6 +97,24 @@
 
       &:hover {
         color: $deep-forest;
+      }
+    }
+  }
+
+  &__toggle {
+    background: none;
+    border: none;
+    color: $olive-green;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    .faq-page__chevron {
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+
+      &.rotated {
+        transform: rotate(180deg);
       }
     }
   }

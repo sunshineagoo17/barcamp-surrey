@@ -9,14 +9,22 @@ import {
   faChildReaching,
   faGlassCheers,
   faClipboardCheck,
+  faChevronDown,
 } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 const FAQs = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <section className="faq-page">
       <h1 className="faq-page__title">Frequently Asked Questions</h1>
       <div className="faq-page__grid">
-        {/* Existing FAQs */}
+        {/* Standard FAQs */}
         <div className="faq-page__card">
           <FontAwesomeIcon icon={faCar} className="faq-page__icon" />
           <h2 className="faq-page__question">Is there parking at the venue?</h2>
@@ -43,16 +51,19 @@ const FAQs = () => {
           </p>
         </div>
 
-        {/* New FAQs */}
-        <div className="faq-page__card">
+        {/* "What is a BarCamp?" FAQ */}
+        <div className={`faq-page__card ${isExpanded ? 'expanded' : ''}`}>
           <FontAwesomeIcon icon={faQuestionCircle} className="faq-page__icon" />
           <h2 className="faq-page__question">What is a BarCamp?</h2>
-          <p className="faq-page__answer">
-            BarCamp Surrey is an open and interactive workshop-style event designed for sharing knowledge and ideas in a relaxed and welcoming environment.
-            Everyone is encouraged to attend—whether to simply listen or to actively participate by giving a talk. Talks can cover any topic you think others
-            might find interesting, whether it’s about a hobby, something you’ve created, or even a technical or non-technical subject. It’s all about fostering
-            curiosity and community engagement! Learn more on the <a href="https://en.wikipedia.org/wiki/BarCamp" target="_blank" rel="noopener noreferrer">Wikipedia page</a> or listen to the <a href="https://linuxmatters.sh/47/" target="_blank" rel="noopener noreferrer">podcast interview</a>.
-          </p>
+          <div className={`faq-page__answer-container ${isExpanded ? 'expanded' : ''}`}>
+            <p className="faq-page__answer">
+              BarCamp Surrey is an open and interactive workshop-style event designed for sharing knowledge and ideas in a relaxed and welcoming environment. Everyone is encouraged to attend—whether to simply listen or to actively participate by giving a talk. Talks can cover any topic you think others might find interesting, whether it’s about a hobby, something you’ve created, or even a technical or non-technical subject. It’s all about fostering curiosity and community engagement! Learn more on the <a href="https://en.wikipedia.org/wiki/BarCamp" target="_blank" rel="noopener noreferrer">Wikipedia page</a> or listen to the <a href="https://linuxmatters.sh/47/" target="_blank" rel="noopener noreferrer">podcast interview</a>.
+            </p>
+          </div>
+          <button className="faq-page__toggle" onClick={toggleExpand}>
+            {isExpanded ? 'Show Less' : 'Read More'}
+            <FontAwesomeIcon icon={faChevronDown} className={`faq-page__chevron ${isExpanded ? 'rotated' : ''}`} />
+          </button>
         </div>
 
         <div className="faq-page__card">

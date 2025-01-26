@@ -4,7 +4,7 @@ $dark-green: #375B2A;
 $black: #000000;
 $white: #FFFFFF;
 
-// Secondary Colors (Complementary)
+// Secondary Colors 
 $very-light-green: #C6EDC7;
 $soft-green: #C8E6A1;
 $mint-green: #C9E4C5;
@@ -12,6 +12,14 @@ $olive-green: #6D8A4E;
 $warm-beige: #F5F0E1;
 $cool-gray: #BFC9CA;
 $deep-forest: #2B3B2E;
+$lime-green: #B6E673;      
+$emerald-green: #50C878;  
+$spring-green: #A2D9A1;   
+
+// Accent Greens
+$forest-green: #228B22;    
+$neon-green: #76FF7A;     
+$seafoam-green: #9FE2BF;  
 
 // Neutral Colors
 $light-gray: #F2F2F2;
@@ -25,21 +33,23 @@ $mist-blue: #E0F7FA;
 $frosted-white: rgba(255, 255, 255, 0.6);
 $cloud-gray: #ECEFF1;
 
+// Muted Greens
+$sage-green: #A8B79A;      
+$tea-green: #D0F0C0;      
+
 // Frosted Colors (for glassmorphic effects)
 $frosted-green: rgba(165, 203, 72, 0.3);
 $frosted-dark-green: rgba(55, 91, 42, 0.3);
 $frosted-gray: rgba(191, 201, 202, 0.3);
 $frosted-black: rgba(0, 0, 0, 0.2);
+$frosted-lime: rgba(182, 230, 115, 0.3);   
+$frosted-emerald: rgba(80, 200, 120, 0.3);
 
 // Gradients
-// Light Gradient (Soft and Fresh)
 $gradient-light: linear-gradient(135deg, $light-green, $soft-green, $warm-beige);
-
-// Dark Gradient (Bold and Elegant)
 $gradient-dark: linear-gradient(135deg, $dark-green, $deep-forest, $black);
-
-// Soft Gradient (Smooth and Subtle)
 $gradient-soft: linear-gradient(135deg, $olive-green, $cool-gray, $light-gray);
-
-// Frosted Gradient (Glassmorphism Inspired)
 $gradient-frosted: linear-gradient(135deg, $frosted-green, $frosted-gray, $frosted-white);
+$gradient-bright: linear-gradient(135deg, $lime-green, $spring-green, $tea-green);
+$gradient-soft-green: linear-gradient(135deg, $sage-green, $mint-green, $soft-mint);
+$gradient-vibrant-green: linear-gradient(135deg, $emerald-green, $lime-green, $neon-green);
