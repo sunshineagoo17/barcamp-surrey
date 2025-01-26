@@ -1,0 +1,84 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/global.scss' as *;
+
+.faq-page {
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba($mint-green, 0.75),
+    rgba($soft-mint, .5)
+  );
+  text-align: center;
+
+  &__title {
+    @include primary-font(700);
+    font-size: 3rem;
+    color: $dark-green;
+    margin-bottom: 3rem;
+    text-shadow: 0.125rem 0.25rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  &__card {
+    background: $frosted-white; 
+    border-radius: 1.5rem;
+    box-shadow: 
+      0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.2),
+      -0.5rem -0.5rem 1.5rem rgba(255, 255, 255, 0.5),
+      inset 0.1rem 0.1rem 0.5rem rgba(255, 255, 255, 0.3),
+      inset -0.1rem -0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(1rem);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 1.5rem 3rem rgba($soft-mint, 0.75);
+      background: $white; 
+    }
+  }
+
+  &__icon {
+    font-size: 3rem;
+    color: green;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 0.5rem rgba(green, 0.5)); 
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 1rem rgba(55, 91, 42, 0.8));
+    }
+  }
+
+  &__question {
+    @include primary-font(600);
+    font-size: 1.5rem;
+    color: $dark-green;
+    margin-bottom: 1rem;
+  }
+
+  &__answer {
+    @include primary-font(400);
+    font-size: 1.1rem;
+    color: $black;
+
+    a {
+      color: $olive-green;
+      text-decoration: underline;
+
+      &:hover {
+        color: $deep-forest;
+      }
+    }
+  }
+}

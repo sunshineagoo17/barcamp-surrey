@@ -7,6 +7,7 @@ import About from './components/About/About';
 import Hero from './components/Hero/Hero';
 import Map from './components/Map/Map';
 import FAQ from './components/FAQ/FAQ';
+import FAQs from './pages/FAQs/FAQs';
 import Registration from './components/Registration/Registration';
 import Organisers from './components/Organisers/Organisers';
 import Sponsors from './components/Sponsors/Sponsors';
@@ -52,6 +53,7 @@ function App() {
                   </>
                 }
               />
+              <Route path="/faq" element={<FAQs />} /> 
               <Route path="/share" element={<Share />} />
               <Route path='*' element={<NotFound />} />
             </Routes>
