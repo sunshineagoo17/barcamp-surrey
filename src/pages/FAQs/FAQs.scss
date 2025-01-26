@@ -3,7 +3,19 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/global.scss' as *;
 
+@keyframes fadeInFaq {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .faq-page {
+  animation: fadeInFaq 0.5s ease-out;
   padding: 4rem 2rem;
   background: linear-gradient(
     180deg,

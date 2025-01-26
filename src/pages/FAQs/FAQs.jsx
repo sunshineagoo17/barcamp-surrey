@@ -15,9 +15,12 @@ import {
   faSignInAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import useScrollAnimation from '../../hooks/useScrollAnimation';
 
 const FAQs = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  useScrollAnimation();
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -27,6 +30,7 @@ const FAQs = () => {
     <section className='faq-page'>
       <h1 className='faq-page__title'>FAQs</h1>
       <div className='faq-page__grid'>
+        
         {/* Standard FAQs */}
         <div className='faq-page__card'>
           <FontAwesomeIcon icon={faCar} className='faq-page__icon' />
