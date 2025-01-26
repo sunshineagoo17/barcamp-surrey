@@ -311,17 +311,24 @@
     }
 
     &__icon {
-      font-size: 2rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: auto; 
+      height: 2.75rem; 
+      font-size: 1.75rem; 
       color: $soft-green;
+      border-radius: 50%; 
       transition: transform 0.3s ease, color 0.3s ease;
-
+    
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.2); 
         color: $white;
       }
-
+    
       &:active {
-        transform: scale(0.9);
+        transform: scale(0.9); 
+        color: $neon-green;
       }
     }
   }
