@@ -257,23 +257,33 @@
     font-size: 1.5rem;
     color: $dark-green;
     margin-bottom: 1rem;
+    white-space: normal; 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   &__answer-container {
-    max-height: 6rem;
-    overflow-y: hidden;
-    transition: max-height 0.3s ease;
+    max-height: 6rem; 
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0.5rem 0; 
 
     &.expanded {
-      max-height: 100%;
-      overflow-y: visible;
+      max-height: none;
+      overflow: visible; 
+      padding: 1rem 0; 
     }
   }
 
   &__answer {
     @include primary-font(400);
     font-size: 1.1rem;
+    line-height: 1.6;
     color: $black;
+    margin: 0;
+    white-space: normal; 
+    overflow-wrap: break-word;
+    word-wrap: break-word; 
   }
 
   &__toggle {
