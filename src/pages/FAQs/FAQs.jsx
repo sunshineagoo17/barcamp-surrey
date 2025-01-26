@@ -171,7 +171,7 @@ const FAQs = () => {
               target='_blank'
               rel='noopener noreferrer'
               className='faq-page__button'>
-              <FontAwesomeIcon icon={faSignInAlt} /> Register
+              <FontAwesomeIcon icon={faSignInAlt} /> Join Us
             </a>
           </div>
         </div>
