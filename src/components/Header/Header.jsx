@@ -17,6 +17,7 @@ const Header = () => {
 
   const isMainPage = location.pathname === '/';
   const isSharePage = location.pathname === '/share';
+  const isFAQPage = location.pathname === '/faq';
 
   return (
     <header className='header'>
@@ -58,6 +59,11 @@ const Header = () => {
             {!isSharePage && (
               <Link to='/share' className='header__nav-link'>
                 Share
+              </Link>
+            )}
+            {!isFAQPage && (
+              <Link to='/faq' className='header__nav-link'>
+                FAQ
               </Link>
             )}
           </>
