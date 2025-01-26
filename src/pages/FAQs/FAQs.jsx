@@ -12,7 +12,7 @@ import {
   faChevronDown,
   faGlobe,
   faPodcast,
-  faSignInAlt,
+  faTicket,
 } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
@@ -175,7 +175,7 @@ const FAQs = () => {
               target='_blank'
               rel='noopener noreferrer'
               className='faq-page__button'>
-              <FontAwesomeIcon icon={faSignInAlt} /> Join Us
+              <FontAwesomeIcon icon={faTicket} /> Join Us
             </a>
           </div>
         </div>
