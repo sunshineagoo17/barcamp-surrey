@@ -10,6 +10,8 @@ import {
   faGlassCheers,
   faClipboardCheck,
   faChevronDown,
+  faGlobe,
+  faPodcast,
 } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
@@ -57,8 +59,30 @@ const FAQs = () => {
           <h2 className="faq-page__question">What is a BarCamp?</h2>
           <div className={`faq-page__answer-container ${isExpanded ? 'expanded' : ''}`}>
             <p className="faq-page__answer">
-              BarCamp Surrey is an open and interactive workshop-style event designed for sharing knowledge and ideas in a relaxed and welcoming environment. Everyone is encouraged to attend—whether to simply listen or to actively participate by giving a talk. Talks can cover any topic you think others might find interesting, whether it’s about a hobby, something you’ve created, or even a technical or non-technical subject. It’s all about fostering curiosity and community engagement! Learn more on the <a href="https://en.wikipedia.org/wiki/BarCamp" target="_blank" rel="noopener noreferrer">Wikipedia page</a> or listen to the <a href="https://linuxmatters.sh/47/" target="_blank" rel="noopener noreferrer">podcast interview</a>.
+              BarCamp Surrey is an open and interactive workshop-style event designed for sharing knowledge and ideas in a relaxed and welcoming environment. Everyone is encouraged to attend—whether to simply listen or to actively participate by giving a talk. Talks can cover any topic you think others might find interesting, whether it’s about a hobby, something you’ve created, or even a technical or non-technical subject. It’s all about fostering curiosity and community engagement!
             </p>
+            <p className="faq-page__answer">
+              Learn more about BarCamps on the <a href="https://en.wikipedia.org/wiki/BarCamp" target="_blank" rel="noopener noreferrer" className="faq-page__link"><strong>Wikipedia page</strong></a> or listen to this <a href="https://linuxmatters.sh/47/" target="_blank" rel="noopener noreferrer" className="faq-page__link"><strong>podcast</strong></a> with Alan Pope, brought to you by <a href="https://linuxmatters.sh/" target="_blank" rel="noopener noreferrer" className="faq-page__link"><strong>Linux Matters</strong></a>.
+            </p>
+
+            <div className="faq-page__links">
+              <a
+                href="https://en.wikipedia.org/wiki/BarCamp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="faq-page__button"
+              >
+                <FontAwesomeIcon icon={faGlobe} /> Wikipedia
+              </a>
+              <a
+                href="https://linuxmatters.sh/47/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="faq-page__button"
+              >
+                <FontAwesomeIcon icon={faPodcast} /> Podcast
+              </a>
+            </div>
           </div>
           <button className="faq-page__toggle" onClick={toggleExpand}>
             {isExpanded ? 'Show Less' : 'Read More'}
