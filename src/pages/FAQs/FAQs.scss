@@ -258,15 +258,6 @@
     @include primary-font(400);
     font-size: 1.1rem;
     color: $black;
-
-    a {
-      color: $olive-green;
-      text-decoration: underline;
-
-      &:hover {
-        color: $deep-forest;
-      }
-    }
   }
 
   &__toggle {
@@ -317,21 +308,21 @@
   }
 
   &__link {
-    text-decoration: none !important; 
-    color: $deep-forest !important;
+    text-decoration: none; 
+    color: $deep-forest;
     transition: color 0.3s ease;
   
     &:hover {
-      color: green !important; 
+      color: green; 
     }
 
     &:visited {
-      text-decoration: none !important; 
+      text-decoration: none; 
       color: inherit;
     }
 
     &:active {
-      color: $black !important; 
+      color: $black; 
     }
 
     strong {

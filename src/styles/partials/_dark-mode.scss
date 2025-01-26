@@ -711,6 +711,171 @@
     }
   }
 
+  .faq-page {
+    padding: 4rem 2rem;
+    background: linear-gradient(
+      180deg,
+      rgba($deep-forest, .5),
+      rgba($deep-forest, 1)
+    );
+    text-align: center;
+
+    &__answer {
+      @include primary-font(400);
+      font-size: 1.1rem;
+      color: $white;
+    }
+
+    &__link {
+      text-decoration: none; 
+      color: $soft-mint;
+      transition: color 0.3s ease;
+    
+      &:hover {
+        color: $white;
+      }
+  
+      &:visited {
+        text-decoration: none; 
+        color: inherit;
+      }
+  
+      &:active {
+        color: $soft-mint; 
+      }
+  
+      strong {
+        text-decoration: none; 
+        color: inherit;
+      }
+    }
+
+    &__toggle {
+      @include primary-font(600);
+      text-transform: uppercase;
+      background: $soft-green;
+      border: 0.125rem solid $white;
+      color: $dark-green;
+      font-size: 0.85rem;
+      cursor: pointer;
+      padding: 0.5rem 1.5rem;
+      border-radius: 1.5rem;
+      margin-top: 1rem;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow:
+        0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.1),
+        inset 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.6);
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background: $mint-green;
+        color: $black;
+        box-shadow: 0.5rem 0.5rem 1.5rem rgba($mint-green, 0.5);
+      }
+  
+      &:active {
+        transform: scale(0.95);
+        box-shadow: 0.25rem 0.25rem 0.75rem rgba($dark-green, 0.5);
+        background: $white;
+        color: $deep-forest;
+        border: 0.125rem solid $deep-forest;
+      }
+  
+      .faq-page__chevron {
+        font-size: 1.25rem;
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+        color: currentColor; 
+  
+        &.rotated {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: $deep-forest;
+      color: $soft-mint;
+      border-radius: 1.5rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid $white;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        color: green;
+        border: 0.125rem solid green;
+        background: $soft-mint;
+        font-weight: bold;
+        transform: scale(1.05);
+        box-shadow: 0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+      }
+  
+      &:active {
+        transform: scale(0.95);
+        background: $mint-green;
+        color: $dark-green;
+        border: 0.125rem solid $dark-green;
+        box-shadow: 0.15rem 0.15rem 0.5rem rgba(0, 0, 0, 0.2);
+      }
+  
+      svg {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__card {
+      background: $frosted-emerald;
+      border-radius: 1.5rem;
+      box-shadow:
+        0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.2),
+        -0.5rem -0.5rem 1.5rem rgba(255, 255, 255, 0.5),
+        inset 0.1rem 0.1rem 0.5rem rgba(255, 255, 255, 0.3),
+        inset -0.1rem -0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(1rem);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 1.5rem 3rem rgba($white, 0.75);
+        background: $deep-forest;
+        border: 0.125rem solid green;
+      }
+  
+      &.expanded {
+        .faq-page__answer-container {
+          max-height: none;
+          overflow: visible;
+        }
+      }
+    }
+  
+    &__icon {
+      font-size: 3rem;
+      color: $white;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 0.5rem rgba(green, 0.25));
+      transition: transform 0.3s ease, filter 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 1rem rgba(55, 91, 42, 0.8));
+      }
+    }
+  }
+
   .notfound {
     &__button {
       @include button-style(12rem, 3rem, $light-green, $deep-forest);
