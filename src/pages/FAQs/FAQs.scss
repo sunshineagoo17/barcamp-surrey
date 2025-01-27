@@ -25,7 +25,7 @@
   text-align: center;
 
   @include large-desktop {
-    padding-bottom: 18rem;
+    padding-bottom: 14rem;
   }
 
   &__title {
@@ -44,6 +44,12 @@
   }
 
   &__card {
+    width: 100%;
+    min-height: 22.5rem;
+    max-height: 64rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: $white;
     border-radius: 1.5rem;
     box-shadow:
@@ -61,6 +67,10 @@
       box-shadow: 0 1.5rem 3rem rgba($white, 0.75);
       background: $soft-mint;
       border: 0.125rem solid $white;
+    }
+
+    @include tablet {
+      justify-content: flex-start;
     }
 
     &.expanded {
