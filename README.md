@@ -41,7 +41,7 @@ A custom error page for nonexistent routes.
 ## Mockups
 
 ### Home Page
-![Homepage](/docs/images/barcamp-surrey-home.png)
+![Homepage](/docs/images/barcamp-surrey-homepage.png)
 
 ### FAQ Page
 ![FAQ Page](/docs/images/barcamp-surrey-faq.png)
@@ -63,7 +63,7 @@ A custom error page for nonexistent routes.
 
 1. Node.js and npm installed on your machine.
 2. Git for version control.
-3. A VPS setup for deployment (e.g., provided by Alan).
+3. A VPS setup for deployment.
 
 ### Installation
 
