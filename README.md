@@ -1,4 +1,4 @@
-# BarCamp Surrey Website
+# BarCamp Surrey Event Website
 
 Welcome to the BarCamp Surrey Website repository! This project is dedicated to showcasing the event details, fostering community interaction, and providing a seamless experience for attendees. The website is built with modern tools and technologies to ensure responsiveness, accessibility, and ease of use.
 
