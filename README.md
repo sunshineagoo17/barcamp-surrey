@@ -86,6 +86,6 @@ A custom error page for nonexistent routes.
 ## Contact
 
 For any questions or issues, feel free to reach out:
-- [BarCamp Surrey Website] https://www.barcampsurrey.org
+- BarCamp Surrey Website: https://www.barcampsurrey.org
 
 **We're excited to see you at BarCamp Surrey!**
