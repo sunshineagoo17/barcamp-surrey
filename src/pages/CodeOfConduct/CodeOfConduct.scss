@@ -17,18 +17,18 @@
     margin: 0 auto;
     padding: 2rem;
     background: $frosted-emerald;
-        border-radius: 1rem;
-        box-shadow: 0.5rem 0.5rem 1.5rem rgba($black, 0.1),
-                    -0.5rem -0.5rem 1.5rem rgba($white, 0.5),
-                    inset 0.1rem 0.1rem 0.5rem rgba($white, 0.3),
-                    inset -0.1rem -0.1rem 0.5rem rgba($black, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-        &:hover {
-          transform: translateY(-0.5rem);
-          box-shadow: 0 1.5rem 3rem rgba($white, 0.75);
-          background: $soft-mint;
-        }    
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1.5rem rgba($black, 0.1),
+      -0.5rem -0.5rem 1.5rem rgba($white, 0.5),
+      inset 0.1rem 0.1rem 0.5rem rgba($white, 0.3),
+      inset -0.1rem -0.1rem 0.5rem rgba($black, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 1.5rem 3rem rgba($white, 0.75);
+      background: $soft-mint;
+    }
   }
 
   &__title {
@@ -52,9 +52,9 @@
     background: $frosted-white;
     border-radius: 1rem;
     box-shadow: 0.5rem 0.5rem 1.5rem rgba($black, 0.1),
-                -0.5rem -0.5rem 1.5rem rgba($white, 0.5),
-                inset 0.1rem 0.1rem 0.5rem rgba($white, 0.3),
-                inset -0.1rem -0.1rem 0.5rem rgba($black, 0.1);
+      -0.5rem -0.5rem 1.5rem rgba($white, 0.5),
+      inset 0.1rem 0.1rem 0.5rem rgba($white, 0.3),
+      inset -0.1rem -0.1rem 0.5rem rgba($black, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {

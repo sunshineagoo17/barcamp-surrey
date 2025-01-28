@@ -314,20 +314,20 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      width: auto; 
-      height: 2.75rem; 
-      font-size: 1.75rem; 
+      width: auto;
+      height: 2.75rem;
+      font-size: 1.75rem;
       color: $soft-green;
-      border-radius: 50%; 
+      border-radius: 50%;
       transition: transform 0.3s ease, color 0.3s ease;
-    
+
       &:hover {
-        transform: scale(1.2); 
+        transform: scale(1.2);
         color: $white;
       }
-    
+
       &:active {
-        transform: scale(0.9); 
+        transform: scale(0.9);
         color: $neon-green;
       }
     }
@@ -388,6 +388,23 @@
 
     &__copyright {
       color: $soft-mint;
+    }
+
+    &__created-by-txt {
+      color: $soft-mint;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+
+      &:hover {
+        color: $white;
+        text-shadow: 0 0 10px rgba(188, 255, 20, 0.9);
+      }
+
+      &:active {
+        color: $very-light-green;
+        font-weight: bold;
+        transform: scale(0.95);
+        border-radius: 0.25rem;
+      }
     }
 
     &__created-by {
@@ -459,6 +476,62 @@
         @include button-style(10rem, 2.5rem, $dark-green, $white);
         border-radius: 1.5rem;
       }
+    }
+  }
+
+  .code-of-conduct {
+    background: $deep-forest;
+
+    &__container {
+      &:hover {
+        background: $deep-forest;
+      }
+    }
+
+    &__icon {
+      font-size: 2.5rem;
+      color: $soft-mint;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 0.5rem rgba($dark-green, 0.5));
+      transition: transform 0.3s ease, filter 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 1rem rgba($dark-green, 0.8));
+        color: $emerald-green;
+      }
+    }
+
+    &__heading {
+      color: $tea-green;
+    }
+
+    &__text,
+    &__list {
+      color: $white;
+    }
+
+    &__section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: $deep-forest;
+      border-radius: 1rem;
+      box-shadow: 0.5rem 0.5rem 1.5rem rgba($black, 0.1),
+        -0.5rem -0.5rem 1.5rem rgba($white, 0.5),
+        inset 0.1rem 0.1rem 0.5rem rgba($white, 0.3),
+        inset -0.1rem -0.1rem 0.5rem rgba($black, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 1.5rem 3rem rgba($white, 0.75);
+        background: $black;
+        border: 3px $white double;
+      }
+    }
+
+    &__intro {
+      color: $white;
     }
   }
 
@@ -722,7 +795,7 @@
     padding: 4rem 2rem;
     background: linear-gradient(
       180deg,
-      rgba($deep-forest, .5),
+      rgba($deep-forest, 0.5),
       rgba($deep-forest, 1)
     );
     text-align: center;
@@ -734,25 +807,25 @@
     }
 
     &__link {
-      text-decoration: none; 
+      text-decoration: none;
       color: $soft-mint;
       transition: color 0.3s ease;
-    
+
       &:hover {
         color: $white;
       }
-  
+
       &:visited {
-        text-decoration: none; 
+        text-decoration: none;
         color: inherit;
       }
-  
+
       &:active {
-        color: $soft-mint; 
+        color: $soft-mint;
       }
-  
+
       strong {
-        text-decoration: none; 
+        text-decoration: none;
         color: inherit;
       }
     }
@@ -773,17 +846,16 @@
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      box-shadow:
-        0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.1),
+      box-shadow: 0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.1),
         inset 0.125rem 0.125rem 0.25rem rgba(255, 255, 255, 0.6);
       transition: all 0.3s ease;
-  
+
       &:hover {
         background: $mint-green;
         color: $black;
         box-shadow: 0.5rem 0.5rem 1.5rem rgba($mint-green, 0.5);
       }
-  
+
       &:active {
         transform: scale(0.95);
         box-shadow: 0.25rem 0.25rem 0.75rem rgba($dark-green, 0.5);
@@ -791,13 +863,13 @@
         color: $deep-forest;
         border: 0.125rem solid $deep-forest;
       }
-  
+
       .faq-page__chevron {
         font-size: 1.25rem;
         margin-left: 0.5rem;
         transition: transform 0.3s ease;
-        color: currentColor; 
-  
+        color: currentColor;
+
         &.rotated {
           transform: rotate(180deg);
         }
@@ -818,7 +890,7 @@
       text-decoration: none;
       cursor: pointer;
       transition: all 0.3s ease;
-  
+
       &:hover {
         color: green;
         border: 0.125rem solid green;
@@ -827,7 +899,7 @@
         transform: scale(1.05);
         box-shadow: 0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
       }
-  
+
       &:active {
         transform: scale(0.95);
         background: $mint-green;
@@ -835,7 +907,7 @@
         border: 0.125rem solid $dark-green;
         box-shadow: 0.15rem 0.15rem 0.5rem rgba(0, 0, 0, 0.2);
       }
-  
+
       svg {
         font-size: 1.2rem;
       }
@@ -844,8 +916,7 @@
     &__card {
       background: $frosted-emerald;
       border-radius: 1.5rem;
-      box-shadow:
-        0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.2),
+      box-shadow: 0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.2),
         -0.5rem -0.5rem 1.5rem rgba(255, 255, 255, 0.5),
         inset 0.1rem 0.1rem 0.5rem rgba(255, 255, 255, 0.3),
         inset -0.1rem -0.1rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -853,14 +924,14 @@
       text-align: center;
       backdrop-filter: blur(1rem);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+
       &:hover {
         transform: translateY(-0.5rem);
         box-shadow: 0 1.5rem 3rem rgba($white, 0.75);
         background: $deep-forest;
         border: 0.125rem solid green;
       }
-  
+
       &.expanded {
         .faq-page__answer-container {
           max-height: none;
@@ -868,14 +939,14 @@
         }
       }
     }
-  
+
     &__icon {
       font-size: 3rem;
       color: $white;
       margin-bottom: 1rem;
       filter: drop-shadow(0 0 0.5rem rgba(green, 0.25));
       transition: transform 0.3s ease, filter 0.3s ease;
-  
+
       &:hover {
         transform: scale(1.1);
         filter: drop-shadow(0 0 1rem rgba(55, 91, 42, 0.8));
