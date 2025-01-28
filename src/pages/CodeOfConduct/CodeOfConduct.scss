@@ -1,0 +1,117 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/global.scss' as *;
+
+.code-of-conduct {
+  padding: 4rem 2rem;
+  background: $gradient-soft-green;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 1.5rem rgba($black, 0.1);
+  backdrop-filter: blur(1rem);
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+
+  &__container {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background: $frosted-emerald;
+        border-radius: 1rem;
+        box-shadow: 0.5rem 0.5rem 1.5rem rgba($black, 0.1),
+                    -0.5rem -0.5rem 1.5rem rgba($white, 0.5),
+                    inset 0.1rem 0.1rem 0.5rem rgba($white, 0.3),
+                    inset -0.1rem -0.1rem 0.5rem rgba($black, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+        &:hover {
+          transform: translateY(-0.5rem);
+          box-shadow: 0 1.5rem 3rem rgba($white, 0.75);
+          background: $soft-mint;
+        }    
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $dark-green;
+    margin-bottom: 2rem;
+    text-shadow: 0.125rem 0.25rem 1rem rgba($black, 0.2);
+  }
+
+  &__intro {
+    font-size: 1.2rem;
+    color: $deep-forest;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  &__section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: $frosted-white;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1.5rem rgba($black, 0.1),
+                -0.5rem -0.5rem 1.5rem rgba($white, 0.5),
+                inset 0.1rem 0.1rem 0.5rem rgba($white, 0.3),
+                inset -0.1rem -0.1rem 0.5rem rgba($black, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 1.5rem 3rem rgba($white, 0.75);
+      background: $soft-mint;
+      border: 3px green double;
+    }
+  }
+
+  &__icon {
+    font-size: 2.5rem;
+    color: $dark-green;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 0.5rem rgba($dark-green, 0.5));
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 1rem rgba($dark-green, 0.8));
+    }
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $forest-green;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: $black;
+    line-height: 1.6;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__list {
+    list-style-type: disc;
+    text-align: left;
+    margin: 1rem auto;
+    padding-left: 2rem;
+    font-size: 1rem;
+    color: $dark-gray;
+    line-height: 1.6;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

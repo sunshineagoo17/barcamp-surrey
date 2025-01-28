@@ -15,6 +15,7 @@ import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound/NotFound';
 import Share from './pages/Share/Share';
 import Social from './components/Social/Social';
+import CodeOfConduct from './pages/CodeOfConduct/CodeOfConduct';
 
 import './styles/global.scss';
 
@@ -56,6 +57,7 @@ function App() {
               />
               <Route path="/faq" element={<FAQs />} />
               <Route path="/share" element={<Share />} />
+              <Route path="/code-of-conduct" element={<CodeOfConduct />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
