@@ -14,8 +14,13 @@
     background: rgba($black, 0.5);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     z-index: 1000;
+    height: 100%;
+
+    @include tablet {
+        align-items: center;
+    }
   }
 
   &__content {
