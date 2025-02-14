@@ -1,8 +1,8 @@
-@use 'colors' as *;
-@use 'mixins' as *;
+@use "colors" as *;
+@use "mixins" as *;
 
 // Global Dark Mode Styles
-[data-theme='dark'] {
+[data-theme="dark"] {
   // Background and text colors
   background-color: $deep-forest;
   color: $frosted-white;
@@ -68,7 +68,7 @@
       position: relative;
       z-index: 1;
       cursor: pointer;
-      transition: all 0.3s ease, transform 0.2s ease;
+      transition: all 0.3s ease, transform 0.3s ease;
 
       // 3D Popping Effect (Idle)
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2),
@@ -80,7 +80,7 @@
 
       // Glow Effect (Idle)
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         top: -2px;
         left: -2px;
@@ -153,7 +153,7 @@
       cursor: pointer;
       text-decoration: none;
       transition: background-color 0.3s ease, transform 0.3s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.3s ease;
       margin-bottom: 2rem;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 
@@ -187,6 +187,41 @@
   }
 
   .about {
+    &__video-button {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.0625rem;
+      color: $deep-forest;
+      margin-top: -1.5rem;
+      background-color: $mint-green;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease, border .3s ease,
+        box-shadow 0.3s ease;
+      margin-bottom: 2rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        background-color: $white;
+        color: $deep-forest;
+        transform: translateY(-0.4rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+      }
+
+      &:active {
+        transform: translateY(0rem);
+        box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+        background-color: $deep-forest;
+        color: $mint-green;
+        border: .125rem solid $mint-green;
+      }
+    }
+
     &__icon {
       font-size: 3rem;
       color: $white;
@@ -436,7 +471,7 @@
     &__sun-icon {
       font-size: 0.65rem;
       color: $soft-mint;
-      transition: color 0.3s ease, transform 0.2s ease, text-shadow 0.3s ease;
+      transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
       cursor: pointer;
 
       @include large-mobile {
@@ -574,7 +609,7 @@
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.2);
       cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
 
       &:hover {
         transform: translateY(-2px);
@@ -679,7 +714,7 @@
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.2);
       cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
 
       &:visited {
         color: $white;
@@ -709,7 +744,7 @@
       display: block;
       margin: auto;
       filter: brightness(0) invert(1);
-      transition: filter 0.3s, transform 0.2s;
+      transition: filter 0.3s, transform 0.3s;
 
       &:hover {
         filter: brightness(0.7) saturate(150%);
@@ -787,6 +822,54 @@
       }
       50% {
         box-shadow: 0 0 25px rgba(173, 255, 47, 0.8);
+      }
+    }
+  }
+
+  .video-modal {
+    &__content {
+      background: $black;
+      padding: 1.25rem;
+      border-radius: 0.625rem;
+      position: relative;
+      width: 80%;
+      max-width: 50rem;
+      box-shadow: 0 0.625rem 1.875rem rgba($black, 0.3),
+        0 0 0.9375rem rgba($neon-green, 0.5);
+    }
+
+    &__close {
+      position: absolute;
+      top: 0.625rem;
+      right: 0.625rem;
+      background-color: $black;
+      color: $neon-green;
+      border: 0.125rem solid $neon-green;
+      padding: 0.35rem;
+      border-radius: 0.25rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease,
+        transform 0.3s ease, border 0.3s ease;
+      will-change: transform, background-color, border;
+
+      &:hover {
+        background-color: $lime-green;
+        color: $dark-green;
+        border: 0.125rem solid $lime-green;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.9);
+        background-color: $white;
+        color: $dark-green;
+        border: 0.125rem solid green;
+      }
+
+      @include tablet {
+        font-size: 1rem;
+        padding: 0.625rem;
       }
     }
   }

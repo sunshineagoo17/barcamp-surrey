@@ -1,0 +1,75 @@
+// Import partials
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/global.scss" as *;
+
+.video-modal {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($black, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  &__content {
+    background: $white;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    position: relative;
+    width: 80%;
+    max-width: 50rem;
+    box-shadow: 0 0.625rem 1.875rem rgba($black, 0.3),
+      0 0 0.9375rem rgba($neon-green, 0.5);
+    transition: box-shadow 0.3s ease;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    background-color: $white;
+    color: $dark-green;
+    border: 0.125rem solid $dark-green;
+    padding: 0.35rem;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+      border 0.3s ease;
+    will-change: transform, background-color, border;
+
+    &:hover {
+      background-color: $lime-green;
+      color: $white;
+      border: 0.125rem solid $lime-green;
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.9);
+      background-color: $black;
+      color: $neon-green;
+      border: 0.125rem solid $neon-green;
+    }
+
+    @include tablet {
+      font-size: 1rem;
+      padding: 0.625rem;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    height: auto;
+    border-radius: 0.3125rem;
+    border: 0.125rem solid $cool-gray;
+    box-shadow: 0 0.25rem 0.9375rem rgba($black, 0.1);
+  }
+}
