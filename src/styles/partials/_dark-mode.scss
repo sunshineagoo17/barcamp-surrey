@@ -857,21 +857,21 @@
       align-items: center;
       width: 2rem;
       height: 2rem;
-
+  
       &:hover {
         background-color: $lime-green;
         color: green;
         border: 0.125rem solid $lime-green;
         transform: scale(1.05);
       }
-
+  
       &:active {
         transform: scale(0.9);
-        background-color: $white;
-        color: $dark-green;
-        border: 0.125rem solid $dark-green;
+        background-color: $dark-green;
+        color: $white;
+        border: 0.125rem solid $white;
       }
-
+  
       @include tablet {
         font-size: 1rem;
         padding: 0.625rem;
@@ -879,23 +879,15 @@
         height: 2.5rem;
       }
     }
-
+  
     &__close {
       top: 0.625rem;
       right: 0.625rem;
     }
-
+  
     &__share-button {
       top: 0.625rem;
       left: 0.625rem;
-    }
-
-    &__share-icon {
-      font-size: 1rem;
-
-      @include tablet {
-        font-size: 1.25rem;
-      }
     }
   }
 

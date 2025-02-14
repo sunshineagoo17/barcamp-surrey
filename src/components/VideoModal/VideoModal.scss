@@ -33,6 +33,10 @@
     box-shadow: 0 0.625rem 1.875rem rgba($black, 0.3),
       0 0 0.9375rem rgba($neon-green, 0.5);
     transition: box-shadow 0.3s ease;
+
+    @include mobile {
+      margin-top: 2rem;
+    }
   }
 
   &__close,
@@ -57,16 +61,16 @@
 
     &:hover {
       background-color: $lime-green;
-      color: $dark-green;
+      color: green;
       border: 0.125rem solid $lime-green;
       transform: scale(1.05);
     }
 
     &:active {
       transform: scale(0.9);
-      background-color: $neon-green;
-      color: $black;
-      border: 0.125rem solid $cool-gray;
+      background-color: green;
+      color: $neon-green;
+      border: 0.125rem solid green;
     }
 
     @include tablet {
@@ -85,14 +89,6 @@
   &__share-button {
     top: 0.625rem;
     left: 0.625rem;
-  }
-
-  &__share-icon {
-    font-size: 1rem;
-
-    @include tablet {
-      font-size: 1.25rem;
-    }
   }
 
   &__video {
