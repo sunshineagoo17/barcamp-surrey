@@ -838,10 +838,10 @@
         0 0 0.9375rem rgba($neon-green, 0.5);
     }
 
-    &__close {
+    &__close,
+    &__share-button {
+      z-index: 2;
       position: absolute;
-      top: 0.625rem;
-      right: 0.625rem;
       background-color: $black;
       color: $neon-green;
       border: 0.125rem solid $neon-green;
@@ -849,13 +849,18 @@
       border-radius: 0.25rem;
       font-size: 0.85rem;
       cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease,
-        transform 0.3s ease, border 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+        border 0.3s ease;
       will-change: transform, background-color, border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
 
       &:hover {
         background-color: $lime-green;
-        color: $dark-green;
+        color: green;
         border: 0.125rem solid $lime-green;
         transform: scale(1.05);
       }
@@ -864,12 +869,32 @@
         transform: scale(0.9);
         background-color: $white;
         color: $dark-green;
-        border: 0.125rem solid green;
+        border: 0.125rem solid $dark-green;
       }
 
       @include tablet {
         font-size: 1rem;
         padding: 0.625rem;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+
+    &__close {
+      top: 0.625rem;
+      right: 0.625rem;
+    }
+
+    &__share-button {
+      top: 0.625rem;
+      left: 0.625rem;
+    }
+
+    &__share-icon {
+      font-size: 1rem;
+
+      @include tablet {
+        font-size: 1.25rem;
       }
     }
   }
