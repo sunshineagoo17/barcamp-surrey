@@ -8,7 +8,6 @@ import {
 import useScrollAnimation from "../../hooks/useScrollAnimation";
 import { useState } from "react";
 import VideoModal from "../../components/VideoModal/VideoModal";
-import promoVideo from "../../assets/video/barcamp_surrey_promo_video.mp4"; 
 
 const About = () => {
   useScrollAnimation();
@@ -17,6 +16,8 @@ const About = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const promoVideo = "/video/barcamp_surrey_promo_video.mp4";
 
   // Google Calendar Event Link (Pre-filled)
   const googleCalendarLink = `https://www.google.com/calendar/render?action=TEMPLATE&text=BarCamp+Surrey&dates=20250802T080000Z/20250802T163000Z&details=Join+us+at+BarCamp+Surrey+for+a+day+of+collaboration+and+innovation!&location=Godalming+College,+Tuesley+Ln,+Godalming+GU7+1RS`;
