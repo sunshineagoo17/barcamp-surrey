@@ -7,9 +7,9 @@ const VideoModal = ({ isOpen, onClose, videoSrc }) => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "Watch the BarCamp Surrey Promo Video!",
-          text: "Check out this event promo video for BarCamp Surrey.",
-          url: videoSrc,  
+          title: "BarCamp Surrey Promo",
+          text: "Check out this event video for BarCamp Surrey and join us!",
+          url: videoSrc,
         });
       } catch (error) {
         console.error("Error sharing:", error);
