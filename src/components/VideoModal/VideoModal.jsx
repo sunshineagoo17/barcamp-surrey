@@ -1,30 +1,21 @@
 import { FaShareAlt } from "react-icons/fa"; 
 import "./VideoModal.scss";
 
-const VideoModal = ({ isOpen, onClose }) => {
+const VideoModal = ({ isOpen, onClose, videoSrc }) => { 
   
-  // Detect if running locally or in production
-  const isLocalhost = window.location.hostname === "localhost";
-
-  // Use correct video URL based on environment
-  const videoUrl = isLocalhost
-    ? "/video/barcamp_surrey_promo_video.mp4"
-    : "https://www.barcampsurrey.org/video/barcamp_surrey_promo.mp4";
-
   const handleShare = async () => {
     if (navigator.share) {
       try {
         await navigator.share({
           title: "Watch the BarCamp Surrey Promo Video!",
           text: "Check out this event promo video for BarCamp Surrey.",
-          url: videoUrl,  
+          url: videoSrc,  
         });
       } catch (error) {
         console.error("Error sharing:", error);
       }
     } else {
-      navigator.clipboard.writeText(videoUrl);
-      alert("Video link copied! Share it anywhere.");
+      navigator.clipboard.writeText(videoSrc);
     }
   };
 
@@ -44,7 +35,7 @@ const VideoModal = ({ isOpen, onClose }) => {
 
         {/* Video */}
         <video className="video-modal__video" width="80%" height="auto" controls>
-          <source src={videoUrl} type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         
