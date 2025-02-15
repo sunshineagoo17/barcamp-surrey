@@ -18,7 +18,7 @@ const About = () => {
   const closeModal = () => setIsModalOpen(false);
 
   // Ensure the correct video URL is used
-  const promoVideo = `${window.location.origin}/video/barcamp_surrey_cc.mp4`;
+  const promoVideo = `${window.location.origin}/video/barcamp-surrey-cc.mp4`;
 
   // Google Calendar Event Link (Pre-filled)
   const googleCalendarLink = `https://www.google.com/calendar/render?action=TEMPLATE&text=BarCamp+Surrey&dates=20250802T080000Z/20250802T163000Z&details=Join+us+at+BarCamp+Surrey+for+a+day+of+collaboration+and+innovation!&location=Godalming+College,+Tuesley+Ln,+Godalming+GU7+1RS`;
@@ -43,7 +43,7 @@ const About = () => {
       <VideoModal
         isOpen={isModalOpen}
         onClose={closeModal}
-        videoSrc={promoVideo} // Ensures correct video URL is passed
+        videoSrc={promoVideo} 
       />
 
       <div className="about__info fade-in">
