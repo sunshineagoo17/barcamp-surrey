@@ -23,13 +23,13 @@ const Footer = () => {
             BarCamp Surrey
           </a>
         </div>
-        <div className='footer__divider'>&nbsp;|&nbsp;</div>
+        {/* <div className='footer__divider'>&nbsp;|&nbsp;</div>
           <a
             href='/code-of-conduct'
             className='footer__link'
           >
             Code of Conduct
-          </a>
+          </a> */}
         <div className='footer__divider'>&nbsp;|&nbsp;</div>
         <span className='footer__created-by'>
           <a

@@ -26,7 +26,7 @@ function Share() {
     const ctx = canvas.getContext('2d');
 
     const dimensions = {
-      twitter: { width: 1200, height: 675 },
+      x: { width: 1200, height: 675 },
       linkedin: { width: 1200, height: 627 },
     };
 
@@ -123,7 +123,7 @@ function Share() {
         includeName || includeTitle || includeImage || role !== 'none';
 
       const headlineFont =
-        format === 'twitter' || format === 'linkedin'
+        format === 'x' || format === 'linkedin'
           ? hasAdditionalContent
             ? 'bold 50px Fieldwork'
             : 'bold 55px Fieldwork'
@@ -132,7 +132,7 @@ function Share() {
           : 'bold 28px Fieldwork';
 
       const detailsFont =
-        format === 'twitter' || format === 'linkedin'
+        format === 'x' || format === 'linkedin'
           ? hasAdditionalContent
             ? '28px Fieldwork'
             : '32px Fieldwork'
@@ -349,7 +349,7 @@ function Share() {
       {/* Format Selection */}
       <div className='share__section fade-in'>
         <h2 className='share__heading'>Choose Format</h2>
-        {['twitter', 'linkedin'].map((option) => (
+        {['x', 'linkedin'].map((option) => (
           <label key={option} className='share__label'>
             <input
               type='radio'
