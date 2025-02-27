@@ -10,7 +10,7 @@ const FAQ = () => {
   return (
     <section id='faq' className='faq fade-in'>
       <h2 className='faq__title fade-in'>FAQ</h2>
-      <Link to='/faq' className='faq__button fade-in'>Unlock More Answers</Link>
+      <Link to='/faq' className='faq__button fade-in' aria-label="Go to FAQ page">Unlock More Answers</Link>
       <div className='faq__grid'>
         <div className='faq__card fade-in'>
           <FontAwesomeIcon icon={faCar} className='faq__icon' />

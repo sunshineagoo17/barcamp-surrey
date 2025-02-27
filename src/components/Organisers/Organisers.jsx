@@ -44,18 +44,20 @@ const Organisers = () => {
               {/* Email Icon */}
               <a
                 href={`mailto:${organiser.email}`}
-                className='organisers__icon'
-                target='_blank'
-                rel='noopener noreferrer'>
+                className="organisers__icon"
+                target="_blank"
+                aria-label="Contact Organiser"
+                rel="noopener noreferrer">
                 <FaEnvelope />
               </a>
 
               {/* LinkedIn Icon */}
               <a
                 href={organiser.linkedin}
-                className='organisers__icon'
-                target='_blank'
-                rel='noopener noreferrer'>
+                className="organisers__icon"
+                target="_blank"
+                aria-label="Connect with Organiser"
+                rel="noopener noreferrer">
                 <FaLinkedin />
               </a>
 
@@ -63,9 +65,10 @@ const Organisers = () => {
               {organiser.blog && (
                 <a
                   href={organiser.blog}
-                  className='organisers__icon'
-                  target='_blank'
-                  rel='noopener noreferrer'>
+                  className="organisers__icon"
+                  target="_blank"
+                  aria-label="Check out Laura's blog"
+                  rel="noopener noreferrer">
                   <FaRocket />
                 </a>
               )}
@@ -74,9 +77,10 @@ const Organisers = () => {
               {organiser.podcast && (
                 <a
                   href={organiser.podcast}
-                  className='organisers__icon'
-                  target='_blank'
-                  rel='noopener noreferrer'>
+                  className="organisers__icon"
+                  target="_blank"
+                  aria-label="Check out Alan's podcast"
+                  rel="noopener noreferrer">
                   <FaPodcast />
                 </a>
               )}

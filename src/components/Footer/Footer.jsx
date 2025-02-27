@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className='footer'>
       <div className='footer__logo'>
-        <a href='https://barcampsurrey.org' rel='noopener noreferrer'>
+        <a href="https://barcampsurrey.org" rel="noopener noreferrer" aria-label="Go to homepage">
           <img src={WordmarkLogo} alt='Barcamp Surrey Logo' />
         </a>
       </div>
@@ -19,14 +19,16 @@ const Footer = () => {
             href='https://barcampsurrey.org'
             rel='noopener noreferrer'
             className='footer__link'
+            aria-label="Go to homepage"
           >
             BarCamp Surrey
           </a>
         </div>
         {/* <div className='footer__divider'>&nbsp;|&nbsp;</div>
           <a
-            href='/code-of-conduct'
-            className='footer__link'
+            href="/code-of-conduct"
+            className="footer__link"
+            aria-label="Go to Code of Conduct page"
           >
             Code of Conduct
           </a> */}
@@ -37,6 +39,7 @@ const Footer = () => {
             target='_blank'
             rel='noopener noreferrer'
             className='footer__sun-link'
+            aria-label="Go to Sunshine's page"
           >
             <div className='footer__created-by-txt'>
               Created by&nbsp;          
@@ -47,7 +50,7 @@ const Footer = () => {
       </div>
 
       <div className='footer__contact'>
-        <a href='mailto:Laura.czajkowski@gmail.com' className='footer__button'>
+        <a href="mailto:Laura.czajkowski@gmail.com" aria-label="Contact Us" className="footer__button">
           Contact Us
         </a>
       </div>

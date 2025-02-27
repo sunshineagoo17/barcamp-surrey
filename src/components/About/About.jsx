@@ -35,7 +35,7 @@ const About = () => {
     <section id="about" className="about fade-in">
       <h1 className="about__title fade-in">Event Info</h1>
 
-      <button className="about__video-button" onClick={openModal}>
+      <button className="about__video-button" aria-label="Watch BarCamp Surrey's video" onClick={openModal}>
         Watch the Video
       </button>
 
@@ -55,7 +55,7 @@ const About = () => {
             BarCamp is a user-generated conference where people like you lead
             the conversation and shape the future.
           </p>
-          <button className="about__button" onClick={scrollToDetails}>
+          <button className="about__button" aria-label="Go to FAQ page" onClick={scrollToDetails}>
             FAQ
           </button>
         </div>
@@ -72,6 +72,7 @@ const About = () => {
             href={googleCalendarLink}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Add event to your calendar"
             className="about__button">
             Add to Calendar
           </a>
@@ -86,7 +87,8 @@ const About = () => {
             href={googleMapsLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="about__button">
+            className="about__button"
+            aria-label="See event's location on a map">
             See It on a Map
           </a>
         </div>

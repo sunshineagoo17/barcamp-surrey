@@ -92,26 +92,29 @@ const FAQs = () => {
             <p className='faq-page__answer'>
               Learn more about BarCamps on the{' '}
               <a
-                href='https://en.wikipedia.org/wiki/BarCamp'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='faq-page__link'>
+                href="https://en.wikipedia.org/wiki/BarCamp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Go to BarCamp's Wikipedia page"
+                className="faq-page__link">
                 <strong>Wikipedia page</strong>
               </a>{' '}
               or listen to this{' '}
               <a
-                href='https://linuxmatters.sh/47/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='faq-page__link'>
+                href="https://linuxmatters.sh/47/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Check out Linux Matters podcast"
+                className="faq-page__link">
                 <strong>podcast</strong>
               </a>{' '}
               with Alan Pope, brought to you by{' '}
               <a
-                href='https://linuxmatters.sh/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='faq-page__link'>
+                href="https://linuxmatters.sh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Check out Linux Matters podcast"
+                className="faq-page__link">
                 <strong>Linux Matters</strong>
               </a>
               .
@@ -119,27 +122,32 @@ const FAQs = () => {
 
             <div className='faq-page__links'>
               <a
-                href='https://en.wikipedia.org/wiki/BarCamp'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='faq-page__button'>
+                href="https://en.wikipedia.org/wiki/BarCamp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Go to BarCamp's Wikipedia page"
+                className="faq-page__button">
                 <FontAwesomeIcon icon={faGlobe} /> Wikipedia
               </a>
               <a
-                href='https://linuxmatters.sh/47/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='faq-page__button'>
+                href="https://linuxmatters.sh/47/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Check out Linux Matters podcast"
+                className="faq-page__button">
                 <FontAwesomeIcon icon={faPodcast} /> Podcast
               </a>
             </div>
           </div>
-          <button className='faq-page__toggle' onClick={toggleExpand}>
-            {isExpanded ? 'Show Less' : 'Read More'}
-            <FontAwesomeIcon
-              icon={faChevronDown}
-              className={`faq-page__chevron ${isExpanded ? 'rotated' : ''}`}
-            />
+          <button 
+            className="faq-page__toggle" 
+            aria-label={isExpanded ? "Collapse content to show less" : "Expand content to read more"}
+            onClick={toggleExpand}>
+              {isExpanded ? 'Show Less' : 'Read More'}
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                className={`faq-page__chevron ${isExpanded ? 'rotated' : ''}`}
+              />
           </button>
         </div>
 
@@ -161,20 +169,22 @@ const FAQs = () => {
           <p className='faq-page__answer'>
             Please{' '}
             <a
-              href='https://lu.ma/ins7ivwr?from=embed'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='faq-page__link'>
+              href="https://lu.ma/ins7ivwr?from=embed"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Register for BarCamp Surrey"
+              className="faq-page__link">
               <strong>register</strong>
             </a>{' '}
             as soon as possible, as spaces for the event are limited.
           </p>
           <div className='faq-page__links'>
             <a
-              href='https://lu.ma/ins7ivwr?from=embed'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='faq-page__button'>
+              href="https://lu.ma/ins7ivwr?from=embed"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Register for BarCamp Surrey"
+              className="faq-page__button">
               <FontAwesomeIcon icon={faTicket} /> Join Us
             </a>
           </div>

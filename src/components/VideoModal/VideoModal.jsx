@@ -26,10 +26,10 @@ const VideoModal = ({ isOpen, onClose, videoSrc }) => {
       <div className="video-modal__content" onClick={(e) => e.stopPropagation()}>
 
         {/* Close Button */}
-        <button className="video-modal__close" onClick={onClose}>X</button>
+        <button className="video-modal__close" aria-label="Close video modal" onClick={onClose}>X</button>
 
         {/* Share Button */}
-        <button className="video-modal__share-button" onClick={handleShare}>
+        <button className="video-modal__share-button" aria-label="Share BarCamp Surrey's video" onClick={handleShare}>
           <FaShareAlt className="video-modal__share-icon" />
         </button>
 

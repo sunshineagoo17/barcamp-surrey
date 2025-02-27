@@ -10,10 +10,11 @@ const Sponsors = () => {
       <h2 className='sponsors__title fade-in'>Sponsored By</h2>
       <div className='sponsors__content fade-in'>
         <a
-          href='https://bitfolk.com'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='sponsors__logo-link'>
+          href="https://bitfolk.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Go to BitFolk's page"
+          className="sponsors__logo-link">
           <img
             src={BitFolkLogo}
             alt='BitFolk Logo'

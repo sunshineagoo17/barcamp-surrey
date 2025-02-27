@@ -11,7 +11,8 @@ const Registration = () => {
       <h2 className='registration__title fade-in'>Ready to Join Us?</h2>
 
       <button
-        className='registration__button'
+        className="registration__button"
+        aria-label="Register for BarCamp Surrey"
         onClick={() => window.open(eventUrl, '_blank')}>
         Save Your Spot
       </button>

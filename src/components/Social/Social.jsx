@@ -11,7 +11,7 @@ const Social = () => {
 
       {/* Create Your Own Badge Button */}
       <div className="social__badge-container fade-in">
-        <Link to="/share" className="social__badge-button">
+        <Link to="/share" className="social__badge-button" aria-label="Go to Share page">
           Create Your Own Badge
         </Link>
       </div>
@@ -25,6 +25,7 @@ const Social = () => {
           href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.barcampsurrey.org"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Share on LinkedIn"
           className="social__button fade-in">
           Share on LinkedIn
         </a>
@@ -32,6 +33,7 @@ const Social = () => {
           href="https://twitter.com/intent/tweet?text=Excited+to+participate+in+%23BarCampSurrey!+Find+out+more+at+https://www.barcampsurrey.org"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Share on X"
           className="social__button fade-in">
           Share on X
         </a>

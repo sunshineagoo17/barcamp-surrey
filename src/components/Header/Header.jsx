@@ -25,7 +25,7 @@ const Header = () => {
     <header className="header">
       {/* Logo Image */}
       <div className="header__logo">
-        <Link to="/">
+        <Link to="/" aria-label="Go to Homepage">
           <img src={Logo} alt="BarCamp Surrey Logo" className="header__logo-img" />
         </Link>
       </div>
@@ -34,31 +34,31 @@ const Header = () => {
       <nav className="header__nav">
         {isMainPage ? (
           <>
-            <a href="#about" className="header__nav-link">
+            <a href="#about" className="header__nav-link" aria-label="Go to About page">
               About
             </a>
-            <a href="#faq" className="header__nav-link">
+            <a href="#faq" className="header__nav-link" aria-label="Go to FAQ page">
               FAQ
             </a>
-            <a href="#register" className="header__nav-link">
+            <a href="#register" className="header__nav-link" aria-label="Register for BarCamp Surrey">
               Register
             </a>
-            <a href="mailto:Laura.czajkowski@gmail.com" className="header__nav-link">
+            <a href="mailto:Laura.czajkowski@gmail.com" className="header__nav-link" aria-label="Contact Us">
               Contact
             </a>
           </>
         ) : (
           <>
-            <Link to="/" className="header__nav-link">
+            <Link to="/" className="header__nav-link" aria-label="Go to homepage">
               Home
             </Link>
             {!isSharePage && (
-              <Link to="/share" className="header__nav-link">
+              <Link to="/share" className="header__nav-link" aria-label="Go to Share page">
                 Share
               </Link>
             )}
             {!isFAQPage && (
-              <Link to="/faq" className="header__nav-link">
+              <Link to="/faq" className="header__nav-link" aria-label="Go to FAQ page">
                 FAQ
               </Link>
             )}
@@ -67,6 +67,7 @@ const Header = () => {
                 href="https://lu.ma/ins7ivwr?from=embed"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Register for BarCamp Surrey"
                 className="header__nav-link header__nav-link--highlight"
               >
                 Register
@@ -80,6 +81,7 @@ const Header = () => {
       <div className="header__toggle-wrapper">
         <button
           onClick={toggleTheme}
+          aria-label="Toggle modes"
           className={`header__toggle ${
             theme === 'light' ? 'header__toggle--light' : 'header__toggle--dark'
           }`}

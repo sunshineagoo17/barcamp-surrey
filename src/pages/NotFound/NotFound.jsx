@@ -16,7 +16,7 @@ const NotFound = () => {
       <p className='notfound__message fade-in'>
         Oops! The page you're looking for doesn't exist.
       </p>
-      <Link to='/' className='notfound__button fade-in'>
+      <Link to="/" className="notfound__button fade-in" aria-label="Go to homepage">
         Go Back Home
       </Link>
     </section>

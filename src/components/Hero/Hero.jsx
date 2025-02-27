@@ -58,7 +58,7 @@ const Hero = () => {
           </span>{' '}
           in the Heart of Surrey
         </h1>
-        <button className='hero__button fade-in' onClick={scrollToAbout}>
+        <button className='hero__button fade-in' aria-label="Go to Event Info" onClick={scrollToAbout}>
           Tell Me More
         </button>
       </div>

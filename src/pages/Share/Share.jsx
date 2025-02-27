@@ -405,12 +405,18 @@ function Share() {
 
       {/* Actions */}
       <div className='share__section fade-in'>
-        <button className='share__button' onClick={handleDownload}>
+        <button
+          className="share__button"
+          onClick={handleDownload} 
+          aria-label="Download event badge"
+        >
           Download
         </button>
         <button
-          className='share__button share__button--reset'
-          onClick={handleReset}>
+          className="share__button share__button--reset"
+          aria-label="Reset badge"
+          onClick={handleReset}
+        >
           Reset
         </button>
       </div>
@@ -423,6 +429,7 @@ function Share() {
         <div className='share__buttons'>
           <button
             className='share__button-icon'
+            aria-label="Share BarCamp Surrey event"
             onClick={async () => {
               const text = `Check out #BarCampSurrey! Proud to participate in this amazing event. Learn more at: https://www.barcampsurrey.org`;
               if (navigator.share) {
@@ -442,23 +449,25 @@ function Share() {
 
           {/* Share on LinkedIn */}
           <a
-            className='share__button-icon'
+            className="share__button-icon"
             href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-              'https://www.barcampsurrey.org'
+              "https://www.barcampsurrey.org"
             )}`}
-            target='_blank'
-            rel='noopener noreferrer'>
-            <i className='fab fa-linkedin'></i>
+            target="_blank"
+            aria-label="Share on LinkedIn"
+            rel="noopener noreferrer">
+            <i className="fab fa-linkedin"></i>
           </a>
 
           {/* Share on X */}
           <a
-            className='share__button-icon'
+            className="share__button-icon"
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
               `Excited to participate in #BarCampSurrey! Hope to see you there! Learn more at: https://www.barcampsurrey.org`
             )}`}
-            target='_blank'
-            rel='noopener noreferrer'>
+            target="_blank"
+            aria-label="Share on X"
+            rel="noopener noreferrer">
             <img src={XLogo} alt='X Logo' className='share__icon-image' />
           </a>
         </div>
