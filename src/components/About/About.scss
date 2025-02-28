@@ -17,7 +17,7 @@
 
   &__subtitle {
     font-size: 1.25rem;
-    color: $dark-green;
+    color: $darker-green;
     font-weight: 600;
     margin-top: .5rem;
     text-transform: uppercase;
@@ -33,7 +33,7 @@
     letter-spacing: .0625rem;
     color: $white;
     margin-top: -1.5rem;
-    background-color: green;
+    background-color: $medium-green;
     border: none;
     border-radius: 2rem;
     cursor: pointer;
@@ -72,7 +72,7 @@
   }
 
   &__item {
-    background: rgba(255, 255, 255, .3);
+    background: rgba(255, 255, 255, .6);
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 .5rem 1.25rem rgba(0, 0, 0, .1),
@@ -162,7 +162,7 @@
   }
 
   &__button {
-    @include button-style(10rem, 2.75rem, $soft-mint, $dark-green);
+    @include button-style(10rem, 2.75rem, $soft-mint, $darker-green);
     font-size: 0.75rem;
     text-transform: uppercase;
     border-radius: 1.5rem;
