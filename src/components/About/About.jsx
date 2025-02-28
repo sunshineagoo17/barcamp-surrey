@@ -50,7 +50,7 @@ const About = () => {
         {/* WHAT */}
         <div className="about__item fade-in">
           <FontAwesomeIcon icon={faComments} className="about__icon" />
-          <h3 className="about__subtitle">What?</h3>
+          <h2 className="about__subtitle">What?</h2>
           <p>
             BarCamp is a user-generated conference where people like you lead
             the conversation and shape the future.
@@ -63,7 +63,7 @@ const About = () => {
         {/* WHEN */}
         <div className="about__item fade-in">
           <FontAwesomeIcon icon={faCalendarAlt} className="about__icon" />
-          <h3 className="about__subtitle">When?</h3>
+          <h2 className="about__subtitle">When?</h2>
           <div className="about__when-container">
             <p>August 2, 2025</p>
             <p>9:00 AM - 5:30 PM</p>
@@ -81,7 +81,7 @@ const About = () => {
         {/* WHERE */}
         <div className="about__item fade-in">
           <FontAwesomeIcon icon={faMapMarkerAlt} className="about__icon" />
-          <h3 className="about__subtitle">Where?</h3>
+          <h2 className="about__subtitle">Where?</h2>
           <p>Godalming College, Tuesley Ln, Godalming GU7 1RS</p>
           <a
             href={googleMapsLink}
