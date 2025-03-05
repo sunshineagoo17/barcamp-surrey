@@ -24,14 +24,14 @@ const Footer = () => {
             BarCamp Surrey
           </a>
         </div>
-        {/* <div className='footer__divider'>&nbsp;|&nbsp;</div>
+        <div className='footer__divider'>&nbsp;|&nbsp;</div>
           <a
             href="/code-of-conduct"
             className="footer__link"
             aria-label="Go to Code of Conduct page"
           >
             Code of Conduct
-          </a> */}
+          </a>
         <div className='footer__divider'>&nbsp;|&nbsp;</div>
         <span className='footer__created-by'>
           <a
