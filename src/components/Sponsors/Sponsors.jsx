@@ -46,7 +46,7 @@ const Sponsors = () => {
             <img
               src={UKGovCampLogo}
               alt='UKGovCamp Logo'
-              className='sponsors__logo'
+              className='sponsors__logo sponsors__logo-ukgovcamp'
             />
           </a>
           <div className='sponsors__info'>
