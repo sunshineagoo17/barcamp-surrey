@@ -26,15 +26,34 @@
     text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
   }
 
+  &__content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+
+    @include tablet {
+      flex-direction: row;
+      width: 90%;
+    }
+
+    @include desktop {
+      gap: 4rem;
+      width: 90%;
+    }
+  }
+
   &__content {
     display: flex;
     align-items: center;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding: 2rem;
-    width: 90%;
-    gap: 3rem;
+    padding: .5rem;
+    width: 95%;
+    height: 40rem;
+    gap: 1rem;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 2rem;
     padding: 2rem 3rem;
@@ -48,6 +67,26 @@
     &:hover {
       transform: scale(1.02);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    @include large-mobile {
+      height: 33rem;
+      width: 90%;
+    }
+
+    @include tablet {
+      width: 50%;
+      padding: 2rem;
+      height: 30rem;
+    }
+
+    @include desktop {
+      width: 30%;
+      height: 28rem;
+    }
+
+    @include large-desktop {
+      height: 22rem;
     }
   }
 
@@ -63,8 +102,9 @@
   }
 
   &__logo {
-    width: 12rem;
-    height: auto;
+    width: 10rem;
+    height: 6rem;
+    object-fit: contain;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
     transition: transform 0.4s ease;
 
@@ -73,11 +113,12 @@
     }
 
     &:active {
-        transform: scale(.9) rotate(0deg);
+      transform: scale(.9) rotate(0deg);
     }
 
     @include mobile {
-      width: 9rem;
+      width: 8rem;
+      height: 5rem;
     }
   }
 
