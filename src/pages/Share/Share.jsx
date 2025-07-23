@@ -150,7 +150,7 @@ function Share() {
 
       ctx.font = detailsFont;
       ctx.fillText(
-        'August 2, 2025 | 9:00 AM - 5:30 PM',
+        'April 11, 2026 | 9:00 AM - 5:30 PM',
         width / 2,
         detailsY + 10
       );
