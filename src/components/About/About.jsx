@@ -6,19 +6,19 @@ import {
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import useScrollAnimation from "../../hooks/useScrollAnimation";
-import { useState } from "react";
-import VideoModal from "../../components/VideoModal/VideoModal";
+// import { useState } from "react";
+// import VideoModal from "../../components/VideoModal/VideoModal";
 
 const About = () => {
   useScrollAnimation();
 
   // State to manage modal visibility
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const openModal = () => setIsModalOpen(true);
+  // const closeModal = () => setIsModalOpen(false);
 
   // Ensure the correct video URL is used
-  const promoVideo = `${window.location.origin}/video/barcamp-surrey-cc.mp4`;
+  // const promoVideo = `${window.location.origin}/video/barcamp-surrey-cc.mp4`;
 
   // Google Calendar Event Link (Pre-filled)
   const googleCalendarLink = `https://www.google.com/calendar/render?action=TEMPLATE&text=BarCamp+Surrey&dates=20250802T080000Z/20250802T163000Z&details=Join+us+at+BarCamp+Surrey+for+a+day+of+collaboration+and+innovation!&location=Godalming+College,+Tuesley+Ln,+Godalming+GU7+1RS`;
@@ -35,16 +35,16 @@ const About = () => {
     <section id="about" className="about fade-in">
       <h1 className="about__title fade-in">Event Info</h1>
 
-      <button className="about__video-button" aria-label="Watch BarCamp Surrey's video" onClick={openModal}>
+      {/* <button className="about__video-button" aria-label="Watch BarCamp Surrey's video" onClick={openModal}>
         Watch the Video
-      </button>
+      </button> */}
 
-      {/* Video Modal */}
-      <VideoModal
+      {/* Video Modal - Video needs to be updated first (date is currently wrong)*/}
+      {/* <VideoModal
         isOpen={isModalOpen}
         onClose={closeModal}
         videoSrc={promoVideo} 
-      />
+      /> */}
 
       <div className="about__info fade-in">
         {/* WHAT */}
@@ -65,7 +65,7 @@ const About = () => {
           <FontAwesomeIcon icon={faCalendarAlt} className="about__icon" />
           <h2 className="about__subtitle">When?</h2>
           <div className="about__when-container">
-            <p className="about__card-copy">August 2, 2025</p>
+            <p className="about__card-copy">Saturday, April 11, 2026</p>
             <p className="about__card-copy">9:00 AM - 5:30 PM</p>
           </div>
           <a
